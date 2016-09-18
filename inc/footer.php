@@ -46,6 +46,7 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" id="analytic"/>
+                    <input type="hidden" id="Tour_Id" valus="ПРИСОЕДЕНИЛИСЬ К СООБЩЕСТВУ!" />
                     <div class="form-group text-align-left">
                         <label for="name" class="takepart_input">Ваше имя и фамилия</label>
                         <input type="text" class="form-control" id="name" required>
@@ -61,7 +62,7 @@
                 </div>
                 <div class="modal-footer">
                     <div class="text-center">
-                        <input type="submit" class="tour_btn_takepart_blue tour_btn_witout_marginbottom" value="Отправить заявку" style="margin-top: 0px;font-size: 24px;margin-bottom: 0px;" />
+                        <input type="submit" class="btn_submitform tour_btn_takepart_blue tour_btn_witout_marginbottom" value="Отправить заявку" style="margin-top: 0px;font-size: 24px;margin-bottom: 0px;" />
                         <button type="button" class="btn_submitform hidden" data-dismiss="modal" aria-label="Close">Закрыть</button>
                     </div>
                 </div>
@@ -69,51 +70,6 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-
-    $("#takePartModalsocial").on("hidden.bs.modal", function () {
-        $("#takePartFormsocial .takepart_header").text("Присоединиться к сообществу");
-        $("#takePartFormsocial .takepart_descrip").html("Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня");
-        $("#takePartFormsocial .modal-body").removeClass("hidden");
-        $("#takePartFormsocial .modal-footer input").removeClass("hidden");
-        $("#takePartFormsocial .modal-footer button").addClass("hidden");
-        $("#takePartFormsocial #name").val("");
-        $("#takePartFormsocial #phone").val("");
-        $("#takePartFormsocial #mail").val("");
-    })
-
-    $("#takePartFormsocial").on("submit", function (e) {
-        e.preventDefault();
-        $.ajax({
-            url: "zayavkasocial.php",
-            type: "POST",
-            data: {
-                name: $("#takePartFormsocial #name").val(),
-                phone: $("#takePartFormsocial #phone").val(),
-                mail: $("#takePartFormsocial #mail").val(),
-                tourname: $("#Tour_Id").val()
-            },
-            success: function (data) {
-                    $("#errorMsg").addClass("hidden");
-                    //$("#takePartModalsocial").modal("hide");
-                    $("#takePartFormsocial .takepart_header").text("Благодарим за заявку!");
-                    $("#takePartFormsocial .takepart_descrip").text("Мы перезвоним Вам в течение рабочего дня.");
-                    $("#takePartFormsocial .modal-body").addClass("hidden");
-                    $("#takePartFormsocial .modal-footer input").addClass("hidden");
-                    $("#takePartFormsocial .modal-footer button").removeClass("hidden");
-                    document.location='https://www.facebook.com/FollowYourDREAM2015';
-            }
-        });
-    });
-
-</script>
-
-
-
-
-
-
 
 
 <script type="text/javascript">
@@ -258,8 +214,6 @@
     }
 
 </script>    
-
-
 
 
 
