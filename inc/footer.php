@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <ul class="footer-messager">
-                    <li class="footer-messager__viber"><a href="viber://add?number=skybun.followyourdream">followyourdream</a></li>
-                    <li class="footer-messager__skype"><a href="skype:skybun.followyourdream?chat">followyourdream</a></li>
+                    <li class="footer-messager__viber"><a href="viber://add?number=+380678502107">followyourdream</a></li>
+                    <li class="footer-messager__skype"><a href="skype:anna_skibun?chat">followyourdream</a></li>
                     <li class="footer-messager__email"><a href="mailto:info@dreamlifeexpeditions.com">info@dreamlifeexpeditions.com</a></li>
                 </ul>
             </div>

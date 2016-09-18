@@ -12,9 +12,9 @@
                 <img src="img/our-travel__img-1.jpg" alt="">
                 <div class="our-travels__wrapper-item-hover">
                   <span>арктика</span>
-                  <span class="our-travels__wrapper-item-hover-detail">
+                  <!--<span class="our-travels__wrapper-item-hover-detail">
                     detail Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id incidunt molestias nemo nostrum veritatis. Beatae, debitis est excepturi, iusto laboriosam maiores mollitia necessitatibus nemo quae quod sequi soluta unde, voluptate!
-                  </span>
+                  </span> -->
                 </div>
               </a>
             </div>
@@ -23,9 +23,9 @@
                 <img src="img/our-travel__img-2.jpg" alt="">
                 <div class="our-travels__wrapper-item-hover">
                   <span>яхтинг</span>
-                  <span class="our-travels__wrapper-item-hover-detail">
+                 <!-- <span class="our-travels__wrapper-item-hover-detail">
                     detail
-                  </span>
+                  </span> -->
                 </div>
               </a>
             </div>
@@ -34,9 +34,9 @@
                 <img src="img/our-travel__img-3.jpg" alt="">
                 <div class="our-travels__wrapper-item-hover">
                   <span>приключения</span>
-                  <span class="our-travels__wrapper-item-hover-detail">
+                <!--  <span class="our-travels__wrapper-item-hover-detail">
                     detail
-                  </span>
+                  </span> -->
                 </div>
               </a>
             </div>
@@ -45,9 +45,9 @@
                 <img src="img/our-travel__img-4.jpg" alt="">
                 <div class="our-travels__wrapper-item-hover">
                   <span>dream bus</span>
-                  <span class="our-travels__wrapper-item-hover-detail">
+                 <!-- <span class="our-travels__wrapper-item-hover-detail">
                     detail
-                  </span>
+                  </span> -->
                 </div>
               </a>
             </div>
@@ -121,6 +121,7 @@
             <h3 class="heading">с нами вас ждут</h3>
             <ul>
               <li>Веселые встречи, уникальные путешествия, приключения и тусовки!</li>
+              <li>Уникальные арктические экспедиции – Гренландия, Шпицберген, Северный Полюс и Антарктика</li>
               <li>Приключения на краю света – Мадагаскар, Галапагосские острова, Антарктида и только самые впечатляющие места планеты</li>
               <li>Яхтенные флотилии в Италии, Греции, на Мальдивских островах – лучшие маршруты, комфортабельные  парусные яхты/катамараны и самые веселые Party на пляже</li>
               <li>DREAM Bus - легендарные FreeLifestyle  уикэнды  за звездами, MOREм,  и запахом трав… Для всех, кто в теме))</li>
@@ -143,16 +144,18 @@
       <h3 class="heading">Ближайшие путешествия и экспедиции</h3>
       <div class="container-fluid">
         <div class="row">
+
           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
             <div class="upcoming-event__item-img-wrapper">
-              <img src="img/upcoming-event__img-1.jpg" alt="">
+              <!-- <img src="img/upcoming-event__img-1.jpg" alt=""> -->
+              <img src="img/foto-dly-kalendary-2/Январь.jpg" alt="">
             </div>
             <div class="upcoming-event__item-hover-substrate"></div>
             <div class="upcoming-event__item-hover">
               <ul>
-                <li class="upcoming-event__item-hover__place">ШПИЦБЕРГЕН - уникальная Арктика</li>
-                <li class="upcoming-event__item-hover__date">5-11 июня 2016</li>
-                <li class="upcoming-event__item-hover__money">1450 евро</li>
+                <li class="upcoming-event__item-hover__place">Тайланд + затеряные миры Камбоджи</li>
+                <li class="upcoming-event__item-hover__date">2-14 января 2017</li>
+                <li class="upcoming-event__item-hover__money">1799 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
                 <a href="#" class="button yellow">
@@ -161,24 +164,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item">
-            <div class="upcoming-event__item-img-wrapper">
-              <img src="img/upcoming-event__img-2.jpg" alt="">
-            </div>
-            <div class="upcoming-event__item-hover-substrate"></div>
-            <div class="upcoming-event__item-hover">
-              <ul>
-                <li class="upcoming-event__item-hover__place">ШПИЦБЕРГЕН - уникальная Арктика</li>
-                <li class="upcoming-event__item-hover__date">5-11 июня 2016</li>
-                <li class="upcoming-event__item-hover__money">1450 евро</li>
-              </ul>
-              <div class="upcoming-event__item-hover_btn">
-                <a href="#" class="button yellow">
-                  <button>Подробнее</button>
-                </a>
-              </div>
-            </div>
-          </div>
+
           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
             <div class="upcoming-event__item-img-wrapper">
               <img src="img/upcoming-event__img-3.jpg" alt="">
@@ -186,9 +172,9 @@
             <div class="upcoming-event__item-hover-substrate"></div>
             <div class="upcoming-event__item-hover">
               <ul>
-                <li class="upcoming-event__item-hover__place">ШПИЦБЕРГЕН –уникальная Арктика</li>
-                <li class="upcoming-event__item-hover__date">5-11 июня 2016</li>
-                <li class="upcoming-event__item-hover__money">1450 евро</li>
+                <li class="upcoming-event__item-hover__place">Шпицберген – в поисках Северного Сияния</li>
+                <li class="upcoming-event__item-hover__date">11-17 февраля 2017</li>
+                <li class="upcoming-event__item-hover__money">1780 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
                 <a href="#" class="button yellow">
@@ -197,15 +183,16 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item">
             <div class="upcoming-event__item-img-wrapper">
-              <img src="img/upcoming-event__img-4.jpg" alt="">
+              <img src="img/upcoming-event__img-2.jpg" alt="">
             </div>
             <div class="upcoming-event__item-hover-substrate"></div>
             <div class="upcoming-event__item-hover">
               <ul>
-                <li class="upcoming-event__item-hover__place">ШПИЦБЕРГЕН –уникальная Арктика</li>
-                <li class="upcoming-event__item-hover__date">5-11 июня 2016</li>
+                <li class="upcoming-event__item-hover__place">Марокко – океан, пустыня Гоби и Атласские горы</li>
+                <li class="upcoming-event__item-hover__date">20-31 марта 2017</li>
                 <li class="upcoming-event__item-hover__money">1450 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
@@ -215,16 +202,36 @@
               </div>
             </div>
           </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
+            <div class="upcoming-event__item-img-wrapper">
+              <img src="img/foto-dly-kalendary-2/апрель.jpg" alt="">
+            </div>
+            <div class="upcoming-event__item-hover-substrate"></div>
+            <div class="upcoming-event__item-hover">
+              <ul>
+                <li class="upcoming-event__item-hover__place">Греция – ионические острова и средиземноморская кухня</li>
+                <li class="upcoming-event__item-hover__date">28 апреля – 6  мая 2017</li>
+                <li class="upcoming-event__item-hover__money">950 евро</li>
+              </ul>
+              <div class="upcoming-event__item-hover_btn">
+                <a href="#" class="button yellow">
+                  <button>Подробнее</button>
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item">
             <div class="upcoming-event__item-img-wrapper">
-              <img src="img/upcoming-event__img-5.jpg" alt="">
+              <img src="img/foto-dly-kalendary-2/Исландия.jpg" alt="">
             </div>
             <div class="upcoming-event__item-hover-substrate"></div>
             <div class="upcoming-event__item-hover">
               <ul>
-                <li class="upcoming-event__item-hover__place">ШПИЦБЕРГЕН –уникальная Арктика</li>
-                <li class="upcoming-event__item-hover__date">5-11 июня 2016</li>
-                <li class="upcoming-event__item-hover__money">1450 евро</li>
+                <li class="upcoming-event__item-hover__place">Исландия джампинг – все самое грандиозное в одном путешествии</li>
+                <li class="upcoming-event__item-hover__date">14 - 21 мая 2017</li>
+                <li class="upcoming-event__item-hover__money">1650 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
                 <a href="#" class="button yellow">
@@ -233,16 +240,17 @@
               </div>
             </div>
           </div>
+
           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
             <div class="upcoming-event__item-img-wrapper">
-              <img src="img/upcoming-event__img-6.jpg" alt="">
+              <img src="img/foto-dly-kalendary-2/Гренландия.jpg" alt="">
             </div>
             <div class="upcoming-event__item-hover-substrate"></div>
             <div class="upcoming-event__item-hover">
               <ul>
-                <li class="upcoming-event__item-hover__place">ШПИЦБЕРГЕН –уникальная Арктика</li>
-                <li class="upcoming-event__item-hover__date">5-11 июня 2016</li>
-                <li class="upcoming-event__item-hover__money">1450 евро</li>
+                <li class="upcoming-event__item-hover__place">Гренландия –  must-have 2017. Приключение всей жизни!</li>
+                <li class="upcoming-event__item-hover__date">27 июня  - 04 июля 2017</li>
+                <li class="upcoming-event__item-hover__money">2050 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
                 <a href="#" class="button yellow">
@@ -251,6 +259,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
       <div class="container upcoming-event__bottom">
