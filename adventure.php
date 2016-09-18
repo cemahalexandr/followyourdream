@@ -99,7 +99,7 @@
 
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item">
                         <div class="upcoming-event__item-img-wrapper">
-                          <img src="img/upcoming-event__img-2.jpg" alt="">
+                          <img src="img/foto-dly-kalendary-2/foto-dly-blocka-blishayshie-priklucheniya/март.jpg" alt="">
                         </div>
                         <div class="upcoming-event__item-hover-substrate"></div>
                         <div class="upcoming-event__item-hover">
@@ -118,7 +118,7 @@
 
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item">
                             <div class="upcoming-event__item-img-wrapper">
-                              <img src="img/foto-dly-kalendary-2/Исландия.jpg" alt="">
+                              <img src="img/foto-dly-kalendary-2/foto-dly-blocka-blishayshie-priklucheniya/май.jpg" alt="">
                             </div>
                             <div class="upcoming-event__item-hover-substrate"></div>
                             <div class="upcoming-event__item-hover">

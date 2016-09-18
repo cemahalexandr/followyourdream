@@ -4,11 +4,14 @@
     <input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Tour_Id" name="Tour.Id" type="hidden" value="Шпицберген">
     <div class="calendar-wrapper">
         <div class="calendar-item">
-            <div class="calendar-item__month">Октябрь 2016</div>
+            <div class="calendar-item__month">Январь 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="#greece-modal" data-toggle="modal" data-target="">Греция яхтинг</a>
+                        <a href="" data-toggle="modal" data-target="">Тай + Камбоджа</a>
+                    </li>
+                    <li>
+                        <a href="" data-toggle="modal" data-target="">Танзания + Занзибар</a>
                     </li>
                 </ul>
             </div>
@@ -16,11 +19,11 @@
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/октябрь 2016.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Ноябрь 2016</div>
+            <div class="calendar-item__month">Февраль 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="" data-toggle="modal" data-target="#calendar-modal">Канары Яхтинг -  Вулкан Тейде</a>
+                        <a href="" data-toggle="modal" data-target="">ШПИЦБЕРГЕН Северное Сияние</a>
                     </li>
                 </ul>
             </div>
@@ -28,11 +31,11 @@
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/Ноябрь 2016.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Декабрь 2016</div>
+            <div class="calendar-item__month">Март 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="" data-toggle="modal" data-target="#calendar-modal">New Year Сейшелы</a>
+                        <a href="" data-toggle="modal" data-target="">Экспедиция Марокко</a>
                     </li>
                 </ul>
             </div>
@@ -40,11 +43,11 @@
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/Декабрь 2016.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Январь 2017</div>
+            <div class="calendar-item__month">Апрель 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="" data-toggle="modal" data-target="#calendar-modal">Азия Лаос</a>
+                        <a href="" data-toggle="modal" data-target="#greece-modal">Греция Яхтинг</a>
                     </li>
                 </ul>
             </div>
@@ -52,14 +55,14 @@
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/январь 2017.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Февраль 2017</div>
+            <div class="calendar-item__month">Май 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="" data-toggle="modal" data-target="#calendar-modal">ШПИЦБЕРГЕН Северное Сияние</a>
+                        <a href="" data-toggle="modal" data-target="">Исландия на джипах</a>
                     </li>
                     <li>
-                        <a href="" data-toggle="modal" data-target="#calendar-modal">Экспедиция Марокко</a>
+                        <a href="" data-toggle="modal" data-target="#calendar-modal">ШПИЦБЕРГЕН Лето в Арктике</a>
                     </li>
                 </ul>
             </div>
@@ -67,26 +70,26 @@
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/февраль 2017.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Март 2017</div>
+            <div class="calendar-item__month">Июнь 2017</div>
             <div class="calendar-item__tours">
-               <!-- <ul>
+               <ul>
                     <li>
-                        <a href="">Ямайка</a>
+                        <a href="" data-toggle="modal" data-target="">Гренландия Must Have 2017</a>
                     </li>
-                    <li>
+                    <!--  <li>
                         <a href="">Ибица</a>
-                    </li>
-                </ul> -->
+                    </li> -->
+                </ul> 
             </div>
             <div class="calendar-item__overlay"></div>
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/март 2017.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Апрель 2017</div>
+            <div class="calendar-item__month">Июль 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="">Яхтинг Италия</a>
+                        <a href="" data-toggle="modal" data-target="">Ибица яхтинг</a>
                     </li>
                 </ul>
             </div>
@@ -94,14 +97,14 @@
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/апрель 2017.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Май 2017</div>
+            <div class="calendar-item__month">Август 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="">Исландия на джипах</a>
+                        <a href="" data-toggle="modal" data-target="">Италия на машинах Dolce Vita</a>
                     </li>
                     <li>
-                        <a href="">Гренландия Must Have 2017</a>
+                        <a href="" data-toggle="modal" data-target="#calendar-modal">ШПИЦБЕРГЕН Арктический закат</a>
                     </li>
                 </ul>
             </div>
@@ -109,14 +112,11 @@
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/май 2017.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Июнь 2017</div>
+            <div class="calendar-item__month">Сентябрь 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="">ШПИЦБЕРГЕН Лето в Арктике</a>
-                    </li>
-                    <li>
-                        <a href="">Места силы Тибета</a>
+                        <a href="" data-toggle="modal" data-target="">Монголия</a>
                     </li>
                 </ul>
             </div>
@@ -124,11 +124,11 @@
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/июнь 2017.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Июль 2017</div>
+            <div class="calendar-item__month">Октябрь 2016</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="">Ибица Яхтинг</a>
+                        <a href="" data-toggle="modal" data-target="">Мадагаскар</a>
                     </li>
                 </ul>
             </div>
@@ -136,11 +136,11 @@
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/июль 2017.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Август 2017</div>
+            <div class="calendar-item__month">Ноябрь 2016</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="">Италия на машинах Dolce Vita</a>
+                        <a href="" data-toggle="modal" data-target="">Канары Яхтинг -  Вулкан Тейде</a>
                     </li>
                 </ul>
             </div>
@@ -148,11 +148,14 @@
             <div class="calendar-item__bg-img" style="background-image: url('img/calendar/август 2017.jpg')"></div>
         </div>
         <div class="calendar-item">
-            <div class="calendar-item__month">Сентябрь 2017</div>
+            <div class="calendar-item__month">Декабрь 2016</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
-                        <a href="">Мадагаскар</a>
+                        <a href="" data-toggle="modal" data-target="">New Year Сейшелы</a>
+                    </li>
+                    <li>
+                        <a href="" data-toggle="modal" data-target="">Финляндия</a>
                     </li>
                 </ul>
             </div>
@@ -162,6 +165,39 @@
         <div class="clearfix"></div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Modal -->
     <div class="modal fade calendar-modal" id="calendar-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -838,6 +874,11 @@
 
 
 
+
+
+
+
+
     <div class="modal fade calendar-modal" id="greece-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-header-close-991">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -1108,18 +1149,17 @@
             <div class="form-group">
                 <input type="email" class="form-control input_getprogram" id="mail" placeholder="Ваша почта" required="">
             </div>
-           <!-- <div class="modal-body-top-button">
+            <div class="modal-body-top-button">
                 <input type="submit" class="btn_submitform button" value="Получить программу">
-            </div> -->
-        </form>
-<br><br>
-<div class="modal-body-top-button">
+            </div> 
+            <br><br>
+<!-- <div class="modal-body-top-button">
                         <a href="" class="button ">
-                            <button type="submit" form="getProgramForm" value="Submit" style="
-    padding: 20px 25px;
-">Получить</button>
+                            <button type="submit" form="getProgramForm" value="submit" style="padding: 20px 25px;">Получить</button>
                         </a>
-                    </div>
+                    </div> -->
+        </form>
+
         
         
 <div id="thankModal" class="modal fade" tabindex="-1" role="dialog">
@@ -1146,7 +1186,7 @@
             $("#getProgramForm").on("submit", function (e) {
                 e.preventDefault();
                 $.ajax({
-                    url: "programma.php",
+                    url: "zayavka.php",
                     type: "POST",
                     data: {
                         name: $("#getProgramForm #name").val(),
