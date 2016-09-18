@@ -181,28 +181,29 @@
             <form id="takePartForm">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title takepart_header">Заявка на участие</h4>
-                    <p class="takepart_descrip">Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня<br />для обсуждения деталей путешествия</p>
+                    <h4 class="modal-title takepart_header" style="font-size: 14pt;">Интересуетесь приключениями?</h4>
+                    <p class="takepart_descrip" style="font-size: 14pt;color: rgba(0, 0, 0, 0.5);">Оставьте ваши данные и будьте в курсе ближайших путешествий, акций и скидок</p>
                     <div id="errorMsg" class="alert alert-danger hidden ptsans">Произошла ошибка, попробуйте еще раз</div>
                 </div>
                 <div class="modal-body">
                     <input type="hidden" id="analytic"/>
+                    <input type="hidden" id="Tour_Id" value="ИНТЕРЕСУЮТ ПРИКЛЮЧЕНИЯ!" /> 
                     <div class="form-group">
-                        <label for="name" class="takepart_input">Ваше имя и фамилия</label>
+                        <label for="name" class="takepart_input" style="font-size: 14pt;">ФИО</label>
                         <input type="text" class="form-control" id="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone" class="takepart_input">Ваш телефон</label>
+                        <label for="phone" class="takepart_input" style="font-size: 14pt;">Телефон</label>
                         <input type="tel" class="form-control" id="phone" required>
                     </div>
                     <div class="form-group">
-                        <label for="mail" class="takepart_input">Ваша почта</label>
+                        <label for="mail" class="takepart_input" style="font-size: 14pt;">Е-мейл</label>
                         <input type="email" class="form-control" id="mail" required>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="text-center">
-                        <input type="submit" class="btn_submitform" value="Отправить заявку" />
+                        <input type="submit" class="btn_submitform" value="Присоединиться" style="font-size: 14pt;"/>
                         <button type="button" class="btn_submitform hidden" data-dismiss="modal" aria-label="Close">Закрыть</button>
                     </div>
                 </div>
@@ -214,8 +215,8 @@
 <script type="text/javascript">
 
     $("#takePartModal").on("hidden.bs.modal", function () {
-        $("#takePartForm .takepart_header").text("Заявка на участие");
-        $("#takePartForm .takepart_descrip").html("Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня<br />для обсуждения деталей путешествия");
+        $("#takePartForm .takepart_header").text("Интересуетесь приключениями?");
+        $("#takePartForm .takepart_descrip").html("Оставьте ваши данные и будьте в курсе ближайших путешествий, акций и скидок");
         $("#takePartForm .modal-body").removeClass("hidden");
         $("#takePartForm .modal-footer input").removeClass("hidden");
         $("#takePartForm .modal-footer button").addClass("hidden");
@@ -233,7 +234,7 @@
                 name: $("#takePartForm #name").val(),
                 phone: $("#takePartForm #phone").val(),
                 mail: $("#takePartForm #mail").val(),
-                tourname: $("#Tour_Id").val()
+                tourname: $("#takePartForm #Tour_Id").val()
             },
             success: function (data) {
                     $("#errorMsg").addClass("hidden");

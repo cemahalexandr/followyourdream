@@ -16,16 +16,16 @@
                 <div class="footer-sotial">
                     <h4>Мы в соц.сетях</h4>
                     <ul>
-                        <li class="footer-sotial__facebook"><a href=""><img src="img/sotial-facebook.png" alt=""></a></li>
-                        <li class="footer-sotial__instagram"><a href=""><img src="img/sotial-instargam.png" alt=""></a></li>
+                        <li class="footer-sotial__facebook"><a href="https://www.facebook.com/FollowYourDREAM2015" target="_blank"><img src="img/sotial-facebook.png" alt=""></a></li>
+                        <li class="footer-sotial__instagram"><a href="https://www.instagram.com/follow_your_dream_kiev" target="_blank"><img src="img/sotial-instargam.png" alt=""></a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="footer-phones">
                     <ul>
-                        <li><a href="tel:+38 067 850 21 07">+38 067 850 21 07</a></li>
-                        <li><a href="tel:+38  044 360 53 28">+38  044 360 53 28</a></li>
+                        <li><a href="tel:+380678502107">+38 067 850 21 07</a></li>
+                        <li><a href="tel:+380443605328">+38 044 360 53 28</a></li>
                     </ul>
                 </div>
             </div>
