@@ -1,0 +1,693 @@
+﻿br {
+    clear: both;
+}
+
+.tour_block {
+    padding-bottom: 40px;
+}
+
+.tour_title {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 44pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    /*letter-spacing: 15px;*/
+    margin-top: 75px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.cover_title {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 44pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.tour_descrip {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 32pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    white-space: pre-wrap;    
+}
+
+.tour_descrip_data {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 32pt;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    white-space: pre-wrap;    
+    color: #ffd343;
+}
+
+.btn_play {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+@media(max-width: 480px) {
+    .btn_play {
+        width: 120px;
+        height: 120px;
+        margin: 25px auto;
+    }
+}
+
+.btn_play div {
+    background-image: url("../images/trip/button_round.png");
+    width: inherit;
+    height: inherit;
+    opacity: 0.5;
+    transition: ease 0.5s;
+    -o-transition: ease 0.5s;
+    -webkit-transition: ease 0.5s;
+    -moz-transition: ease 0.5s;
+    background-size: contain;
+}
+
+.btn_play img {    
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+}
+
+.btn_play:hover div {
+    opacity: 1;
+}
+
+.forvideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: black;
+    z-index: 2000;
+}
+
+.forvideo span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    font-size: 20pt;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.forvideo video {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.title44gray {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 44pt;
+    font-weight: bold;
+    color: #ed1c24;
+    text-align: center;
+    margin: 40px 0px;
+    white-space: pre-wrap;
+} 
+
+@media (max-width: 480px) {
+    .title44gray {
+        font-size: 26pt;
+    }
+}
+
+.title33gray {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 33pt;
+    font-weight: bold;
+    color: #404040;
+    text-align: center;
+    margin: 40px 0px;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 480px) {
+    .title33gray {
+        font-size: 22pt;
+    }
+}
+
+.imp_name {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 22pt;
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 50px;    
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 1500px) {
+    .imp_name {
+        margin-top: 320px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 2500px) {
+    .imp_name {
+        margin-top: 350px;
+        margin-bottom: 70px;
+    }
+}
+
+.btn_play_sm {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -85px;
+    width: 170px;
+    height: 170px;
+    cursor: pointer;
+}
+
+.btn_play_sm div {
+    background-image: url("../images/trip/button_round_small.png");
+    width: 170px;
+    height: 170px;
+    opacity: 0.5;
+    transition: ease 0.5s;
+    -o-transition: ease 0.5s;
+    -webkit-transition: ease 0.5s;
+    -moz-transition: ease 0.5s;
+}
+
+.btn_play_sm img {    
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn_play_sm:hover div {
+    opacity: 1;
+}
+
+.title22gray {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 22pt;
+    font-weight: bold;
+    color: #404040;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+@media (max-width: 480px) {
+    .title22gray {
+        font-size: 16pt;
+    }
+}
+
+.input_getprogram {
+    border-radius: 2px;
+    font-family: PTSansRegular, sans-serif;
+    font-size: 12pt;
+}
+
+.btn_getprogram {
+    background-color: #ed1c24;
+    color: white;
+    font-family: BebasRegular, sans-serif;
+    font-size: 18pt;
+    width: 100%;
+    border-radius: 2px;
+    border: 3px solid #ed1c24;
+}
+
+.btn_getprogram:hover {
+    background-color: white;
+    color: #ed1c24;
+}
+
+
+.tour_section {
+    margin-top: 40px;
+}
+
+.section_header {    
+    height: 2px; 
+    background-color: #ed1c24; 
+    text-align: center;
+}
+
+.section_header span {    
+    font-family: BebasRegular, sans-serif;
+    font-size: 28pt;
+    font-weight: bold;
+    color: #ed1c24;
+    background-color: white; 
+    position: relative; 
+    top: -0.7em;
+    padding: 0px 20px;
+}
+
+.section_title {   
+    font-family: PTSansRegular, sans-serif;
+    font-size: 33pt;
+    font-weight: bold;
+    color: #404040;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.section_title2 {   
+    font-family: PTSansRegular, sans-serif;
+    font-size: 33pt;
+    font-weight: bold;
+    color: #404040;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section_descrip {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 33pt;
+    font-weight: bold;
+    color: #ed1c24;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    white-space: pre-wrap;
+}
+
+
+.block_title {   
+    font-family: PTSansRegular, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #404040;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.block_descrip {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 14pt;
+    color: #404040;
+    white-space: pre-wrap;
+}
+
+.block_img {
+    width: 100%;
+}
+
+.btn_block {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.block_title img {
+    width: 40px;
+    margin-right: 15px;
+}
+
+.cover_block {
+    background-size: cover;
+    padding-top: 0px;
+}
+
+.container750 {
+    width: 100%;
+}
+
+@media(max-width:768px) {
+    .container750 {
+        width: 750px;
+    }
+}
+
+@media (max-width:480px) {
+    .container750 {
+        width: 100%;
+    }
+}
+
+
+
+.cover_opacity_block {
+    background-color: rgba(64, 64, 64, 0.2);
+}
+
+.tour_section .cover_block {
+    margin-top: 40px;
+}
+
+.cover_line {
+    background-image: url(../images/trip/line_center.png);
+    background-repeat: repeat-x;
+    height: 70px;
+}
+
+.cover_title {
+   font-family: PTSansRegular, sans-serif;
+    font-size: 44pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.cover_descrip {    
+    font-family: PTSansRegular, sans-serif;
+    font-size: 25pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+}
+
+.gallery_preview {
+    padding: 5px;
+}
+
+@media (max-width: 480px){
+    .section_title, .section_title2, .tour_title, .cover_title {
+        font-size: 26pt!important;
+    }
+    .section_descrip, .tour_descrip, .tour_descrip_data, .cover_descrip {
+        font-size: 16pt!important;
+    }
+    .tour_btn_takepart_white, .tour_btn_takepart_orange  {
+        font-size: 20px!important;
+    }
+    .tour_title {
+        margin-top: 30px;
+    }
+}
+
+
+/* ТРАНСПОРТ */
+
+
+.schedule_block {
+    font-family: PTSansRegular, sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.schedule_day {    
+    font-size: 44pt;
+    margin: 0;
+    line-height: 30pt;
+}
+
+.schedule_month {
+    font-size: 25pt;
+}
+
+@media (max-width: 480px) {
+    .schedule_day {    
+        font-size: 30pt;
+        line-height: 21pt;
+    }
+
+    .schedule_month {
+        font-size: 17pt;
+    }
+}
+
+
+
+/* ПРОГРАМА */
+
+.tour_excur {
+    margin-bottom: 20px;
+}
+
+.tour_excur_title {    
+    font-family: PTSansRegular, sans-serif;
+    font-size: 17pt;
+    font-weight: bold;
+    color: #404040;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@media (max-width: 480px) {
+    .tour_excur_title {
+        font-size: 15pt;
+    }
+}
+
+.tour_excur_title img {
+    height: 40px;
+    margin-right: 15px;
+    margin-top: -5px;
+}
+
+.tour_excur_day {
+    /*color: #ed1c24;*/
+    border-right: 2px solid #BFBFBF;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.tour_excur_title2 {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 13pt;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #BFBFBF;
+}
+
+.tour_excur_descrip {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 13pt;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: pre-wrap;
+}
+
+/* СТОИМОСТЬ */
+
+.price_full {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 44pt;
+    color: #404040;
+    text-align: center;
+    font-weight: bold;
+}
+
+.price_discount {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 33pt;
+    color: #404040;
+    text-align: center;
+    font-weight: bold;
+}
+
+del {
+    display:inline-block; /* запрещает перенос текста на следующую строку */
+    text-decoration:none;
+    position:relative;
+    padding: 10px;
+}
+
+del.cross:before {
+    content:'';
+    position:absolute;
+    display:block;
+    width:auto;
+    height:auto;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background: rgba(0,0,0,0) url(../images/trip/cross.svg) no-repeat;
+    background-size:100% 100%; /* растягивает фон на всю ширину и высоту блока */
+}
+
+
+/* ОТЗЫВЫ */
+
+.tour_review {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+    .tour_review_right {
+        float: right;
+    }
+}
+
+
+/* КОНТАКТЫ */
+
+.contact_city {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 24pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact_address {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #404040;
+}
+
+
+.white {
+  color: #fff;
+}
+
+
+/* ФОРМА */
+
+
+.btn_submitform {
+    font-family: PTSansRegular, sans-serif;
+    background-color: rgba(255,255,255,0);
+    padding: 5px 25px;
+    border: solid 2px #ed1c24;
+    border-radius: 5px;
+    color: #ed1c24;
+    font-size: 20pt;
+    text-transform: uppercase;
+}
+
+.btn_submitform:hover {
+    border: solid 2px #ed1c24;
+    background-color: #ed1c24;
+    color: white;
+}
+
+.btn_submitform:active {
+    outline: none !important;
+}
+
+.takepart_header {
+    font-family: BebasRegular, sans-serif;
+    color: #ed1c24;
+    font-size: 24pt;
+    text-align: center;
+}
+
+.takepart_descrip {
+    font-family: PTSansRegular, sans-serif;
+    color: #404040;
+    font-size: 16pt;
+    text-align: center;
+    font-weight: 400;
+}
+
+.takepart_input {
+    font-family: PTSansRegular, sans-serif;
+    color: #404040;
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+@media (max-width: 480px) {
+    .takepart_header {
+        font-size: 18pt;
+    }
+
+    .takepart_descrip {
+        font-size: 12pt;
+
+    }
+
+    .takepart_input {
+        font-size: 12pt;
+    }
+    .btn_submitform {
+        font-size: 14pt;
+    }
+}
+
+@media (min-width: 768px) {
+    .row-centered {
+        text-align: center;
+    }
+
+    .col-centered {
+        display: inline-block;
+        float: none;
+        /* inline-block space fix */
+        margin-right: -4px;
+    }
+}
+
+.social_tfooter a {
+    margin-right: 30px;
+}
+
+.text_tfooter {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #404040;
+    text-align: center;
+}
+
+.tour_btn_takepart_blue {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 16pt;
+    text-transform: uppercase;
+    border: solid 2px #3F51B5;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0);
+    color: #3F51B5;
+    padding: 5px 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.tour_btn_takepart_blue:hover {
+    background-color: #3F51B5;
+    border: solid 2px #3F51B5;
+    color: white;
+    text-decoration: none;
+}
+
+.tour_btn_takepart_blue:active {
+    outline: none !important;
+}
+
+.tour_btn_witout_marginbottom {
+    margin-bottom: 0px!important;
+}
+
+.text-align-left{
+        text-align: left;
+}
