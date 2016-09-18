@@ -125,58 +125,61 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
                         <div class="upcoming-event__item-img-wrapper">
-                            <img src="img/arctic/2.jpg" alt="">
+                          <img src="img/upcoming-event__img-3.jpg" alt="">
                         </div>
                         <div class="upcoming-event__item-hover-substrate"></div>
                         <div class="upcoming-event__item-hover">
-                            <ul>
-                                <li class="upcoming-event__item-hover__place">ШПИЦБЕРГЕН. В поисках Северного Сияния</li>
-                                <li class="upcoming-event__item-hover__date">02.02-10.02.2017</li>
-                                <li class="upcoming-event__item-hover__money">1450 euro</li>
-                            </ul>
-                            <div class="upcoming-event__item-hover_btn">
-                                <a href="#" class="button yellow">
-                                    <button>Подробнее</button>
-                                </a>
-                            </div>
+                          <ul>
+                            <li class="upcoming-event__item-hover__place">Шпицберген – в поисках Северного Сияния</li>
+                            <li class="upcoming-event__item-hover__date">11-17 февраля 2017</li>
+                            <li class="upcoming-event__item-hover__money">1780 евро</li>
+                          </ul>
+                          <div class="upcoming-event__item-hover_btn">
+                            <a href="#" class="button yellow">
+                              <button>Подробнее</button>
+                            </a>
+                          </div>
                         </div>
-                    </div>
+                      </div>
+
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item">
                         <div class="upcoming-event__item-img-wrapper">
-                            <img src="img/arctic/11.jpg" alt="">
+                          <img src="img/foto-dly-kalendary-2/Исландия.jpg" alt="">
                         </div>
                         <div class="upcoming-event__item-hover-substrate"></div>
                         <div class="upcoming-event__item-hover">
-                            <ul>
-                                <li class="upcoming-event__item-hover__place">ГРЕНЛАНДИЯ. Must-have приключение 2017</li>
-                                <li class="upcoming-event__item-hover__date">04.07-12.07.2017</li>
-                                <li class="upcoming-event__item-hover__money">1450 euro</li>
-                            </ul>
-                            <div class="upcoming-event__item-hover_btn">
-                                <a href="#" class="button yellow">
-                                    <button>Подробнее</button>
-                                </a>
-                            </div>
+                          <ul>
+                            <li class="upcoming-event__item-hover__place">Исландия джампинг – все самое грандиозное в одном путешествии</li>
+                            <li class="upcoming-event__item-hover__date">14 - 21 мая 2017</li>
+                            <li class="upcoming-event__item-hover__money">1650 евро</li>
+                          </ul>
+                          <div class="upcoming-event__item-hover_btn">
+                            <a href="#" class="button yellow">
+                              <button>Подробнее</button>
+                            </a>
+                          </div>
                         </div>
-                    </div>
+                      </div>
+
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
-                        <div class="upcoming-event__item-img-wrapper">
-                            <img src="img/arctic/6.jpg" alt="">
-                        </div>
-                        <div class="upcoming-event__item-hover-substrate"></div>
-                        <div class="upcoming-event__item-hover">
-                            <ul>
-                                <li class="upcoming-event__item-hover__place">ИСЛАНДИЯ. Невероятные эмоции севера</li>
-                                <li class="upcoming-event__item-hover__date">18.08-28.08.2017</li>
-                                <li class="upcoming-event__item-hover__money">1450 euro</li>
-                            </ul>
-                            <div class="upcoming-event__item-hover_btn">
-                                <a href="#" class="button yellow">
-                                    <button>Подробнее</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="upcoming-event__item-img-wrapper">
+              <img src="img/foto-dly-kalendary-2/Гренландия.jpg" alt="">
+            </div>
+            <div class="upcoming-event__item-hover-substrate"></div>
+            <div class="upcoming-event__item-hover">
+              <ul>
+                <li class="upcoming-event__item-hover__place">Гренландия –  must-have 2017. Приключение всей жизни!</li>
+                <li class="upcoming-event__item-hover__date">27 июня  - 04 июля 2017</li>
+                <li class="upcoming-event__item-hover__money">2050 евро</li>
+              </ul>
+              <div class="upcoming-event__item-hover_btn">
+                <a href="#" class="button yellow">
+                  <button>Подробнее</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          
                 </div>
             </div>
         </section>
@@ -345,7 +348,43 @@
 
 </script>
 
+<script type="text/javascript">
 
+    $("#takePartModalsocial").on("hidden.bs.modal", function () {
+        $("#takePartFormsocial .takepart_header").text("Присоединиться к сообществу");
+        $("#takePartFormsocial .takepart_descrip").html("Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня");
+        $("#takePartFormsocial .modal-body").removeClass("hidden");
+        $("#takePartFormsocial .modal-footer input").removeClass("hidden");
+        $("#takePartFormsocial .modal-footer button").addClass("hidden");
+        $("#takePartFormsocial #name").val("");
+        $("#takePartFormsocial #phone").val("");
+        $("#takePartFormsocial #mail").val("");
+    })
+
+    $("#takePartFormsocial").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "zayavkasocial.php",
+            type: "POST",
+            data: {
+                name: $("#takePartFormsocial #name").val(),
+                phone: $("#takePartFormsocial #phone").val(),
+                mail: $("#takePartFormsocial #mail").val(),
+                tourname: $("#takePartFormsocial #Tour_Id").val()
+            },
+            success: function (data) {
+                    $("#errorMsg").addClass("hidden");
+                    //$("#takePartModalsocial").modal("hide");
+                    $("#takePartFormsocial .takepart_header").text("Благодарим за заявку!");
+                    $("#takePartFormsocial .takepart_descrip").text("Мы перезвоним Вам в течение рабочего дня.");
+                    $("#takePartFormsocial .modal-body").addClass("hidden");
+                    $("#takePartFormsocial .modal-footer input").addClass("hidden");
+                    $("#takePartFormsocial .modal-footer button").removeClass("hidden");
+            }
+        });
+    });
+
+</script>   
 
 </body>
 </html>

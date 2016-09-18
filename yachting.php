@@ -143,22 +143,22 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
                         <div class="upcoming-event__item-img-wrapper">
-                            <img src="img/yachting/sotavento-beach-fuerteventura.jpg" alt="">
+                          <img src="img/foto-dly-kalendary-2/апрель.jpg" alt="">
                         </div>
                         <div class="upcoming-event__item-hover-substrate"></div>
                         <div class="upcoming-event__item-hover">
-                            <ul>
-                                <li class="upcoming-event__item-hover__place">Канары NEW YEAR 2017 – архипелаг контрастов и серфинга</li>
-                                <li class="upcoming-event__item-hover__date">30.12.2016 - 08.01.2017</li>
-                                <li class="upcoming-event__item-hover__money">1450 euro</li>
-                            </ul>
-                            <div class="upcoming-event__item-hover_btn">
-                                <a href="#" class="button yellow">
-                                    <button>Подробнее</button>
-                                </a>
-                            </div>
+                          <ul>
+                            <li class="upcoming-event__item-hover__place">Греция – ионические острова и средиземноморская кухня</li>
+                            <li class="upcoming-event__item-hover__date">28 апреля – 6  мая 2017</li>
+                            <li class="upcoming-event__item-hover__money">950 евро</li>
+                          </ul>
+                          <div class="upcoming-event__item-hover_btn">
+                            <a href="#" class="button yellow">
+                              <button>Подробнее</button>
+                            </a>
+                          </div>
                         </div>
-                    </div>
+                      </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item">
                         <div class="upcoming-event__item-img-wrapper">
                             <img src="img/yachting/bvi_yacht_charter_72dpi.jpg" alt="">
@@ -315,6 +315,44 @@
     });
 
 </script>
+
+<script type="text/javascript">
+
+    $("#takePartModalsocial").on("hidden.bs.modal", function () {
+        $("#takePartFormsocial .takepart_header").text("Присоединиться к сообществу");
+        $("#takePartFormsocial .takepart_descrip").html("Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня");
+        $("#takePartFormsocial .modal-body").removeClass("hidden");
+        $("#takePartFormsocial .modal-footer input").removeClass("hidden");
+        $("#takePartFormsocial .modal-footer button").addClass("hidden");
+        $("#takePartFormsocial #name").val("");
+        $("#takePartFormsocial #phone").val("");
+        $("#takePartFormsocial #mail").val("");
+    })
+
+    $("#takePartFormsocial").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "zayavkasocial.php",
+            type: "POST",
+            data: {
+                name: $("#takePartFormsocial #name").val(),
+                phone: $("#takePartFormsocial #phone").val(),
+                mail: $("#takePartFormsocial #mail").val(),
+                tourname: $("#takePartFormsocial #Tour_Id").val()
+            },
+            success: function (data) {
+                    $("#errorMsg").addClass("hidden");
+                    //$("#takePartModalsocial").modal("hide");
+                    $("#takePartFormsocial .takepart_header").text("Благодарим за заявку!");
+                    $("#takePartFormsocial .takepart_descrip").text("Мы перезвоним Вам в течение рабочего дня.");
+                    $("#takePartFormsocial .modal-body").addClass("hidden");
+                    $("#takePartFormsocial .modal-footer input").addClass("hidden");
+                    $("#takePartFormsocial .modal-footer button").removeClass("hidden");
+            }
+        });
+    });
+
+</script>   
 
 </body>
 </html>

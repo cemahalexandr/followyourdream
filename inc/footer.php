@@ -72,6 +72,7 @@
 </div>
 
 
+
 <script type="text/javascript">
 
     var videos = document.getElementsByTagName('video');
@@ -214,8 +215,6 @@
     }
 
 </script>    
-
-
 
 
 
