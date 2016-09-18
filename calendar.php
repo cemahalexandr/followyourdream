@@ -806,15 +806,16 @@
                                 <div class="modal-footer__orginizer-img-wrapper">
                                     <img src="img/review__human-2.png" alt="">
                                 </div>
-                                <h4>Елена Келыш</h4>
-                                <h5>Организатор и клиент-менеджер</h5>
+                                <h4>Анна Скибун</h4>
+                                <h5>Организатор</h5>
                                 <ul class="modal-footer__orginizer-contacts">
-                                    <li class="contact-fb"><a href="">elena.stiit</a></li>
-                                    <li class="contact-skype"><a href="">skype</a></li>
-                                    <li class="contact-mail"><a href="">mail@mail.ru</a></li>
+                                    <li class="contact-fb"><a href="https://www.facebook.com/anna.skibun" target="_blank">anna.skibun</a></li>
+                                    <li class="contact-skype"><a href="skype:anna_skibun?chat">skype</a></li>
+                                    <li class="footer-messager__viber"><a href="viber://add?number=+380678502107">followyourdream</a></li>
+                                    <li class="contact-mail"><a href="mailto:info@dreamlifeexpeditions.com">info@dreamlifeexpeditions.com</a></li>
                                     <li class="contact-phones">
-                                        <a href="">+38 093 449 78 52</a>
-                                        <a href="">+38 093 449 78 52</a>
+                                    <a href="tel:+380678502107">+38 067 850 21 07</a>
+                                    
                                     </li>
                                 </ul>
                             </li>
@@ -822,15 +823,16 @@
                                 <div class="modal-footer__orginizer-img-wrapper">
                                     <img src="img/review__human-2.png" alt="">
                                 </div>
-                                <h4>Елена Келыш</h4>
-                                <h5>Организатор и клиент-менеджер</h5>
+                                <h4>Владислав Бондарь</h4>
+                                <h5>Клиент-менеджер</h5>
                                 <ul class="modal-footer__orginizer-contacts">
-                                    <li class="contact-fb"><a href="">elena.stiit</a></li>
-                                    <li class="contact-skype"><a href="">skype</a></li>
-                                    <li class="contact-mail"><a href="">mail@mail.ru</a></li>
+                                    <li class="contact-fb"><a href="https://www.facebook.com/bondar.vlad" target="_blank">bondar.vlad</a></li>
+                                    <li class="contact-skype"><a href="skype:anna_skibun?chat">skype</a></li>
+                                    <li class="footer-messager__viber"><a href="viber://add?number=+380678502107">followyourdream</a></li>
+                                    <li class="contact-mail"><a href="mailto:info@dreamlifeexpeditions.com">info@dreamlifeexpeditions.com</a></li>
                                     <li class="contact-phones">
-                                        <a href="">+38 093 449 78 52</a>
-                                        <a href="">+38 093 449 78 52</a>
+                                    <a href="tel:+380443605328">+38 044 360 53 28</a>
+                                    
                                     </li>
                                 </ul>
                             </li>
@@ -1486,15 +1488,16 @@
                                 <div class="modal-footer__orginizer-img-wrapper">
                                     <img src="img/review__human-2.png" alt="">
                                 </div>
-                                <h4>Елена Келыш</h4>
-                                <h5>Организатор и клиент-менеджер</h5>
+                                <h4>Анна Скибун</h4>
+                                <h5>Организатор</h5>
                                 <ul class="modal-footer__orginizer-contacts">
-                                    <li class="contact-fb"><a href="">elena.stiit</a></li>
-                                    <li class="contact-skype"><a href="">skype</a></li>
-                                    <li class="contact-mail"><a href="">mail@mail.ru</a></li>
+                                    <li class="contact-fb"><a href="https://www.facebook.com/anna.skibun" target="_blank">anna.skibun</a></li>
+                                    <li class="contact-skype"><a href="skype:anna_skibun?chat">skype</a></li>
+                                    <li class="footer-messager__viber"><a href="viber://add?number=+380678502107">followyourdream</a></li>
+                                    <li class="contact-mail"><a href="mailto:info@dreamlifeexpeditions.com">info@dreamlifeexpeditions.com</a></li>
                                     <li class="contact-phones">
-                                        <a href="">+38 093 449 78 52</a>
-                                        <a href="">+38 093 449 78 52</a>
+                                    <a href="tel:+380678502107">+38 067 850 21 07</a>
+                                    
                                     </li>
                                 </ul>
                             </li>
@@ -1502,15 +1505,16 @@
                                 <div class="modal-footer__orginizer-img-wrapper">
                                     <img src="img/review__human-2.png" alt="">
                                 </div>
-                                <h4>Елена Келыш</h4>
-                                <h5>Организатор и клиент-менеджер</h5>
+                                <h4>Владислав Бондарь</h4>
+                                <h5>Клиент-менеджер</h5>
                                 <ul class="modal-footer__orginizer-contacts">
-                                    <li class="contact-fb"><a href="">elena.stiit</a></li>
-                                    <li class="contact-skype"><a href="">skype</a></li>
-                                    <li class="contact-mail"><a href="">mail@mail.ru</a></li>
+                                    <li class="contact-fb"><a href="https://www.facebook.com/bondar.vlad" target="_blank">bondar.vlad</a></li>
+                                    <li class="contact-skype"><a href="skype:anna_skibun?chat">skype</a></li>
+                                    <li class="footer-messager__viber"><a href="viber://add?number=+380678502107">followyourdream</a></li>
+                                    <li class="contact-mail"><a href="mailto:info@dreamlifeexpeditions.com">info@dreamlifeexpeditions.com</a></li>
                                     <li class="contact-phones">
-                                        <a href="">+38 093 449 78 52</a>
-                                        <a href="">+38 093 449 78 52</a>
+                                    <a href="tel:+380443605328">+38 044 360 53 28</a>
+                                    
                                     </li>
                                 </ul>
                             </li>
