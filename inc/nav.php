@@ -12,12 +12,14 @@
       </a>
     </div>
    <div id="navbar" class="navbar-collapse collapse">
+
+
       <ul class="nav navbar-nav navbar-left">
         <li class="dropdown">
           <a href="#travels" style="display: inline-block;">
             Путешествия 
           </a>
-          <a href="" style="display: inline-block;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <a href="" style="display: inline-block;padding: 0 15px;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="caret " ></span>
           </a>
           <ul class="dropdown-menu">
@@ -29,9 +31,9 @@
           </ul>
         </li>
         <li><a href="#comunity">Сообщество</a></li>
-        <li><a href="#idea">Идея</a></li>
         <li><a href="#upcoming-event">Ближайшие экспедиции</a></li>
         <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contacts">Контакты</a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right ul-nav-sotial">

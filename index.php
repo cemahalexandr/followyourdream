@@ -158,7 +158,7 @@
                 <li class="upcoming-event__item-hover__money">1799 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
-                <a href="#" class="button yellow">
+                <a href="calendar.php#tay-kambodga" class="button yellow">
                   <button>Подробнее</button>
                 </a>
               </div>
@@ -177,7 +177,7 @@
                 <li class="upcoming-event__item-hover__money">1780 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
-                <a href="#" class="button yellow">
+                <a href="calendar.php#shpicbergen-severnoe" class="button yellow">
                   <button>Подробнее</button>
                 </a>
               </div>
@@ -196,7 +196,7 @@
                 <li class="upcoming-event__item-hover__money">1450 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
-                <a href="#" class="button yellow">
+                <a href="calendar.php#ekspidiciya-marokko" class="button yellow">
                   <button>Подробнее</button>
                 </a>
               </div>
@@ -215,7 +215,7 @@
                 <li class="upcoming-event__item-hover__money">950 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
-                <a href="#" class="button yellow">
+                <a href="calendar.php#greece-modal" class="button yellow">
                   <button>Подробнее</button>
                 </a>
               </div>
@@ -229,12 +229,12 @@
             <div class="upcoming-event__item-hover-substrate"></div>
             <div class="upcoming-event__item-hover">
               <ul>
-                <li class="upcoming-event__item-hover__place">Исландия джампинг – все самое грандиозное в одном путешествии</li>
+                <li class="upcoming-event__item-hover__place">Исландия джиппинг – все самое грандиозное в одном путешествии</li>
                 <li class="upcoming-event__item-hover__date">14 - 21 мая 2017</li>
                 <li class="upcoming-event__item-hover__money">1650 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
-                <a href="#" class="button yellow">
+                <a href="calendar.php#islandiya-in-gip" class="button yellow">
                   <button>Подробнее</button>
                 </a>
               </div>
@@ -253,7 +253,7 @@
                 <li class="upcoming-event__item-hover__money">2050 евро</li>
               </ul>
               <div class="upcoming-event__item-hover_btn">
-                <a href="#" class="button yellow">
+                <a href="calendar.php#grenlandiya-must-have" class="button yellow">
                   <button>Подробнее</button>
                 </a>
               </div>

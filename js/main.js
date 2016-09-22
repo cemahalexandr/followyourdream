@@ -86,9 +86,9 @@ $(document).ready(function() {
 
     /*--------*/
     // img on modal to bg
-    var calendarModalHeaderBg = $('#calendar-modal .modal-header-bg-img').attr('src');
+    //var calendarModalHeaderBg = $('#calendar-modal .modal-header-bg-img').attr('src');
     // local
-    $('.calendar-modal .modal-header').css('background-image', "url(), url(../" + calendarModalHeaderBg + ")");
+    //$('.calendar-modal .modal-header').css('background-image', "url(), url(../" + calendarModalHeaderBg + ")");
     //server
     // $('#calendar-modal .modal-header').css('background-image', "url(../followyourdream/img/modal-header-bg.png), url(../" + calendarModalHeaderBg + ")");
     // ../img/modal-header-bg.png

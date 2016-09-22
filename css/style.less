@@ -288,7 +288,7 @@ nav.navbar{
   }
   ul.navbar-nav{
     li{
-      margin: 5px 15px;
+      margin: 5px 5px;
       a{
         padding: 0 15px;
         line-height: 40px;
@@ -1030,7 +1030,7 @@ footer{
   nav.navbar{
     .navbar-brand{
       height: auto;
-      padding: 5px 15px;
+      padding: 5px 5px;
       img{
         height: auto;
         width: 200px;
@@ -1071,7 +1071,7 @@ footer{
   nav.navbar{
     .navbar-brand{
       height: auto;
-      padding: 5px 15px;
+      padding: 5px 5px;
       img{
         height: auto;
         width: 200px;
@@ -1261,7 +1261,7 @@ footer{
   nav.navbar{
     .navbar-brand{
       height: auto;
-      padding: 5px 15px;
+      padding: 5px 5px;
       img{
         height: auto;
         width: 200px;
@@ -1272,6 +1272,7 @@ footer{
       li{
         margin: 5px 5px;
       }
+      li{a{padding: 0 4px;}}
     }
     ul.ul-nav-sotial{
       padding-right: 10px;
@@ -2333,10 +2334,9 @@ footer{
 @media (max-width: 1980px){
   .template-page{
     header{
-      height: 550px;
-      div.header-button{
-        bottom: 40px;
-      }
+      height: 695px;
+      div.header-button{bottom: 40px;}
+      div.template-header-text{top: 30%;}
     }
   }
 }
@@ -2402,6 +2402,14 @@ footer{
   }
 }
 
+
+@media (max-width: 480px){
+  .template-page{
+    header{
+      div.template-header-text{top: 15%;}
+    }
+  }
+}
 
 
 /*upcoming event backup------------------------------------------------------------------*/
