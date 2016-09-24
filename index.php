@@ -265,10 +265,8 @@
       <div class="container upcoming-event__bottom">
         <div class="row">
           <div class="col-lg-10 col-lg-push-1">
-
-             <a class="button"> <button class="button tour_btn_takepart_orange tour_btn_witout_marginbottom" onclick="openTakePartModal()">хочу получать рассылку</button> </a>
-
-            <p>Никакого спама. Только интересная информация о новых маршрутах, невероятных экспедициях и путешествиях.  </p>
+              <a class="button"> <button class="index_modal_subscribe button tour_btn_takepart_orange tour_btn_witout_marginbottom">хочу получать рассылку</button> </a>
+              <p>Никакого спама. Только интересная информация о новых маршрутах, невероятных экспедициях и путешествиях.  </p>
           </div>
         </div>
       </div>
@@ -332,124 +330,12 @@
         </div>
       </div>
     </section>
+
+
+    
     <?php include_once "inc/footer.php";?>
+    <?php include_once "inc/modal-index.php";?>
     <?php include_once "inc/scripts.php";?>
 
-<div id="takePartModal" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form id="takePartForm">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title takepart_header">Заявка на получение рассылки</h4>
-                    <p class="takepart_descrip">Оставьте свои контактные данные<br />и мы будем сообщать вам самое <br />интересное в мире путешествий</p>
-                    <div id="errorMsg" class="alert alert-danger hidden ptsans">Произошла ошибка, попробуйте еще раз</div>
-                </div>
-                <div class="modal-body">
-                    <input type="hidden" id="analytic"/>
-                    <input type="hidden" id="Tour_Id" value="ПОДПИСАЛИСЬ НА РАССЫЛКУ!" />
-                    <div class="form-group text-align-left">
-                        <label for="name" class="takepart_input">Ваше имя и фамилия</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="form-group text-align-left">
-                        <label for="phone" class="takepart_input">Ваш телефон</label>
-                        <input type="tel" class="form-control" id="phone" required>
-                    </div>
-                    <div class="form-group text-align-left">
-                        <label for="mail" class="takepart_input">Ваша почта</label>
-                        <input type="email" class="form-control" id="mail" required>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="text-center">
-                        <input type="submit" class="btn_submitform" value="Получать рассылку" />
-                        <button type="button" class="btn_submitform hidden" data-dismiss="modal" aria-label="Close">Закрыть</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-
-<script type="text/javascript">
-
-    $("#takePartModal").on("hidden.bs.modal", function () {
-        $("#takePartForm .takepart_header").text("Заявка на получение рассылки");
-        $("#takePartForm .takepart_descrip").html("Оставьте свои контактные данные<br />и мы будем сообщать вам самое интересное в мире путешествий");
-        $("#takePartForm .modal-body").removeClass("hidden");
-        $("#takePartForm .modal-footer input").removeClass("hidden");
-        $("#takePartForm .modal-footer button").addClass("hidden");
-        $("#takePartForm #name").val("");
-        $("#takePartForm #phone").val("");
-        $("#takePartForm #mail").val("");
-    })
-
-    $("#takePartForm").on("submit", function (e) {
-        e.preventDefault();
-        $.ajax({
-            url: "zayavka.php",
-            type: "POST",
-            data: {
-                name: $("#takePartForm #name").val(),
-                phone: $("#takePartForm #phone").val(),
-                mail: $("#takePartForm #mail").val(),
-                tourname: $("#takePartForm #Tour_Id").val()
-            },
-            success: function (data) {
-                    $("#errorMsg").addClass("hidden");
-                    //$("#takePartModal").modal("hide");
-                    $("#takePartForm .takepart_header").text("ПОЗДРАВЛЯЕМ!");
-                    $("#takePartForm .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
-                    $("#takePartForm .modal-body").addClass("hidden");
-                    $("#takePartForm .modal-footer input").addClass("hidden");
-                    $("#takePartForm .modal-footer button").removeClass("hidden");
-            }
-        });
-    });
-
-</script>
-
-<script type="text/javascript">
-
-    $("#takePartModalsocial").on("hidden.bs.modal", function () {
-        $("#takePartFormsocial .takepart_header").text("Присоединиться к сообществу");
-        $("#takePartFormsocial .takepart_descrip").html("Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня");
-        $("#takePartFormsocial .modal-body").removeClass("hidden");
-        $("#takePartFormsocial .modal-footer input").removeClass("hidden");
-        $("#takePartFormsocial .modal-footer button").addClass("hidden");
-        $("#takePartFormsocial #name").val("");
-        $("#takePartFormsocial #phone").val("");
-        $("#takePartFormsocial #mail").val("");
-    })
-
-    $("#takePartFormsocial").on("submit", function (e) {
-        e.preventDefault();
-        $.ajax({
-            url: "zayavkasocial.php",
-            type: "POST",
-            data: {
-                name: $("#takePartFormsocial #name").val(),
-                phone: $("#takePartFormsocial #phone").val(),
-                mail: $("#takePartFormsocial #mail").val(),
-                tourname: $("#takePartFormsocial #Tour_Id").val()
-            },
-            success: function (data) {
-                    $("#errorMsg").addClass("hidden");
-                    //$("#takePartModalsocial").modal("hide");
-                    $("#takePartFormsocial .takepart_header").text("Благодарим за заявку!");
-                    $("#takePartFormsocial .takepart_descrip").text("Мы перезвоним Вам в течение рабочего дня.");
-                    $("#takePartFormsocial .modal-body").addClass("hidden");
-                    $("#takePartFormsocial .modal-footer input").addClass("hidden");
-                    $("#takePartFormsocial .modal-footer button").removeClass("hidden");
-            }
-        });
-    });
-
-</script>	
-
-
-
-  </body>
+</body>
 </html>

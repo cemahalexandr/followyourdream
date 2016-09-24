@@ -25,7 +25,8 @@
 	font-size: 26px;}
 	h4{
 	font-size: 22px;}
-  } }
+  }
+}
 
 
 @base-color-red: #ec1928;
@@ -97,7 +98,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
+*{
+  &:hover,
+  &:focus{
+    outline: 0;
+  }
+}
 body{
   opacity: 0;
   display: block;

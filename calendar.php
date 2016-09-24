@@ -178,13 +178,8 @@
     <div class="modal-dialog template-page" role="document">
         <div class="modal-content">
             <div class="modal-header" style="padding-bottom: 15px;">
-                <!--                    <div class="modal-header-close">-->
-                <!--                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
-                <!--                    </div>-->
                 <img src="img/01.jpg" alt="" class="modal-header-bg-img">
-                <div class="modal-header__content template-header-text"
-                     style="top: 27%;left: 5%;right: 5%;padding: 10% 10% 10%;"
-                ">
+                <div class="modal-header__content template-header-text" style="top: 27%;left: 5%;right: 5%;padding: 10% 10% 10%;"">
                 <h3 class="modal-title modal-header__content-place" id="myModalLabel" style="font-size: 32px;">Тай +
                     Камбоджа</h3>
                 <h4 class="modal-header__content-short-info" style="font-size: 18px;">Дальше только СЕВЕРНЫЙ ПОЛЮС!</h4>
@@ -195,16 +190,8 @@
         </div>
         <section class="arctic-body template-body">
             <div class="modal-body">
-                <!--  <div class="modal-body-top-button">
-                        <a href="" class="button ">
-                            <button>Забронировать</button>
-                        </a>
-                    </div> -->
-
                 <section class="row modal-body__icon-info">
-                    <div
-                        class="col-lg-10 col-lg-push-1 col-md-12 col-md-push-0 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0"
-                        style="border-bottom: 2px dotted #333;padding-bottom: 40px;">
+                    <div class="col-lg-10 col-lg-push-1 col-md-12 col-md-push-0 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0" style="border-bottom: 2px dotted #333;padding-bottom: 40px;">
                         <div class="row modal-body__icon-row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                 <div class="modal-body__icon-info-item">
@@ -235,7 +222,6 @@
                 </section>
                 <h3 class="center first" style="color: #ec1928;margin-left: 50px;margin-right: 50px;font-size: 36px;">В самый неизведанный туристами регион</h3>
                 <div class="col-sm-12 col-xs-12" style="padding: 25px 0;">
-                    <!--  <h4 class="block_title"><img src="images/trip/check_circle.png" />В стоимость включено:</h4>  -->
                     <ul class="arctic-body-shpitsberg-ul" style="padding: 0 50px;">
                         <li>Мы летим за Полярный Круг!</li>
                         <li>
@@ -512,9 +498,6 @@
                                     <input type="email" class="form-control input_getprogram" id="mail"
                                            placeholder="Ваша почта" required="">
                                 </div>
-                                <!-- <div class="modal-body-top-button">
-                <input type="submit" class="btn_submitform button" value="Получить программу">
-            </div> -->
                             </form>
                             <br><br>
                             <div class="modal-body-top-button">
@@ -12873,8 +12856,7 @@
 
 
 
-<!--<div id="takePartModal" class="modal fade" tabindex="-1" role="dialog">-->
-<div id="takePartModal" class="modal">
+<div id="takePartModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <form id="takePartForm">
