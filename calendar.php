@@ -169,11 +169,11 @@
 </div>
 
 
+
 <!-- Modal -->
 <div class="modal fade calendar-modal" id="tay-kambodga" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-header-close-991">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     </div>
     <div class="modal-dialog template-page" role="document">
         <div class="modal-content">
@@ -184,8 +184,7 @@
                     Камбоджа</h3>
                 <h4 class="modal-header__content-short-info" style="font-size: 18px;">Дальше только СЕВЕРНЫЙ ПОЛЮС!</h4>
                 </br>
-                <h4 class="modal-header__content-short-info"
-                    style="font-size: 22px;text-transform: uppercase;color: #f7b32b;">05 - 11 июня 2017<br></h4>
+                <h4 class="modal-header__content-short-info" style="font-size: 22px; text-transform: uppercase; color: #f7b32b;">05 - 11 июня 2017<br></h4>
             </div>
         </div>
         <section class="arctic-body template-body">
@@ -212,15 +211,13 @@
                                 <div class="modal-body__icon-info-item">
                                     <img src="img/modal-icon-money.png" alt="" style="max-width: 100px;">
                                     <h4>СТОИМОСТЬ</h4>
-                                    <p>2090 евро/чел (включая все трансферы и внутренние перелеты) ВАЖНО: в программе
-                                        нет никаких скрытых платежей - во время путешествия включено ВСЁ, кроме
-                                        сувениров и некоторых обедов/ужинов на ваш вкус.</p>
+                                    <p>2090 евро/чел (включая все трансферы и внутренние перелеты) ВАЖНО: в программе нет никаких скрытых платежей - во время путешествия включено ВСЁ, кроме сувениров и некоторых обедов/ужинов на ваш вкус.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <h3 class="center first" style="color: #ec1928;margin-left: 50px;margin-right: 50px;font-size: 36px;">В самый неизведанный туристами регион</h3>
+                <h3 class="center first" style="color: #ec1928; margin-left: 50px; margin-right: 50px; font-size: 36px;">В самый неизведанный туристами регион</h3>
                 <div class="col-sm-12 col-xs-12" style="padding: 25px 0;">
                     <ul class="arctic-body-shpitsberg-ul" style="padding: 0 50px;">
                         <li>Мы летим за Полярный Круг!</li>
@@ -258,10 +255,8 @@
                 </div>
 
                 <div class="modal-body-top-button">
-                    <a class="button">
-                        <button class="button tour_btn_takepart_orange tour_btn_witout_marginbottom"
-                                onclick="openTakePartModal()" style="margin: 10px;">ПРИНЯТЬ УЧАСТИЕ В ЭКСПЕДИЦИИ
-                        </button>
+                    <a class="button calendar_modal_sub" >
+                        <button class="button tour_btn_takepart_orange tour_btn_witout_marginbottom" style="margin: 10px;">ПРИНЯТЬ УЧАСТИЕ В ЭКСПЕДИЦИИ</button>
                     </a>
                 </div>
 
@@ -299,18 +294,9 @@
                     </div>
                 </div>
                 <section class="modal-body__travel-program">
-                    <div class="section_header"
-                         style="height: 2px;background-color: #ed1c24;text-align: center;margin: 35px auto;width: 80%;"><span
-                            style="
-    color: #ed1c24;
-    background-color: white;
-    position: relative;
-    top: -0.7em;
-    padding: 0px 20px;
-    width: 40%;
-    text-align: center;
-    font-size: 28pt;
-">Программа</span></div>
+                    <div class="section_header" style="height: 2px;background-color: #ed1c24;text-align: center;margin: 35px auto;width: 80%;">
+                        <span style="color: #ed1c24;background-color: white;position: relative;top: -0.7em;padding: 0px 20px;width: 40%;text-align: center;font-size: 28pt;">Программа</span>
+                    </div>
                     <h2 style="text-align: center;color: #404040;font-size: 14pt;text-transform: none;">Даже если вы
                         никогда не мечтали попасть на ШПИЦБЕРГЕН - рискните и это будет одним из самых запоминающихся и
                         НЕОБЫЧНЫХ ПУТЕШЕСТВИЙ в вашей жизни!</h2>
@@ -487,25 +473,19 @@
                             <form id="getProgramForm" _lpchecked="1">
                                 <input type="hidden" id="tourname" value="Шпицберген">
                                 <div class="form-group">
-                                    <input type="text" class="form-control input_getprogram" id="name"
-                                           placeholder="Ваше имя и фамилия" required="">
+                                    <input type="text" class="form-control input_getprogram" id="name" placeholder="Ваше имя и фамилия" required="">
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control input_getprogram" id="phone"
-                                           placeholder="Ваш телефон" required="">
+                                    <input type="tel" class="form-control input_getprogram" id="phone" placeholder="Ваш телефон" required="">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control input_getprogram" id="mail"
-                                           placeholder="Ваша почта" required="">
+                                    <input type="email" class="form-control input_getprogram" id="mail" placeholder="Ваша почта" required="">
                                 </div>
                             </form>
                             <br><br>
                             <div class="modal-body-top-button">
                                 <a href="" class="button ">
-                                    <button type="submit" form="getProgramForm" value="Submit" style="
-    padding: 20px 25px;
-">Получить
-                                    </button>
+                                    <button type="submit" form="getProgramForm" value="Submit" style="padding: 20px 25px;">Получить</button>
                                 </a>
                             </div>
 
@@ -12856,46 +12836,46 @@
 
 
 
-<div id="takePartModal" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form id="takePartForm">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title takepart_header">Заявка на участие</h4>
-                    <p class="takepart_descrip">Оставьте свои контактные данные<br/>и мы свяжемся с Вами в течение
-                        дня<br/>для обсуждения деталей путешествия</p>
-                    <div id="errorMsg" class="alert alert-danger hidden ptsans">Произошла ошибка, попробуйте еще раз
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <input type="hidden" id="analytic"/>
-                    <div class="form-group">
-                        <label for="name" class="takepart_input">Ваше имя и фамилия</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="takepart_input">Ваш телефон</label>
-                        <input type="tel" class="form-control" id="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mail" class="takepart_input">Ваша почта</label>
-                        <input type="email" class="form-control" id="mail" required>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="text-center">
-                        <input type="submit" class="btn_submitform" value="Отправить заявку"/>
-                        <button type="button" class="btn_submitform hidden" data-dismiss="modal" aria-label="Close">
-                            Закрыть
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+<!--<div id="takePartModal" class="modal fade" tabindex="-1" role="dialog">-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <form id="takePartForm">-->
+<!--                <div class="modal-header">-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+<!--                            aria-hidden="true">&times;</span></button>-->
+<!--                    <h4 class="modal-title takepart_header">Заявка на участие</h4>-->
+<!--                    <p class="takepart_descrip">Оставьте свои контактные данные<br/>и мы свяжемся с Вами в течение-->
+<!--                        дня<br/>для обсуждения деталей путешествия</p>-->
+<!--                    <div id="errorMsg" class="alert alert-danger hidden ptsans">Произошла ошибка, попробуйте еще раз-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    <input type="hidden" id="analytic"/>-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="name" class="takepart_input">Ваше имя и фамилия</label>-->
+<!--                        <input type="text" class="form-control" id="name" required>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="phone" class="takepart_input">Ваш телефон</label>-->
+<!--                        <input type="tel" class="form-control" id="phone" required>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="mail" class="takepart_input">Ваша почта</label>-->
+<!--                        <input type="email" class="form-control" id="mail" required>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <div class="text-center">-->
+<!--                        <input type="submit" class="btn_submitform" value="Отправить заявку"/>-->
+<!--                        <button type="button" class="btn_submitform hidden" data-dismiss="modal" aria-label="Close">-->
+<!--                            Закрыть-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <script type="text/javascript">
 
@@ -12909,6 +12889,7 @@
 
 </script>
 
+<?php include_once "inc/modal-index.php"; ?>
 <?php include_once "inc/scripts.php"; ?>
 </body>
 </html>

@@ -84,19 +84,7 @@ $(document).ready(function() {
 
 
 
-    // $(document).on('show.bs.modal', '.modal', function () {
-    //     var zIndex = 1040 + (10 * $('.modal:visible').length);
-    //     $(this).css('z-index', zIndex);
-    //     setTimeout(function() {
-    //         $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
-    //         $('body.body-calendar').addClass('modal-open');
-    //     }, 0);
-    // });
-    // // убираем проблему со скролом
-    // $(document).on('hidden.bs.modal', '.modal', function () {
-    //     $('.modal:visible').length;
-    //     $('body.body-calendar').addClass('modal-open');
-    // });
+
 
 
     /*--------*/
@@ -174,31 +162,25 @@ $(document).ready(function() {
         $("#takePartFormsocial #mail").val("");
     });
 
-    // $("#takePartFormsocial").on("submit", function (e) {
-    //     e.preventDefault();
-    //     $.ajax({
-    //         url: "zayavkasocial.php",
-    //         type: "POST",
-    //         data: {
-    //             name: $("#takePartFormsocial #name").val(),
-    //             phone: $("#takePartFormsocial #phone").val(),
-    //             mail: $("#takePartFormsocial #mail").val(),
-    //             tourname: $("#takePartFormsocial #Tour_Id").val()
-    //         },
-    //         success: function (data) {
-    //             $("#errorMsg").addClass("hidden");
-    //             //$("#takePartModalsocial").modal("hide");
-    //             $("#takePartFormsocial .takepart_header").text("Благодарим за заявку!");
-    //             $("#takePartFormsocial .takepart_descrip").text("Мы перезвоним Вам в течение рабочего дня.");
-    //             $("#takePartFormsocial .modal-body").addClass("hidden");
-    //             $("#takePartFormsocial .modal-footer input").addClass("hidden");
-    //             $("#takePartFormsocial .modal-footer button").removeClass("hidden");
-    //         }
-    //     });
-    // });
 
-
-
+    // CALENDAR --- MODAL
+    $('.calendar_modal_sub').on('click', function () {
+        // alert('test');
+        openTakePartModal();
+    });
+    $(document).on('show.bs.modal' ,'.index_modal' , function () {
+        // alert('test');
+        var zIndex = 1040 + (10 * $('.modal:visible').length);
+        $(this).css('z-index', zIndex);
+        setTimeout(function() {
+            $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+            $('body').addClass('modal-open');
+        }, 0);
+    });
+    $(document).on('hidden.bs.modal', '.modal', function () {
+        $('.modal:visible').length;
+        $('body').addClass('modal-open');
+    });
 
     /*--------SCRIPTS NEW END------------------------------------------*/
 

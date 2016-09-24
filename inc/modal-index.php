@@ -1,5 +1,5 @@
 <!--    modal-subscribe start-->
-<div id="takePartModal" class="modal fade" tabindex="-1" role="dialog">
+<div id="takePartModal" class="index_modal modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <form id="takePartForm">
@@ -40,7 +40,7 @@
 
 
 <!--    modal-sotial start -->
-<div id="takePartModalsocial" class="modal fade" tabindex="-1" role="dialog">
+<div id="takePartModalsocial" class="index_modal modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <form id="takePartFormsocial">
