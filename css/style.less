@@ -105,7 +105,8 @@
   }
 }
 body{
-  opacity: 0;
+  //opacity: 0;
+  opacity: 1;
   display: block;
   font-family: 'rubik-regular', sans-serif;
   background: @base-color-white;
@@ -1018,6 +1019,41 @@ footer{
   }
   .footer-center{
     color: @base-color-white;
+    .footer__sotial-form-wrap{
+      form.footer__sotial-form{
+        text-align: center;
+        .animate-wrap{
+          opacity: 0;
+          display: none;
+        }
+        input[type='email'],
+        input[type='submit'],
+        button{
+          display: block;
+          float: left;
+          box-shadow: none;
+          padding: 20px 15px;
+          border: 2px solid @base-color-white;
+        }
+        input[type='email']{
+          border-radius: 5px 0 0 5px;
+          color: @base-color-black;
+          margin-top: 60px;
+
+        }
+        input[type='submit']{
+          //display: none;
+          border-radius: 0 5px 5px 0;
+          background: rgba(0, 0, 0, 0.5);
+          box-sizing: border-box;
+          margin-top: 60px;
+        }
+        button{
+          padding: 20px 30px;
+          //display: none;
+        }
+      }
+    }
     a.button{
       margin-top: 30px;
     }

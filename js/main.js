@@ -93,6 +93,14 @@ $(document).ready(function() {
 
 
     /*--------SCRIPTS NEW START------------------------------------------*/
+    $('form.footer__sotial-form a.button').on('click', function(e){
+        $(this).animate({opacity: 0}, 1000).css('display', 'none');
+        $('form.footer__sotial-form .animate-wrap').css('display', 'inline-block').animate({opacity: 1}, 1000);
+        e.preventDefault();
+        return 0;
+    });
+
+
     // INDEX --- TAKE PART FORM
     function openTakePartModal() {
         $("#takePartModal").modal("show");
@@ -104,11 +112,10 @@ $(document).ready(function() {
     
     $("#takePartForm").on("submit", function (e) {
         $.ajax({
-            url: "formAction.php",
+            url: "data/formAction.php",
             type: "POST",
             data: $(this).serialize(),
             success: function (data) {
-                // console.log(data);
                 $("#takePartForm .takepart_header").text("ПОЗДРАВЛЯЕМ!");
                 $("#takePartForm .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
                 $("#takePartForm .modal-body, #takePartForm .modal-footer").addClass("hidden");
@@ -140,7 +147,7 @@ $(document).ready(function() {
 
     $("#takePartFormsocial").on("submit", function (e) {
         $.ajax({
-            url: "formAction.php",
+            url: "data/formAction.php",
             type: "POST",
             data: $(this).serialize(),
             success: function (data) {
@@ -168,19 +175,19 @@ $(document).ready(function() {
         // alert('test');
         openTakePartModal();
     });
-    $(document).on('show.bs.modal' ,'.index_modal' , function () {
-        // alert('test');
-        var zIndex = 1040 + (10 * $('.modal:visible').length);
-        $(this).css('z-index', zIndex);
-        setTimeout(function() {
-            $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
-            $('body').addClass('modal-open');
-        }, 0);
-    });
-    $(document).on('hidden.bs.modal', '.modal', function () {
-        $('.modal:visible').length;
-        $('body').addClass('modal-open');
-    });
+    // $(document).on('show.bs.modal' ,'.index_modal' , function () {
+    //     // alert('test');
+    //     var zIndex = 1040 + (10 * $('.index_modal:visible').length);
+    //     $(this).css('z-index', zIndex);
+    //     setTimeout(function() {
+    //         $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+    //         $('body').addClass('modal-open');
+    //     }, 0);
+    // });
+    // $(document).on('hidden.bs.modal', '.index_modal', function () {
+    //     $('.index_modal:visible').length;
+    //     $('body').addClass('modal-open');
+    // });
 
     /*--------SCRIPTS NEW END------------------------------------------*/
 
@@ -880,7 +887,9 @@ $(document).ready(function() {
     //     });
     // }
     /*--------SCRIPTS FROM FOOTER.PHP END------------------------------------------*/
+
     
+
 
 
 

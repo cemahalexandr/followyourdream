@@ -38,6 +38,4 @@ if ($formid == "index-modal-subscribe") {
 /*----------FORMACTION index.php END---------*/
 
 
-
-
 ?>

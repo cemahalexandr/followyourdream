@@ -10,9 +10,19 @@
                 </ul>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 footer-center">
-                <a class="button white index_modal_sotial">
-                                    <button class="tour_btn_takepart_blue tour_btn_witout_marginbottom" onclick="">Присоединиться к сообществу</button>
-                </a>
+                <div class="footer__sotial-form-wrap">
+                    <form class="footer__sotial-form">
+                        <div class="animate-wrap">
+                            <input type="email" required placeholder="Ваша электронная почта">
+                            <input type="submit" value="Присоединиться">
+                        </div>
+                        <a href="#" class="button white">
+                            <button class="tour_btn_takepart_blue tour_btn_witout_marginbottom">Присоединиться к сообществу</button>
+                        </a>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+
                 <div class="footer-sotial">
                     <h4>Мы в соц.сетях</h4>
                     <ul>
