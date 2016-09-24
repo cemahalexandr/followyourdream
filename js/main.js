@@ -84,25 +84,6 @@ $(document).ready(function() {
 
 
 
-    /*--------*/
-    // img on modal to bg
-    //var calendarModalHeaderBg = $('#calendar-modal .modal-header-bg-img').attr('src');
-    // local
-    //$('.calendar-modal .modal-header').css('background-image', "url(), url(../" + calendarModalHeaderBg + ")");
-    //server
-    // $('#calendar-modal .modal-header').css('background-image', "url(../followyourdream/img/modal-header-bg.png), url(../" + calendarModalHeaderBg + ")");
-    // ../img/modal-header-bg.png
-
-
-
-    /*--------*/
-    // $('#takePartModal button.close').click(function () {
-    //     $('#takePartModal').removeClass('in').css({'display' : 'none'});
-    //     return false;
-    // });
-
-
-
     $(document).on('show.bs.modal', '.modal', function () {
         var zIndex = 1040 + (10 * $('.modal:visible').length);
         $(this).css('z-index', zIndex);
@@ -121,6 +102,559 @@ $(document).ready(function() {
     /*--------*/
     // opacity 1 after load page
     $("body").animate({opacity: 1}, 1500);
+
+
+
+    /*--------SCRIPTS FROM CALENDAR.PHP START------------------------------------------*/
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+    
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "zayavka.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "zayavka.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#getProgramForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "programma.php",
+            type: "POST",
+            data: {
+                name: $("#getProgramForm #name").val(),
+                phone: $("#getProgramForm #phone").val(),
+                mail: $("#getProgramForm #mail").val(),
+                tourname: $("#getProgramForm #tourname").val()
+            },
+            success: function (data) {
+                $("#thankModal").modal("show");
+                $("#getProgramForm #name").val("");
+                $("#getProgramForm #phone").val("");
+                $("#getProgramForm #mail").val("");
+
+            }
+        });
+    });
+
+
+    $("#takePartModal").on("hidden.bs.modal", function () {
+        $("#takePartForm .takepart_header").text("Заявка на участие");
+        $("#takePartForm .takepart_descrip").html("Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня<br />для обсуждения деталей путешествия");
+        $("#takePartForm .modal-body").removeClass("hidden");
+        $("#takePartForm .modal-footer input").removeClass("hidden");
+        $("#takePartForm .modal-footer button").addClass("hidden");
+        $("#takePartForm #name").val("");
+        $("#takePartForm #phone").val("");
+        $("#takePartForm #mail").val("");
+    })
+
+    $("#takePartForm").on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "zayavka.php",
+            type: "POST",
+            data: {
+                name: $("#takePartForm #name").val(),
+                phone: $("#takePartForm #phone").val(),
+                mail: $("#takePartForm #mail").val(),
+                tourname: $("#Tour_Id").val()
+            },
+            success: function (data) {
+                $("#errorMsg").addClass("hidden");
+                //$("#takePartModal").modal("hide");
+                $("#takePartForm .takepart_header").text("Благодарим за заявку!");
+                $("#takePartForm .takepart_descrip").text("Мы перезвоним Вам в течение рабочего дня.");
+                $("#takePartForm .modal-body").addClass("hidden");
+                $("#takePartForm .modal-footer input").addClass("hidden");
+                $("#takePartForm .modal-footer button").removeClass("hidden");
+            }
+        });
+    });
+
+
+    var videos = document.getElementsByTagName('video');
+    for (var i = 0; i < videos.length; i++) {
+        var v = videos[i];
+        v.volume = 0.5;
+        v.addEventListener('click', function () {
+            if (v.paused == false) {
+                v.pause();
+                v.firstChild.nodeValue = 'Play';
+            }
+            else {
+                v.play();
+                v.firstChild.nodeValue = 'Pause';
+            }
+        });
+    }
+
+    function closeWindow(videoPlayer) {
+        var v = $("#" + videoPlayer + " video")[0];
+        v.pause();
+        v.firstChild.nodeValue = 'Play';
+        $("#" + videoPlayer).fadeOut('slow');
+        $("body").css("overflow-y", "scroll");
+    }
+
+    function openFullVideo(videoPlayer) {
+        $("#" + videoPlayer).fadeIn('slow');
+        var v = $("#" + videoPlayer + " video")[0];
+        v.play();
+        v.firstChild.nodeValue = 'Pause';
+        $("body").css("overflow", "hidden");
+    }
+
+    function openTakePartModal() {
+        $("#takePartModal").modal("show");
+    }
+
+    function openTakePartModal(text) {
+        $("#takePartModal").modal("show");
+        ga('send', 'event', 'Страница тура', 'Нажата кнопка на странице', text);
+        $("#takePartModal #analytic").val(text);
+    }
+
+    function openTakePartModalsocial() {
+        $("#takePartModalsocial").modal("show");
+    }
+
+    function openTakePartModalsocial(text) {
+        $("#takePartModalsocial").modal("show");
+        ga('send', 'event', 'Страница тура', 'Нажата кнопка на странице', text);
+        $("#takePartModalsocial #analytic").val(text);
+    }
+
+    function openGetRecommendModal() {
+        $("#getRecommendModal").modal("show");
+    }
+
+    function openQuestionModal() {
+        $("#questionModal").modal("show");
+    }
+
+    $('#nav').affix({
+        offset: {
+            top: $('header').height()
+        }
+    });
+
+    if (($(window).height() + 100) < $(document).height()) {
+        $('#top-link-block').removeClass('hidden').affix({
+            // how far to scroll down before link "slides" into view
+            offset: {top: 100}
+        });
+    }
+
+    if (($(window).height() + 100) < $(document).height()) {
+        $('#top-link-mark').removeClass('hidden').affix({
+            // how far to scroll down before link "slides" into view
+            offset: {top: 100}
+        });
+    }
+
+
+    function setHeight() {
+        var h = $(window).height() - 90;
+        if (h > $("#fullheight .container").height()) {
+            $("#fullheight").css("height", h);
+            var mt = (h - 520) / 2;
+            if (mt > 0) {
+                $("#fullheight .container").css("padding-top", mt);
+            }
+        }
+    }
+
+    $(function () {
+        $(window).resize(function () {
+            setHeight();
+        })
+    })
+
+    $(document).ready(function () {
+        setHeight();
+        $(document).on("scroll", onScroll);
+        //smoothscroll
+        $('#nav a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            $(document).off("scroll");
+
+            $('a').each(function () {
+                $(this).removeClass('activelink');
+            })
+            $(this).addClass('activelink');
+
+            var target = this.hash,
+                menu = target;
+            $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 93
+            }, 300, 'swing', function () {
+                window.location.hash = target;
+                $(document).on("scroll", onScroll);
+            });
+        });
+    });
+
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop();
+        $('#navbar-collapse-1 a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top - 93 <= scrollPos && refElement.position().top - 93 + refElement.height() > scrollPos) {
+                $('#navbar-collapse-1 ul li a').removeClass("activelink");
+                currLink.addClass("activelink");
+            }
+            else {
+                currLink.removeClass("activelink");
+            }
+        });
+    }
+    /*--------SCRIPTS FROM CALENDAR.PHP END------------------------------------------*/
+    
 
 
 
