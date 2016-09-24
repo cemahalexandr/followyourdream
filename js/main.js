@@ -84,19 +84,19 @@ $(document).ready(function() {
 
 
 
-    $(document).on('show.bs.modal', '.modal', function () {
-        var zIndex = 1040 + (10 * $('.modal:visible').length);
-        $(this).css('z-index', zIndex);
-        setTimeout(function() {
-            $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
-            $('body.body-calendar').addClass('modal-open');
-        }, 0);
-    });
-    // убираем проблему со скролом
-    $(document).on('hidden.bs.modal', '.modal', function () {
-        $('.modal:visible').length;
-        $('body.body-calendar').addClass('modal-open');
-    });
+    // $(document).on('show.bs.modal', '.modal', function () {
+    //     var zIndex = 1040 + (10 * $('.modal:visible').length);
+    //     $(this).css('z-index', zIndex);
+    //     setTimeout(function() {
+    //         $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+    //         $('body.body-calendar').addClass('modal-open');
+    //     }, 0);
+    // });
+    // // убираем проблему со скролом
+    // $(document).on('hidden.bs.modal', '.modal', function () {
+    //     $('.modal:visible').length;
+    //     $('body.body-calendar').addClass('modal-open');
+    // });
 
 
     /*--------*/
@@ -120,6 +120,7 @@ $(document).ready(function() {
             type: "POST",
             data: $(this).serialize(),
             success: function (data) {
+                // console.log(data);
                 $("#takePartForm .takepart_header").text("ПОЗДРАВЛЯЕМ!");
                 $("#takePartForm .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
                 $("#takePartForm .modal-body, #takePartForm .modal-footer").addClass("hidden");
@@ -144,8 +145,33 @@ $(document).ready(function() {
     function openTakePartModalsocial() {
         $("#takePartModalsocial").modal("show");
     }
+    
     $(".index_modal_sotial").on('click', function(){
-        openTakePartModal();
+        openTakePartModalsocial();
+    });
+
+    $("#takePartFormsocial").on("submit", function (e) {
+        $.ajax({
+            url: "formAction.php",
+            type: "POST",
+            data: $(this).serialize(),
+            success: function (data) {
+                // console.log(data);
+                $("#takePartFormsocial .takepart_header").text("ПОЗДРАВЛЯЕМ!");
+                $("#takePartFormsocial .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
+                $("#takePartFormsocial .modal-body, #takePartFormsocial .modal-footer").addClass("hidden");
+            }
+        });
+        e.preventDefault();
+    });
+    $("#takePartModalsocial").on("hidden.bs.modal", function () {
+        $("#takePartFormsocial .takepart_header").text("Присоединиться к сообществу");
+        $("#takePartFormsocial .takepart_descrip").html("Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня");
+        $("#takePartFormsocial .modal-body").removeClass("hidden");
+        $("#takePartFormsocial .modal-footer").removeClass("hidden");
+        $("#takePartFormsocial #name").val("");
+        $("#takePartFormsocial #phone").val("");
+        $("#takePartFormsocial #mail").val("");
     });
 
     // $("#takePartFormsocial").on("submit", function (e) {
@@ -171,16 +197,7 @@ $(document).ready(function() {
     //     });
     // });
 
-    // $("#takePartModalsocial").on("hidden.bs.modal", function () {
-    //     $("#takePartFormsocial .takepart_header").text("Присоединиться к сообществу");
-    //     $("#takePartFormsocial .takepart_descrip").html("Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня");
-    //     $("#takePartFormsocial .modal-body").removeClass("hidden");
-    //     $("#takePartFormsocial .modal-footer input").removeClass("hidden");
-    //     $("#takePartFormsocial .modal-footer button").addClass("hidden");
-    //     $("#takePartFormsocial #name").val("");
-    //     $("#takePartFormsocial #phone").val("");
-    //     $("#takePartFormsocial #mail").val("");
-    // });
+
 
 
     /*--------SCRIPTS NEW END------------------------------------------*/

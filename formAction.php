@@ -1,15 +1,18 @@
 <?php
-/*----------FORMACTION takePartForm submit START---------*/
+/*----------FORMACTION index.php START---------*/
 /* Здесь проверяется существование переменных */
 $formid = $_POST['form-id'];
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$mail = $_POST['mail'];
-$date = date("d.m.y"); // число.месяц.год
-$time= date("H:i"); // часы:минуты:секунды
-$tourname = $_POST['tourname'];
 
-if ($formid == "index-modal-subscribe"){
+
+function sentIndexForm($file_name){
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $mail = $_POST['mail'];
+    $date = date("d.m.y"); // число.месяц.год
+    $time= date("H:i"); // часы:минуты:секунды
+    $tourname = $_POST['tourname'];
+
+    
     /* Сюда впишите свою эл. почту */
 //    $address = "info@dreamlifeexpeditions.com,cemah.alexandr@gmail.com";
     $address = "elljay@ya.ru";
@@ -20,14 +23,19 @@ if ($formid == "index-modal-subscribe"){
 
     /* А эта функция как раз занимается отправкой письма на указанный вами email */
     $send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$address");
-
     // Сохраняем в базу данных
-    $f = fopen("application_subscribe.txt", "a+");
+    $f = fopen($file_name, "a+");
     fwrite($f,"\n Метка: $tourname\n$date $time\nИмя: $name\nТелефон: $phone\nЕмеил: $mail");
     fwrite($f,"\n ---------------");
     fclose($f);
 }
-/*----------FORMACTION takePartForm submit END---------*/
+
+if ($formid == "index-modal-subscribe") {
+    sentIndexForm("application_subscribe.txt");
+} else if ($formid == "index-modal-sotial") {
+    sentIndexForm("application_sotial.txt");
+}
+/*----------FORMACTION index.php END---------*/
 
 
 

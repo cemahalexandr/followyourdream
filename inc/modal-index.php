@@ -29,7 +29,6 @@
         <div class="modal-footer">
           <div class="text-center">
             <input type="submit" class="btn_submitform" value="Получать рассылку" />
-<!--            <input type="submit" class="btn_submitform" value="Получать рассылку" />-->
             <button type="button" class="btn_submitform hidden" data-dismiss="modal" aria-label="Close">Закрыть</button>
           </div>
         </div>
@@ -53,7 +52,8 @@
         </div>
         <div class="modal-body">
           <input type="hidden" id="analytic"/>
-          <input type="hidden" id="Tour_Id" value="ПРИСОЕДЕНИЛИСЬ К СООБЩЕСТВУ!" />
+          <input type="hidden" name="tourname" id="Tour_Id" value="ПРИСОЕДЕНИЛИСЬ К СООБЩЕСТВУ!" />
+          <input type="hidden" name="form-id" id="Tour_Id" value="index-modal-sotial" />
           <div class="form-group text-align-left">
             <label for="name" class="takepart_input">Ваше имя и фамилия</label>
             <input type="text" class="form-control" id="name" required>
