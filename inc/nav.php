@@ -16,13 +16,14 @@
 
       <ul class="nav navbar-nav navbar-left">
         <li class="dropdown">
+<!--          <a href="index.php#travels" style="display: inline-block;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
           <a href="index.php#travels" style="display: inline-block;">
-            Путешествия 
-          </a>
-          <a href="" style="display: inline-block;padding: 0 15px;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Путешествия
             <span class="caret " ></span>
           </a>
+
           <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="index.php#travels">Путешествия</a></li>
             <li><a tabindex="-1" href="arctic.php">Арктические экспедиции</a></li>
             <li><a tabindex="-1" href="yachting.php">Яхтинг</a></li>
             <li><a tabindex="-1" href="adventure.php">Приключения</a></li>
