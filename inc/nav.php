@@ -31,10 +31,10 @@
             <li><a tabindex="-1" href="calendar.php">Календарь</a></li>
           </ul>
         </li>
-        <li><a href="index.php#comunity">Сообщество</a></li>
-        <li><a href="index.php#upcoming-event">Ближайшие экспедиции</a></li>
-        <li><a href="index.php#reviews">Отзывы</a></li>
-        <li><a href="index.php#contacts">Контакты</a></li>
+        <li><a href="#comunity">Сообщество</a></li>
+        <li><a href="#upcoming-event">Ближайшие экспедиции</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contacts">Контакты</a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right ul-nav-sotial">
