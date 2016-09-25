@@ -33,9 +33,9 @@ function sentIndexForm($file_name){
 
 }
 if ($formid == "index-modal-subscribe") {
-    sentIndexForm("application_subscribe.txt");
+    sentIndexForm("../application_subscribe.txt");
 } else if ($formid == "footer-form") {
-    sentIndexForm("application_sotial.txt");
+    sentIndexForm("../application_sotial.txt");
 } else if ($formid == "calendar-modal-get-program"){
     sentIndexForm("");
 }
