@@ -160,6 +160,57 @@ $(document).ready(function() {
         $("#takePartForm #mail").val("");
     });
 
+
+
+    // CALENDAR FIX MANY MODAL
+    $("#calendar-page").on('hidden.bs.modal', '.index_modal, #thankModal', function () {
+        $('.index_modal:visible').length;
+        $('#thankModal:visible').length;
+        $('body').addClass('modal-open');
+    });
+
+
+
+    // CALENDAR MODAL FORM GET PROGRAM
+    // sent form
+    $('form.calendarModalGetForm').on("submit", function (e) {
+        var funcThis = $(this);
+        var tourName = $(this).parents(".modal-dialog").find("#calendar-modal-title").text();
+        // console.log(tourName);
+        $(this).find('input#tourname').attr('value', tourName);
+        $.ajax({
+            url: "data/formAction.php",
+            type: "POST",
+            data: $(this).serialize(),
+            success: function (data) {
+                $("#thankModal").modal("show");
+                funcThis.find("input.form-control").val("");
+            }
+        });
+        e.preventDefault();
+    });
+    
+
+
+    // CALENDAR MODAL FORM ADD TO EXPEDITION BUTTON
+    //open modal
+    $(".calendar-modal-new button.add_to_expedition").on('click', function(){
+        $("#takePartModal").modal("show");
+        var tourName = $(this).parents(".modal-dialog").find("#calendar-modal-title").text();
+        $("#takePartModal").find("input#Tour_Id").attr('value', 'Принять участие в экспедиции: ' + tourName);
+        $("#takePartModal").find("input[type=submit]").attr('value', 'Отправить');
+        $("#takePartForm .modal-footer").removeClass("hidden");
+    });
+    
+    
+    
+    
+    // $('form.calendarModalGetForm a.button').on('click', function(e){
+    //     $(this).animate({opacity: 0}, 1000).css('display', 'none');
+    //     $('form.footer__sotial-form .animate-wrap').css('display', 'inline-block').animate({opacity: 1}, 1000);
+    //     e.preventDefault();
+    //     return 0;
+    // });
     
     
     //INDEX --- TAKE PART MODAL SOTIAL
@@ -210,10 +261,7 @@ $(document).ready(function() {
     //         $('body').addClass('modal-open');
     //     }, 0);
     // });
-    // $(document).on('hidden.bs.modal', '.index_modal', function () {
-    //     $('.index_modal:visible').length;
-    //     $('body').addClass('modal-open');
-    // });
+
 
     /*--------SCRIPTS NEW END------------------------------------------*/
 

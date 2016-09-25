@@ -11,7 +11,7 @@
         </div>
         <div class="modal-body">
           <input type="hidden" id="analytic"/>
-          <input type="hidden" name="tourname" id="Tour_Id" value="ПОДПИСАЛИСЬ НА РАССЫЛКУ!" />
+          <input type="hidden" name="tourname" id="Tour_Id" value="<?php echo $goal;?>" />
           <input type="hidden" name="form-id" value="index-modal-subscribe" />
           <div class="form-group text-align-left">
             <label for="name" class="takepart_input">Ваше имя и фамилия</label>

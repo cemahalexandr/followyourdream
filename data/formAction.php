@@ -19,20 +19,25 @@ function sentIndexForm($file_name){
 
     // А здесь прописывается текст сообщения, \n - перенос строки 
     $mes = "Метка:" . $tourname . "\nФИО:" . $name . "\nТелефон:" . $phone . "\nЕмеил:" . $mail;
-    $sub = "Новая заявка: " . $name . " " . $tourname; //сабж
+    $sub = "Новая заявка: " . $tourname;
     /* А эта функция как раз занимается отправкой письма на указанный вами email */
     $send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$address");
-    
+    echo $mes;
     // Сохраняем в базу данных
-    $f = fopen($file_name, "a+");
-    fwrite($f,"\n Метка: $tourname\n$date $time\nИмя: $name\nТелефон: $phone\nЕмеил: $mail");
-    fwrite($f,"\n ---------------");
-    fclose($f);
+    if ($file_name != ""){
+        $f = fopen($file_name, "a+");
+        fwrite($f,"\n Метка: $tourname\n$date $time\nИмя: $name\nТелефон: $phone\nЕмеил: $mail");
+        fwrite($f,"\n ---------------");
+        fclose($f);
+    }
+
 }
 if ($formid == "index-modal-subscribe") {
     sentIndexForm("application_subscribe.txt");
 } else if ($formid == "footer-form") {
     sentIndexForm("application_sotial.txt");
+} else if ($formid == "calendar-modal-get-program"){
+    sentIndexForm("");
 }
 /*----------FORMACTION index.php END---------*/
 
