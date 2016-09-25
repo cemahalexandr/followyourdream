@@ -127,6 +127,7 @@ $(document).ready(function() {
     $('form.footer__sotial-form a.button').on('click', function(e){
         $(this).animate({opacity: 0}, 1000).css('display', 'none');
         $('form.footer__sotial-form .animate-wrap').css('display', 'inline-block').animate({opacity: 1}, 1000);
+        $("footer").addClass("blur");
         e.preventDefault();
         return 0;
     });
@@ -147,9 +148,26 @@ $(document).ready(function() {
         });
         e.preventDefault();
     });
+    // hidden form on bind
+    $(document).on("click", function (event) {
+        // console.log($(event.target).closest(".footer__sotial-form .animate-wrap").length);
+        // console.log();
+        if( !$(event.target).closest(".footer__sotial-form .animate-wrap").length && $(event.target).closest(".footer__sotial-form a.button").length){
+            return;
+        } else if ($(event.target).closest(".footer__sotial-form .animate-wrap").length){
+            return 0;
+        } else {
+            console.log($(event.target).closest(".footer__sotial-form .animate-wrap").length);
+            $(".footer__sotial-form .animate-wrap").css('display', 'none');
+            $('form.footer__sotial-form a.button').animate({opacity: 1}, 1000).css('display', 'inline-block');
+            $("footer").removeClass("blur");
+            event.stopPropagation();
+        }
+        event.preventDefault();
+    });
     // reload form
     $("#takePartModal").on("hidden.bs.modal", function () {
-        $(".footer__sotial-form .animate-wrap").css('display', '');
+        // $(".footer__sotial-form .animate-wrap").css('display', '');
         $("#takePartForm .takepart_header").text("Заявка на получение рассылки");
         $("#takePartForm .takepart_descrip").html("Оставьте свои контактные данные<br />и мы будем сообщать вам самое интересное в мире путешествий");
         $("#takePartForm .modal-body").removeClass("hidden");
@@ -212,8 +230,6 @@ $(document).ready(function() {
         isModal = currentUrl.substring(isModal);
         $(isModal).modal("show");
     }
-    console.log(currentUrl);
-    console.log(isModal);
 
 
     
