@@ -142,7 +142,7 @@ $(document).ready(function() {
                 setTimeout(function(){
                     $(".footer__sotial-form .footer__sotial-thanks").css('display', 'none');
                     $('form.footer__sotial-form a.button').css('display', 'inline-block').animate({opacity: 1}, 1000);
-                }, 5000);
+                }, 25000);
             }
         });
         e.preventDefault();
