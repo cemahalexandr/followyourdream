@@ -201,9 +201,21 @@ $(document).ready(function() {
         $("#takePartModal").find("input[type=submit]").attr('value', 'Отправить');
         $("#takePartForm .modal-footer").removeClass("hidden");
     });
-    
-    
-    
+
+
+
+    // CALENDAR MODAL FROM URL
+    var currentUrl = document.URL;
+    var isCalendar = currentUrl.indexOf('calendar');
+    if (isCalendar != -1){
+        var isModal = currentUrl.indexOf('#');
+        isModal = currentUrl.substring(isModal);
+        $(isModal).modal("show");
+    }
+    console.log(currentUrl);
+    console.log(isModal);
+
+
     
     // $('form.calendarModalGetForm a.button').on('click', function(e){
     //     $(this).animate({opacity: 0}, 1000).css('display', 'none');
