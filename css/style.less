@@ -105,8 +105,7 @@
   }
 }
 body{
-  //opacity: 0;
-  opacity: 1;
+  opacity: 0;
   display: block;
   font-family: 'rubik-regular', sans-serif;
   background: @base-color-white;
@@ -182,7 +181,6 @@ h3.heading{
   font: 30px rubik-regular, sans-serif;
   text-align: center;
   text-transform: uppercase;
-  //text-shadow: 2px 2px 2px #D6D6D6;
   padding: 60px 0 0px 0;
   position: relative;
   letter-spacing: 1.5px;
@@ -282,7 +280,6 @@ ul{
 
 /* 0 NAV------------------*/
 nav.navbar{
-  //background: @base-color-red;
   background: fade(@base-color-red, 90%);
   padding: 0;
   .navbar-brand{
@@ -344,7 +341,6 @@ nav.navbar{
         }
       }
       ul.dropdown-menu{
-        //background: @base-color-red;
         padding-top: 0;
         background: fade(@base-color-red, 90%);
         display: none;
@@ -441,8 +437,6 @@ header{
     overflow: hidden;
     div{
       img{
-        //min-width: 100%;
-        //height: 100%;
         min-width: 100%;
         min-height: 100%;
         max-width: 150%;
@@ -652,8 +646,6 @@ section.about-comunity{
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
-    //padding-left: 60px;
-    //background: url("http://followyourdream/img/logo-mini.png") no-repeat left top;
     letter-spacing: 1px;
     line-height: 26px;
     span{
@@ -746,9 +738,6 @@ section.expectation{
 
 /* 5 UPCOMING EVENT------------------*/
 section.upcoming-event{
-  //margin-left: -5px;
-  //margin-right: -5px;
-  //overflow: hidden;
   h3.heading{
     margin-bottom: 80px;
   }
@@ -798,7 +787,6 @@ section.upcoming-event{
           line-height: 18px;
           padding: 5px 0 0 40px;
           font-size: 14px;
-          //font-weight: bold;
           &.upcoming-event__item-hover__place{
             background-position: 0 5px;
           }
@@ -818,7 +806,6 @@ section.upcoming-event{
     &:hover,
     &:focus{
       .upcoming-event__item-hover{
-        //cursor: pointer;
         bottom: 15px;
         background: rgba(255, 255, 255, 1);
         transition: bottom 0.5s ease, background 0.5s ease;
@@ -855,7 +842,6 @@ section.reviews{
       .reviews__item-name{
         color: @base-color-black;
         font-size: 24px;
-        //font-weight: bold;
         margin-top: 30px;
         margin-bottom: 20px;
       }
@@ -875,7 +861,6 @@ section.reviews{
       }
     }
     .owl-controls{
-      //display: none !important;
       .owl-pagination{
         .owl-page{
           display: none;
@@ -1042,7 +1027,6 @@ footer{
 
         }
         input[type='submit']{
-          //display: none;
           border-radius: 0 5px 5px 0;
           background: rgba(0, 0, 0, 0.5);
           box-sizing: border-box;
@@ -1050,7 +1034,6 @@ footer{
         }
         button{
           padding: 20px 30px;
-          //display: none;
         }
       }
     }
@@ -1436,8 +1419,6 @@ footer{
   }
   /* 7 OUR VIDEO */
   section.our-video{
-    //margin-left: -5px;
-    //margin-right: -5px;
     .our-video__wrapper,
     .our-video__left,
     .our-video__right{
@@ -1552,8 +1533,6 @@ footer{
                 height: 100%;
                 width: auto;
                 min-height: 100%;
-                /* max-width: 150%; */
-                //margin-left: -50%;
               }
             }
           }
@@ -1691,7 +1670,6 @@ footer{
 /*--------------------------------------------------*/
 #calendar-page{
   .calendar-wrapper{
-   /* outline: 10px solid red; */
     position: fixed;
     top: 50px;
     bottom: 0;
@@ -1700,7 +1678,6 @@ footer{
     .calendar-item{
       width: 25%;
       height: 33.3333333%;
-      //outline: 1px solid green;
       float: left;
       position: relative;
       overflow: hidden;
@@ -1781,13 +1758,8 @@ footer{
 }
 
 .calendar-modal{
-  //display: block; //
-  //opacity: 1; //
-  //overflow-x: hidden; //
-  //overflow-y: auto; //
   .modal-dialog{
     width: 1000px;
-    //padding-top: 80%; //
     .modal-content{
       .modal-header{
         position: relative;
@@ -1860,7 +1832,6 @@ footer{
               padding: 10px 0;
               font-size: 20px;
               letter-spacing: 1px;
-              //font-weight: bold;
             }
             p{
               padding: 0;
@@ -2002,6 +1973,229 @@ footer{
     }
   }
 }
+.calendar-modal-new{
+  .modal-dialog{
+    .modal-content{
+      .modal-header__first{
+        padding-bottom: 15px;
+      }
+      .modal-header{
+        .modal-header__content{
+          top: 27%;
+          left: 5%;
+          right: 5%;
+          padding: 10% 10% 10%;
+          h3.modal-title{
+            font-size: 32px;
+          }
+          h4.modal-header__content-short-info{
+            font-size: 18px;
+          }
+          h4.date{
+            font-size: 22px;
+            text-transform: uppercase;
+            color: #f7b32b;
+          }
+        }
+      }
+      section.arctic-body{
+        .modal-body{
+          section.modal-body__icon-info{
+            .modal-body__icon-info-item{
+              img{
+                max-width: 100px;
+              }
+            }
+          }
+          h3.center.first{
+            color: #ec1928;
+            margin-left: 50px;
+            margin-right: 50px;
+            font-size: 36px;
+          }
+          .calendar-modal__short-info{
+            padding: 25px 0;
+            ul.arctic-body-shpitsberg-ul{
+              padding: 0 50px;
+            }
+            p.title22gray{
+              margin: 0;
+              font-size: 18px;
+              padding: 0 50px;
+              text-align: center;
+              a{
+                font-size: 22pt;
+              }
+            }
+          }
+          section.modal-body__travel-program{
+            h2{
+              &.travel-program-first{
+                text-align: center;
+                color: #ec1928;
+              }
+              &.travel-program__h2-first{
+                text-align: center;
+                color: #404040;
+                font-size: 14pt;
+                text-transform: none;
+              }
+              &.travel-program__h2-second{
+                text-align: center;
+                color: #404040;
+                font-size: 15pt;
+                text-transform: none;
+                margin-top: 40px;
+              }
+            }
+            .section_header{
+              height: 2px;
+              background-color: #ed1c24;
+              text-align: center;
+              margin: 35px auto;
+              width: 80%;
+              span{
+                color: #ed1c24;
+                background-color: white;
+                position: relative;
+                top: -0.7em;
+                padding: 0px 20px;
+                width: 40%;
+                text-align: center;
+                font-size: 28pt;
+              }
+            }
+            > img{
+              width: 100%;
+              &.pb10{
+                padding-bottom: 10px;
+              }
+            }
+            .container.w100{
+              width: 100%;
+              p.title33gray{
+                text-align: center;
+                color: #404040;
+                font-size: 22pt;
+                text-transform: none;
+                margin-top: 40px;
+                margin-bottom: 5px;
+              }
+              .modal-body-top-button{
+                a{
+                  button{
+                    padding: 20px 25px;
+                  }
+                }
+              }
+            }
+          }
+          .cover_block.container750{
+            margin-top: 0;
+            >.container{
+              width: 100%;
+            }
+            .modal-body-top-button{
+              a.button{
+                button{
+                  margin: 10px;
+                }
+              }
+            }
+          }
+          .container.w87{
+            width: 87%;
+            img{
+              width: 100%;
+              &.w87__img-h{
+                width: 105%;
+              }
+            }
+          }
+          .tour_section{
+            &#price{
+              padding-bottom: 40px;
+              .row.m0_10{
+                margin: 0 10%;
+                h4.block_title{
+                  margin-top: 36px;
+                  img{
+                    width: 40px;
+                    margin-right: 15px;
+                  }
+                }
+              }
+              .hidden-xs{
+                ul.timeline{
+                  li.timeline-li{
+                    height: 35px;
+                  }
+                }
+              }
+            }
+            >.container{
+              width: 100%;
+            }
+            .container.p30_0{
+              padding: 30px 0;
+            }
+            .section_header{
+              height: 2px;
+              background-color: #ed1c24;
+              text-align: center;
+              margin: 50px auto;
+              width: 80%;
+              span{
+                color: #ed1c24;
+                background-color: white;
+                position: relative;
+                top: -0.7em;
+                padding: 0px 20px;
+                width: 40%;
+                text-align: center;
+                font-size: 28pt;
+              }
+            }
+            .price_discount{
+              color: #404040;
+              text-align: center;
+              font-weight: bold;
+              font: 45px rubik-regular, sans-serif;
+            }
+            p.title22gray{
+              color: #404040;
+              text-align: center;
+              font-weight: bold;
+              font: 28px rubik-regular, sans-serif;
+              padding: 0 5%;
+            }
+            .tour_section__links{
+              img{
+                width: 100%;
+              }
+            }
+          }
+        }
+        .modal-footer{
+          .modal-footer__orginizer{
+            ul{
+              li{
+                .modal-footer__orginizer-img-wrapper{
+                  img{
+                    border-radius: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*----------MEDIA 1199-------------------*/
+
 @media (max-width: 1199px){
   #calendar-page{
     .calendar-wrapper{
@@ -2165,7 +2359,6 @@ footer{
     .arctic-header-text,
     .template-header-text{
       position: absolute;
-      //bottom: 310px;
       top: 50px;
       color: white;
       left: 10%;
@@ -2189,8 +2382,6 @@ footer{
     h3,
     p,
     img{
-      //padding-left: 5%;
-      //padding-right: 5%;
     }
     h3{
       color: @base-color-black;
@@ -2233,7 +2424,6 @@ footer{
     p{
       font-size: 18px;
       line-height: 24px;
-      //letter-spacing: 0.7px;
       margin-bottom: 10px;
       span{
         display: block;
@@ -2311,7 +2501,6 @@ footer{
     }
     .arctic-body-details,
     .template-body-details{
-      //padding-top: 50px;
       padding-bottom: 50px;
       p{
         padding-right: 15%;
@@ -2380,7 +2569,6 @@ footer{
             width: 35px;
             height: 100px;
             background: url("../img/review__arrow.png") no-repeat;
-            //background: red;
             top: 200px;
           }
           .owl-prev{
@@ -2493,105 +2681,6 @@ footer{
     }
   }
 }
-
-
-/*upcoming event backup------------------------------------------------------------------*/
-/*
-section.upcoming-event{
-  //margin-left: -5px;
-  //margin-right: -5px;
-  //overflow: hidden;
-  h3.heading{
-    margin-bottom: 80px;
-  }
-  .upcoming-event__item{
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-bottom: 10px;
-    position: relative;
-    height: 280px;
-    overflow: hidden;
-    .upcoming-event__item-img-wrapper{
-      img{
-        width: 100%;
-      }
-    }
-    .upcoming-event__item-hover-substrate{
-      opacity: 0.5;
-      background: rgba(255, 255, 255, 1);
-    }
-    .upcoming-event__item-hover-substrate,
-    .upcoming-event__item-hover{
-      position: absolute;
-      font: 14px rubik-regular, sans-serif;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      top: 15px;
-      left: 30px;
-      right: 30px;
-      bottom: 15px;
-      transform: translate(0%, 0);
-      text-align: left;
-      padding: 25px 45px;
-      transition: background 0.5s ease, opacity 0.7s ease;
-      color: @base-color-black;
-      ul{
-        li{
-          background: url("http://followyourdream/img/upcoming-event__list-sprite.png") no-repeat;
-          margin-bottom: 15px;
-          line-height: 18px;
-          padding: 5px 0 0 40px;
-          font-size: 14px;
-          font-weight: bold;
-          &.upcoming-event__item-hover__place{
-            background-position: 0 5px;
-          }
-          &.upcoming-event__item-hover__date{
-            background-position: 0 -155px;
-          }
-          &.upcoming-event__item-hover__money{
-            background-position: 0 -273px;
-          }
-        }
-      }
-      .upcoming-event__item-hover_btn{
-        text-align: center;
-        padding-top: 150px;
-        transition: padding-top 0.5s ease;
-      }
-      &:hover,
-      &:focus{
-        opacity: 1;
-        background: rgba(255, 255, 255, 1);
-        transition: background 0.5s ease, opacity 0.7s ease;
-        cursor: pointer;
-        .upcoming-event__item-hover_btn{
-          padding-top: 0;
-          transition: padding-top 0.5s ease;
-        }
-      }
-    }
-  }
-  .upcoming-event__bottom{
-    text-align: center;
-    a.button{
-      margin: 30px auto;
-    }
-    p{
-      width: 50%;
-      margin: 0 auto;
-      font-size: 16px;
-      color: @base-color-light-gray;
-    }
-  }
-}
-
-.tour_included {
-    font-family: PTSansRegular, sans-serif;
-    font-size: 13pt;
-    list-style-position: inside;
-}
-*/
 
 ul.arctic-body-shpitsberg-ul li {
     background: url("../img/list-ok.png") no-repeat left top;
