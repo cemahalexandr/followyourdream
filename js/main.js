@@ -136,15 +136,30 @@ $(document).ready(function() {
             url: "data/formAction.php",
             type: "POST",
             data: $(this).serialize(),
-            success: function (data) {
-                console.log(data);
-                $("#takePartForm .takepart_header").text("ПОЗДРАВЛЯЕМ!");
-                $("#takePartForm .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
-                $("#takePartForm .modal-body, #takePartForm .modal-footer").addClass("hidden");
+            success: function () {
+                $(".footer__sotial-form .animate-wrap").css('display', 'none');
+                $(".footer__sotial-form .footer__sotial-thanks").css('display', 'block');
+                setTimeout(function(){
+                    $(".footer__sotial-form .footer__sotial-thanks").css('display', 'none');
+                    $('form.footer__sotial-form a.button').css('display', 'inline-block').animate({opacity: 1}, 1000);
+                }, 5000);
             }
         });
         e.preventDefault();
     });
+    // reload form
+    $("#takePartModal").on("hidden.bs.modal", function () {
+        $(".footer__sotial-form .animate-wrap").css('display', '');
+        $("#takePartForm .takepart_header").text("Заявка на получение рассылки");
+        $("#takePartForm .takepart_descrip").html("Оставьте свои контактные данные<br />и мы будем сообщать вам самое интересное в мире путешествий");
+        $("#takePartForm .modal-body").removeClass("hidden");
+        $("#takePartForm .modal-footer").removeClass("hidden");
+        $("#takePartForm .modal-footer").addClass("hidden");
+        $("#takePartForm #name").val("");
+        $("#takePartForm #phone").val("");
+        $("#takePartForm #mail").val("");
+    });
+
     
     
     //INDEX --- TAKE PART MODAL SOTIAL

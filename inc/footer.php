@@ -12,6 +12,10 @@
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 footer-center">
                 <div class="footer__sotial-form-wrap">
                     <form class="footer__sotial-form">
+                        <div class="footer__sotial-thanks">
+                            <span>ПОЗДРАВЛЯЕМ!</span> 
+                            ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!
+                        </div>
                         <div class="animate-wrap">
                             <input type="hidden" name="tourname" id="Tour_Id" value="ПРИСОЕДИНИЛИСЬ К СООБЩЕСТВУ!" />
                             <input type="hidden" name="form-id" value="footer-form" />
