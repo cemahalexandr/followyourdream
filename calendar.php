@@ -1,10 +1,9 @@
 <?php include_once "inc/doctype.php"; ?>
 <div id="calendar-page">
     <?php include_once "inc/nav.php"; ?>
-    <input data-val="true" data-val-number="The field Id must be a number."
-           data-val-required="The Id field is required." id="Tour_Id" name="Tour.Id" type="hidden" value="Шпицберген">
+    <input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Tour_Id" name="Tour.Id" type="hidden" value="Шпицберген">
     <div class="calendar-wrapper">
-        <div class="calendar-item">
+        <div class="calendar-item jan">
             <div class="calendar-item__month">Январь 2017</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -17,9 +16,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/октябрь 2016.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item feb">
             <div class="calendar-item__month">Февраль 2017</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -30,9 +29,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/Ноябрь 2016.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item mar">
             <div class="calendar-item__month">Март 2017</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -42,9 +41,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/Декабрь 2016.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item apr">
             <div class="calendar-item__month">Апрель 2017</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -54,9 +53,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/январь 2017.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item may">
             <div class="calendar-item__month">Май 2017</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -70,9 +69,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/февраль 2017.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item jun">
             <div class="calendar-item__month">Июнь 2017</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -83,9 +82,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/март 2017.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item jul">
             <div class="calendar-item__month">Июль 2017</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -95,9 +94,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/апрель 2017.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item aug">
             <div class="calendar-item__month">Август 2017</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -110,9 +109,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/май 2017.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item sep">
             <div class="calendar-item__month">Сентябрь 2017</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -122,9 +121,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/июнь 2017.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item oct">
             <div class="calendar-item__month">Октябрь 2016</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -134,9 +133,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/июль 2017.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item nov">
             <div class="calendar-item__month">Ноябрь 2016</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -147,9 +146,9 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/август 2017.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
-        <div class="calendar-item">
+        <div class="calendar-item dec">
             <div class="calendar-item__month">Декабрь 2016</div>
             <div class="calendar-item__tours">
                 <ul>
@@ -162,7 +161,7 @@
                 </ul>
             </div>
             <div class="calendar-item__overlay"></div>
-            <div class="calendar-item__bg-img" style="background-image: url('img/calendar/сентябрь 2017.jpg')"></div>
+            <div class="calendar-item__bg-img"></div>
         </div>
         <div class="clearfix"></div>
     </div>
