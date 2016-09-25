@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-    /*--------*/
+    
+    
     // carousel owl
     $(".header-owl-carousel").owlCarousel({
         navigation : true, // Show next and prev buttons
@@ -19,7 +20,6 @@ $(document).ready(function() {
 
 
 
-    /*--------*/
     //video img to background
     $('.our-video__wrapper').each(function(){
         var imgSrc = $(this).attr('data-image');
@@ -29,7 +29,6 @@ $(document).ready(function() {
 
 
 
-    /*--------*/
     // БЛОК БЛИЖАЙШИЕ СОБЫТИЕ регулировка картинок по высоте
     $('.upcoming-event__item').each(function(){
         var upcomingWrapper = $(this).find(".upcoming-event__item-img-wrapper");
@@ -42,21 +41,18 @@ $(document).ready(function() {
 
 
 
-    /*--------*/
     // arctic/template header background
     var arcticHeaderImg = $('.arctic header img').attr('src');
     $('.arctic header').css('background-image', 'url(../'+ arcticHeaderImg +')');
 
 
 
-    /*--------*/
     // template header background
     var tempHeaderImg = $('.template-page header img').attr('src');
     $('.template-page header').css('background-image', 'url(../'+ tempHeaderImg +')');
 
 
 
-    /*--------*/
     // change li on scroll
     $(function() {
         $("#navbar a[href*=#]:not([href=#])").click(function() {
@@ -84,38 +80,27 @@ $(document).ready(function() {
 
 
 
-
-
-
-    /*--------*/
     // opacity 1 after load page
     $("body").animate({opacity: 1}, 1500);
 
 
     /*--------SCRIPTS NEW START------------------------------------------*/
-    $('form.footer__sotial-form a.button').on('click', function(e){
-        $(this).animate({opacity: 0}, 1000).css('display', 'none');
-        $('form.footer__sotial-form .animate-wrap').css('display', 'inline-block').animate({opacity: 1}, 1000);
-        e.preventDefault();
-        return 0;
-    });
-
-
+    
+    
+    
     // INDEX --- TAKE PART FORM
-    function openTakePartModal() {
-        $("#takePartModal").modal("show");
-    }
-    
+    // open modal
     $(".index_modal_subscribe").on('click', function(){
-        openTakePartModal();
-    });
-    
+        $("#takePartModal").modal("show");
+    });    
+    // sent form
     $("#takePartForm").on("submit", function (e) {
         $.ajax({
             url: "data/formAction.php",
             type: "POST",
             data: $(this).serialize(),
             success: function (data) {
+                console.log(data);
                 $("#takePartForm .takepart_header").text("ПОЗДРАВЛЯЕМ!");
                 $("#takePartForm .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
                 $("#takePartForm .modal-body, #takePartForm .modal-footer").addClass("hidden");
@@ -123,7 +108,7 @@ $(document).ready(function() {
         });
         e.preventDefault();
     });
-    
+    // reload form
     $("#takePartModal").on("hidden.bs.modal", function () {
         $("#takePartForm .takepart_header").text("Заявка на получение рассылки");
         $("#takePartForm .takepart_descrip").html("Оставьте свои контактные данные<br />и мы будем сообщать вам самое интересное в мире путешествий");
@@ -136,45 +121,71 @@ $(document).ready(function() {
     });
     
     
-    //INDEX --- TAKE PART MODAL SOTIAL
-    function openTakePartModalsocial() {
-        $("#takePartModalsocial").modal("show");
-    }
     
-    $(".index_modal_sotial").on('click', function(){
-        openTakePartModalsocial();
+    // FOOTER SENT FORM
+    // on click to footer form
+    $('form.footer__sotial-form a.button').on('click', function(e){
+        $(this).animate({opacity: 0}, 1000).css('display', 'none');
+        $('form.footer__sotial-form .animate-wrap').css('display', 'inline-block').animate({opacity: 1}, 1000);
+        e.preventDefault();
+        return 0;
     });
-
-    $("#takePartFormsocial").on("submit", function (e) {
+    // sent form
+    $('.footer__sotial-form').on("submit", function (e) {
         $.ajax({
             url: "data/formAction.php",
             type: "POST",
             data: $(this).serialize(),
             success: function (data) {
-                // console.log(data);
-                $("#takePartFormsocial .takepart_header").text("ПОЗДРАВЛЯЕМ!");
-                $("#takePartFormsocial .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
-                $("#takePartFormsocial .modal-body, #takePartFormsocial .modal-footer").addClass("hidden");
+                console.log(data);
+                $("#takePartForm .takepart_header").text("ПОЗДРАВЛЯЕМ!");
+                $("#takePartForm .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
+                $("#takePartForm .modal-body, #takePartForm .modal-footer").addClass("hidden");
             }
         });
         e.preventDefault();
     });
-    $("#takePartModalsocial").on("hidden.bs.modal", function () {
-        $("#takePartFormsocial .takepart_header").text("Присоединиться к сообществу");
-        $("#takePartFormsocial .takepart_descrip").html("Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня");
-        $("#takePartFormsocial .modal-body").removeClass("hidden");
-        $("#takePartFormsocial .modal-footer").removeClass("hidden");
-        $("#takePartFormsocial #name").val("");
-        $("#takePartFormsocial #phone").val("");
-        $("#takePartFormsocial #mail").val("");
-    });
+    
+    
+    //INDEX --- TAKE PART MODAL SOTIAL
+    // function openTakePartModalsocial() {
+    //     $("#takePartModalsocial").modal("show");
+    // }
+    //
+    // $(".index_modal_sotial").on('click', function(){
+    //     openTakePartModalsocial();
+    // });
+    //
+    // $("#takePartFormsocial").on("submit", function (e) {
+    //     $.ajax({
+    //         url: "data/formAction.php",
+    //         type: "POST",
+    //         data: $(this).serialize(),
+    //         success: function (data) {
+    //             // console.log(data);
+    //             $("#takePartFormsocial .takepart_header").text("ПОЗДРАВЛЯЕМ!");
+    //             $("#takePartFormsocial .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
+    //             $("#takePartFormsocial .modal-body, #takePartFormsocial .modal-footer").addClass("hidden");
+    //         }
+    //     });
+    //     e.preventDefault();
+    // });
+    // $("#takePartModalsocial").on("hidden.bs.modal", function () {
+    //     $("#takePartFormsocial .takepart_header").text("Присоединиться к сообществу");
+    //     $("#takePartFormsocial .takepart_descrip").html("Оставьте свои контактные данные<br />и мы свяжемся с Вами в течение дня");
+    //     $("#takePartFormsocial .modal-body").removeClass("hidden");
+    //     $("#takePartFormsocial .modal-footer").removeClass("hidden");
+    //     $("#takePartFormsocial #name").val("");
+    //     $("#takePartFormsocial #phone").val("");
+    //     $("#takePartFormsocial #mail").val("");
+    // });
 
 
     // CALENDAR --- MODAL
-    $('.calendar_modal_sub').on('click', function () {
-        // alert('test');
-        openTakePartModal();
-    });
+    // $('.calendar_modal_sub').on('click', function () {
+    //     // alert('test');
+    //     openTakePartModal();
+    // });
     // $(document).on('show.bs.modal' ,'.index_modal' , function () {
     //     // alert('test');
     //     var zIndex = 1040 + (10 * $('.index_modal:visible').length);

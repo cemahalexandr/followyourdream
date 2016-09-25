@@ -13,7 +13,10 @@
                 <div class="footer__sotial-form-wrap">
                     <form class="footer__sotial-form">
                         <div class="animate-wrap">
-                            <input type="email" required placeholder="Ваша электронная почта">
+                            <input type="hidden" name="tourname" id="Tour_Id" value="ПРИСОЕДИНИЛИСЬ К СООБЩЕСТВУ!" />
+                            <input type="hidden" name="form-id" value="footer-form" />
+                            <input type="hidden" name="name" value="" />
+                            <input type="email" name="mail" required placeholder="Ваша электронная почта">
                             <input type="submit" value="Присоединиться">
                         </div>
                         <a href="#" class="button white">
