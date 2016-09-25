@@ -150,8 +150,6 @@ $(document).ready(function() {
     });
     // hidden form on bind
     $(document).on("click", function (event) {
-        // console.log($(event.target).closest(".footer__sotial-form .animate-wrap").length);
-        // console.log();
         if( !$(event.target).closest(".footer__sotial-form .animate-wrap").length && $(event.target).closest(".footer__sotial-form a.button").length){
             return;
         } else if ($(event.target).closest(".footer__sotial-form .animate-wrap").length){
@@ -163,7 +161,7 @@ $(document).ready(function() {
             $("footer").removeClass("blur");
             event.stopPropagation();
         }
-        event.preventDefault();
+        // event.preventDefault();
     });
     // reload form
     $("#takePartModal").on("hidden.bs.modal", function () {
