@@ -11,7 +11,7 @@
                 </div>
                 <div class="header-button">
                     <a class="button">
-                        <button class="index_modal_subscribe button tour_btn_takepart_orange tour_btn_witout_marginbottom">ПРИСОЕДИНЯЙСЯ</button>
+                        <button class="index_modal_arktika button tour_btn_takepart_orange tour_btn_witout_marginbottom">ПРИСОЕДИНЯЙСЯ</button>
                     </a>
                 </div>
             </div>
@@ -158,7 +158,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
                         <div class="upcoming-event__item-img-wrapper">
-                            <img src="img/upcoming-event__img-3.jpg" alt="">
+                            <img src="img/arctic/2.jpg" alt="">
                         </div>
                         <div class="upcoming-event__item-hover-substrate"></div>
                         <div class="upcoming-event__item-hover">
@@ -178,7 +178,7 @@
 
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item">
                         <div class="upcoming-event__item-img-wrapper">
-                            <img src="img/foto-dly-kalendary-2/Исландия.jpg" alt="">
+                            <img src="img/arctic/11.jpg" alt="">
                         </div>
                         <div class="upcoming-event__item-hover-substrate"></div>
                         <div class="upcoming-event__item-hover">
@@ -199,7 +199,7 @@
 
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
                         <div class="upcoming-event__item-img-wrapper">
-                            <img src="img/foto-dly-kalendary-2/Гренландия.jpg" alt="">
+                            <img src="img/arctic/6.jpg" alt="">
                         </div>
                         <div class="upcoming-event__item-hover-substrate"></div>
                         <div class="upcoming-event__item-hover">

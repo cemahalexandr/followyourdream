@@ -10,7 +10,7 @@
                     <h4>Проведи бесподобную неделю <br /> на белоснежной яхте!</h4>
                 </div>
                 <div class="header-button">
-                    <a class="button"> <button class="index_modal_subscribe button tour_btn_takepart_orange tour_btn_witout_marginbottom">ПРИСОЕДИНЯЙСЯ</button> </a>
+                    <a class="button"> <button class="index_modal_yatching button tour_btn_takepart_orange tour_btn_witout_marginbottom">ПРИСОЕДИНЯЙСЯ</button> </a>
                 </div>
             </div>
         </div>

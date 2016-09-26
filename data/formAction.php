@@ -15,7 +15,7 @@ function sentIndexForm($file_name){
 
     // Сюда впишите свою эл. почту
 //    $address = "info@dreamlifeexpeditions.com,cemah.alexandr@gmail.com";
-    $address = "elljay@ya.ru";
+    $address = "elljay@ya.ru,cemah.alexandr@gmail.com";
 
     // А здесь прописывается текст сообщения, \n - перенос строки 
     $mes = "Метка:" . $tourname . "\nФИО:" . $name . "\nТелефон:" . $phone . "\nЕмеил:" . $mail;

@@ -124,7 +124,7 @@
             <div class="calendar-item__bg-img"></div>
         </div>
         <div class="calendar-item oct">
-            <div class="calendar-item__month">Октябрь 2016</div>
+            <div class="calendar-item__month">Октябрь 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
@@ -136,7 +136,7 @@
             <div class="calendar-item__bg-img"></div>
         </div>
         <div class="calendar-item nov">
-            <div class="calendar-item__month">Ноябрь 2016</div>
+            <div class="calendar-item__month">Ноябрь 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>
@@ -149,7 +149,7 @@
             <div class="calendar-item__bg-img"></div>
         </div>
         <div class="calendar-item dec">
-            <div class="calendar-item__month">Декабрь 2016</div>
+            <div class="calendar-item__month">Декабрь 2017</div>
             <div class="calendar-item__tours">
                 <ul>
                     <li>

@@ -2,14 +2,14 @@
     <img src="img/logo-header.png" alt="" class="footer-logo">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <ul class="footer-messager">
                     <li class="footer-messager__viber"><a href="tel:+380 67 850 21 07">followyourdream</a></li>
                     <li class="footer-messager__skype"><a href="skype:anna_skibun">followyourdream</a></li>
                     <li class="footer-messager__email"><a href="mailto:info@dreamlifeexpeditions.com">info@dreamlifeexpeditions.com</a></li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 footer-center">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 footer-center">
                 <div class="footer__sotial-form-wrap">
                     <form class="footer__sotial-form">
                         <div class="footer__sotial-thanks">
@@ -22,6 +22,12 @@
                             <input type="hidden" name="name" value="" />
                             <input type="email" name="mail" required placeholder="Ваша электронная почта">
                             <input type="submit" value="Присоединиться">
+
+                            <a>
+
+
+                            <div class="fb-share-button" data-href="https://www.facebook.com/FollowYourDREAM2015/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FFollowYourDREAM2015%2F&amp;src=sdkpreparse"><img class="button-social" src="img/fb-footer.png" alt=""></a></div>
+
                         </div>
                         <a href="#" class="button white">
                             <button class="tour_btn_takepart_blue tour_btn_witout_marginbottom">Присоединиться к сообществу</button>

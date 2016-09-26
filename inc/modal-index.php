@@ -14,21 +14,144 @@
           <input type="hidden" name="tourname" id="Tour_Id" value="<?php echo $goal;?>" />
           <input type="hidden" name="form-id" value="index-modal-subscribe" />
           <div class="form-group text-align-left">
-            <label for="name" class="takepart_input">Ваше имя и фамилия</label>
+            <label for="name" class="takepart_input">ФИО</label>
             <input name="name" class="form-control" id="name" required>
           </div>
           <div class="form-group text-align-left">
-            <label for="phone" class="takepart_input">Ваш телефон</label>
+            <label for="phone" class="takepart_input">Телефон</label>
             <input type="tel" name="phone" class="form-control" id="phone" required>
           </div>
           <div class="form-group text-align-left">
-            <label for="mail" class="takepart_input" >Ваша почта</label>
+            <label for="mail" class="takepart_input" >Е-мейл</label>
             <input type="email" name="mail" class="form-control" id="mail" required>
           </div>
         </div>
         <div class="modal-footer">
           <div class="text-center">
             <input type="submit" class="btn_submitform" value="Получать рассылку" />
+            <button type="button" class="btn_submitform hidden" data-dismiss="modal" aria-label="Close">Закрыть</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--    modal-subscribe end -->
+
+
+<!--    modal-subscribe-arctica start-->
+<div id="takePartModal-arctica" class="index_modal modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="takePartForm-arctica">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title takepart_header">Интересуетесь арктическими экспедициями?</h4>
+          <p class="takepart_descrip">Оставьте ваши данные и будьте в курсе ближайших арктических путешествий, акций и скидок</p>
+          <div id="errorMsg" class="alert alert-danger hidden ptsans">Произошла ошибка, попробуйте еще раз</div>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="analytic"/>
+          <input type="hidden" name="tourname" id="Tour_Id" value="ИНТЕРЕСУЕТ АРКТИКА!" />
+          <input type="hidden" name="form-id" value="index-modal-subscribe" />
+          <div class="form-group text-align-left">
+            <label for="name" class="takepart_input">ФИО</label>
+            <input name="name" class="form-control" id="name" required>
+          </div>
+          <div class="form-group text-align-left">
+            <label for="phone" class="takepart_input">Телефон</label>
+            <input type="tel" name="phone" class="form-control" id="phone" required>
+          </div>
+          <div class="form-group text-align-left">
+            <label for="mail" class="takepart_input">Е-мейл</label>
+            <input type="email" name="mail" class="form-control" id="mail" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="text-center">
+            <input type="submit" class="btn_submitform" value="Присоединиться" />
+            <button type="button" class="btn_submitform hidden" data-dismiss="modal" aria-label="Close">Закрыть</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--    modal-subscribe end -->
+
+
+<!--    modal-subscribe-yatching start-->
+<div id="takePartModal-yatching" class="index_modal modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="takePartForm-yatching">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title takepart_header">Интересуетесь путешествиями на Яхтах?</h4>
+          <p class="takepart_descrip">Оставьте ваши данные и будьте в курсе ближайших путишествий на яхтах, акций и скидок</p>
+          <div id="errorMsg" class="alert alert-danger hidden ptsans">Произошла ошибка, попробуйте еще раз</div>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="analytic"/>
+          <input type="hidden" name="tourname" id="Tour_Id" value="ИНТЕРЕСУЕТ ЯХТИНГ!" />
+          <input type="hidden" name="form-id" value="index-modal-subscribe" />
+          <div class="form-group text-align-left">
+            <label for="name" class="takepart_input">ФИО</label>
+            <input name="name" class="form-control" id="name" required>
+          </div>
+          <div class="form-group text-align-left">
+            <label for="phone" class="takepart_input">Телефон</label>
+            <input type="tel" name="phone" class="form-control" id="phone" required>
+          </div>
+          <div class="form-group text-align-left">
+            <label for="mail" class="takepart_input">Е-мейл</label>
+            <input type="email" name="mail" class="form-control" id="mail" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="text-center">
+            <input type="submit" class="btn_submitform" value="Присоединиться" />
+            <button type="button" class="btn_submitform hidden" data-dismiss="modal" aria-label="Close">Закрыть</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--    modal-subscribe end -->
+
+
+<!--    modal-subscribe-yatching start-->
+<div id="takePartModal-adventure" class="index_modal modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="takePartForm-adventure">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title takepart_header">Интересуетесь путешествиями с приключениями?</h4>
+          <p class="takepart_descrip">Оставьте ваши данные и будьте в курсе ближайших путишествий, акций и скидок</p>
+          <div id="errorMsg" class="alert alert-danger hidden ptsans">Произошла ошибка, попробуйте еще раз</div>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="analytic"/>
+          <input type="hidden" name="tourname" id="Tour_Id" value="ИНТЕРЕСУЮТ ПРИКЛЮЧЕНИЯ!" />
+          <input type="hidden" name="form-id" value="index-modal-subscribe" />
+          <div class="form-group text-align-left">
+            <label for="name" class="takepart_input">ФИО</label>
+            <input name="name" class="form-control" id="name" required>
+          </div>
+          <div class="form-group text-align-left">
+            <label for="phone" class="takepart_input">Телефон</label>
+            <input type="tel" name="phone" class="form-control" id="phone" required>
+          </div>
+          <div class="form-group text-align-left">
+            <label for="mail" class="takepart_input">Е-мейл</label>
+            <input type="email" name="mail" class="form-control" id="mail" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="text-center">
+            <input type="submit" class="btn_submitform" value="Присоединиться" />
             <button type="button" class="btn_submitform hidden" data-dismiss="modal" aria-label="Close">Закрыть</button>
           </div>
         </div>

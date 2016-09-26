@@ -119,6 +119,112 @@ $(document).ready(function() {
         $("#takePartForm #phone").val("");
         $("#takePartForm #mail").val("");
     });
+
+
+
+
+     // Arctica --- TAKE PART FORM
+    // open modal
+    $(".index_modal_arktika").on('click', function(){
+        $("#takePartModal-arctica").modal("show");
+    });    
+    // sent form
+    $("#takePartForm-arctica").on("submit", function (e) {
+        $.ajax({
+            url: "data/formAction.php",
+            type: "POST",
+            data: $(this).serialize(),
+            success: function (data) {
+                console.log(data);
+                $("#takePartForm-arctica .takepart_header").text("ПОЗДРАВЛЯЕМ!");
+                $("#takePartForm-arctica .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
+                $("#takePartForm-arctica .modal-body, #takePartForm-arctica .modal-footer").addClass("hidden");
+            }
+        });
+        e.preventDefault();
+    });
+    // reload form
+    $("#takePartForm-arctica").on("hidden.bs.modal", function () {
+        $("#takePartForm-arctica .takepart_header").text("Заявка на получение рассылки");
+        $("#takePartForm-arctica .takepart_descrip").html("Оставьте свои контактные данные<br />и мы будем сообщать вам самое интересное в мире путешествий");
+        $("#takePartForm-arctica .modal-body").removeClass("hidden");
+        $("#takePartForm-arctica .modal-footer").removeClass("hidden");
+        $("#takePartForm-arctica .modal-footer").addClass("hidden");
+        $("#takePartForm-arctica #name").val("");
+        $("#takePartForm-arctica #phone").val("");
+        $("#takePartForm-arctica #mail").val("");
+    });
+    
+    
+
+
+    // Yatching --- TAKE PART FORM
+    // open modal
+    $(".index_modal_yatching").on('click', function(){
+        $("#takePartModal-yatching").modal("show");
+    });    
+    // sent form
+    $("#takePartForm-yatching").on("submit", function (e) {
+        $.ajax({
+            url: "data/formAction.php",
+            type: "POST",
+            data: $(this).serialize(),
+            success: function (data) {
+                console.log(data);
+                $("#takePartForm-yatching .takepart_header").text("ПОЗДРАВЛЯЕМ!");
+                $("#takePartForm-yatching .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
+                $("#takePartForm-yatching .modal-body, #takePartForm-yatching .modal-footer").addClass("hidden");
+            }
+        });
+        e.preventDefault();
+    });
+    // reload form
+    $("#takePartForm-arctica").on("hidden.bs.modal", function () {
+        $("#takePartForm-yatching .takepart_header").text("Заявка на получение рассылки");
+        $("#takePartForm-yatching .takepart_descrip").html("Оставьте свои контактные данные<br />и мы будем сообщать вам самое интересное в мире путешествий");
+        $("#takePartForm-yatching .modal-body").removeClass("hidden");
+        $("#takePartForm-yatching .modal-footer").removeClass("hidden");
+        $("#takePartForm-yatching .modal-footer").addClass("hidden");
+        $("#takePartForm-yatching #name").val("");
+        $("#takePartForm-yatching #phone").val("");
+        $("#takePartForm-yatching #mail").val("");
+    });
+    
+    
+
+
+// Adventure --- TAKE PART FORM
+    // open modal
+    $(".index_modal_adventure").on('click', function(){
+        $("#takePartModal-adventure").modal("show");
+    });    
+    // sent form
+    $("#takePartForm-adventure").on("submit", function (e) {
+        $.ajax({
+            url: "data/formAction.php",
+            type: "POST",
+            data: $(this).serialize(),
+            success: function (data) {
+                console.log(data);
+                $("#takePartForm-adventure .takepart_header").text("ПОЗДРАВЛЯЕМ!");
+                $("#takePartForm-adventure .takepart_descrip").text("ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!");
+                $("#takePartForm-adventure .modal-body, #takePartForm-adventure .modal-footer").addClass("hidden");
+            }
+        });
+        e.preventDefault();
+    });
+    // reload form
+    $("#takePartForm-arctica").on("hidden.bs.modal", function () {
+        $("#takePartForm-adventure .takepart_header").text("Заявка на получение рассылки");
+        $("#takePartForm-adventure .takepart_descrip").html("Оставьте свои контактные данные<br />и мы будем сообщать вам самое интересное в мире путешествий");
+        $("#takePartForm-adventure .modal-body").removeClass("hidden");
+        $("#takePartForm-adventure .modal-footer").removeClass("hidden");
+        $("#takePartForm-adventure .modal-footer").addClass("hidden");
+        $("#takePartForm-adventure #name").val("");
+        $("#takePartForm-adventure #phone").val("");
+        $("#takePartForm-adventure #mail").val("");
+    });
+
     
     
     

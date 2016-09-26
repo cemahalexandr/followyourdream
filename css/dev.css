@@ -61,3 +61,39 @@
 #finlandiya .modal-header {
 	background-image: url("../img/01.jpg");
 }
+
+
+.animate-wrap input[type='submit']:focus{
+	    color: red; }
+.animate-wrap input[type='submit']:hover{
+	    color: red; }
+
+.button-social {
+    cursor: pointer !important;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    -moz-transform: rotateY(90deg);
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 56px;
+}
+
+.button-social:hover {
+    background-color: #3b5998;
+    border: 2px solid #3b5998;
+}
+
+.button-social:focus {
+    background-color: #3b5998;
+    border: 2px solid #3b5998;
+}
