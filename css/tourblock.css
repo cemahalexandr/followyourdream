@@ -581,7 +581,7 @@ del.cross:before {
     border: solid 2px #ed1c24;
     border-radius: 5px;
     color: #ed1c24;
-    font-size: 20pt;
+    font-size: 18pt;
     text-transform: uppercase;
 }
 
@@ -598,14 +598,14 @@ del.cross:before {
 .takepart_header {
     font-family: BebasRegular, sans-serif;
     color: #ed1c24;
-    font-size: 24pt;
+    font-size: 14pt;
     text-align: center;
 }
 
 .takepart_descrip {
     font-family: PTSansRegular, sans-serif;
-    color: #404040;
-    font-size: 16pt;
+    color: #7f7f7f;
+    font-size: 14pt;
     text-align: center;
     font-weight: 400;
 }
@@ -613,7 +613,7 @@ del.cross:before {
 .takepart_input {
     font-family: PTSansRegular, sans-serif;
     color: #404040;
-    font-size: 16pt;
+    font-size: 14pt;
     font-weight: 400;
 }
 

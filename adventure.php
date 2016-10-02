@@ -80,7 +80,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 upcoming-event__item ">
                         <div class="upcoming-event__item-img-wrapper">
                           <!-- <img src="img/upcoming-event__img-1.jpg" alt=""> -->
-                          <img src="img/foto-dly-kalendary-2/Январь.jpg" alt="">
+                          <img src="img/foto-dly-kalendary-2/foto-dly-blocka-blishayshie-priklucheniya/Январь.jpg" alt="">
                         </div>
                         <div class="upcoming-event__item-hover-substrate"></div>
                         <div class="upcoming-event__item-hover">
@@ -123,7 +123,7 @@
                             <div class="upcoming-event__item-hover-substrate"></div>
                             <div class="upcoming-event__item-hover">
                               <ul>
-                                <li class="upcoming-event__item-hover__place">Исландия джампинг – все самое грандиозное в одном путешествии</li>
+                                <li class="upcoming-event__item-hover__place">Исландия джиппинг – все самое грандиозное в одном путешествии</li>
                                 <li class="upcoming-event__item-hover__date">14 - 21 мая 2017</li>
                                 <li class="upcoming-event__item-hover__money">1650 евро</li>
                               </ul>
