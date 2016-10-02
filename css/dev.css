@@ -85,7 +85,13 @@
     transition: all 0.3s;
     padding: 10px;
     display: inline-block;
-    margin-top: 56px;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+@media (max-width: 1160px){
+    .button-social {
+    margin-right: 10px;}
 }
 
 .button-social:hover {

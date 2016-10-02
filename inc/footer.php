@@ -9,31 +9,36 @@
                     <li class="footer-messager__email"><a href="mailto:info@dreamlifeexpeditions.com">info@dreamlifeexpeditions.com</a></li>
                 </ul>
             </div>
-            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 footer-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 footer-center">
                 <div class="footer__sotial-form-wrap">
                     <form class="footer__sotial-form">
                         <div class="footer__sotial-thanks">
                             <span>ПОЗДРАВЛЯЕМ!</span> 
                             ТЕПЕРЬ ТВОЯ ЖИЗНЬ  НАПОЛНИТСЯ НЕОБЫКНОВЕННЫМИ ПУТЕШЕСТВИЯМИ И ЭМОЦИЯМИ!
                         </div>
+
                         <div class="animate-wrap">
                             <input type="hidden" name="tourname" id="Tour_Id" value="ПРИСОЕДИНИЛИСЬ К СООБЩЕСТВУ!" />
                             <input type="hidden" name="form-id" value="footer-form" />
                             <input type="hidden" name="name" value="" />
                             <input type="email" name="mail" required placeholder="Ваша электронная почта">
                             <input type="submit" value="Присоединиться">
+                
 
-                            <a>
-
+                            <a>    
 
                             <div class="fb-share-button" data-href="https://www.facebook.com/FollowYourDREAM2015/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FFollowYourDREAM2015%2F&amp;src=sdkpreparse"><img class="button-social" src="img/fb-footer.png" alt=""></a></div>
+                            </br>
+                        <p class="not-spam">Никакого спама. Только интересная информация о новых маршрутах, невероятных экспедициях и путешествиях.  </p>
 
                         </div>
+
                         <a href="#" class="button white">
-                            <button class="tour_btn_takepart_blue tour_btn_witout_marginbottom">Присоединиться к сообществу</button>
+                            <button class="tour_btn_takepart_blue tour_btn_witout_marginbottom button-join">Присоединиться к сообществу</button>
                         </a>
                         <div class="clearfix"></div>
                     </form>
+
                 </div>
 
                 <div class="footer-sotial">
@@ -44,7 +49,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 pull-right">
                 <div class="footer-phones">
                     <ul>
                         <li><a href="tel:+380 67 850 21 07">+380 67 850 21 07</a></li>
