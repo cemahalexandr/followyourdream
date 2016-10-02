@@ -15,7 +15,7 @@
 }
 
 #greece-modal .modal-header {
-	background-image: url("../img/01.jpg");
+	background-image: url("../img/02.jpg");
 }
 
 #islandiya-in-gip .modal-header {
@@ -103,3 +103,17 @@
     background-color: #3b5998;
     border: 2px solid #3b5998;
 }
+
+.p-calendar{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 20px 0px 10px;
+}
+
+.yellow {
+    color: #f7b32b;
+}
+
+.center{
+        text-align: center;
+    }   
