@@ -1,11 +1,19 @@
 <?php include_once "inc/db.php";?>
+<?php
+//данные по базе данных
+$db_table = "followyourdream";
+$db_select = mysql_select_db($db_table);
 
+$db_query = mysql_query("SELECT * FROM indexHeader WHERE id=1");
+$db_arr = mysql_fetch_array($db_query);
+?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>FollowYourDream Admin</title>
+  <title><?php echo $db_arr['headerTitle'];?></title>
+  <meta name="description" content="<?php echo $db_arr['headerDescription'];?>">
   <?php include_once "inc/links-admin-lte.php";?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -32,8 +40,8 @@
               <div class="box-body">
                 <div class="form-group">
                   <div class="form-group-img">
-                    <input type="hidden" name="headerLogoLink">
-                    <img class="image-to-input" src="../img/logo-header.png" alt="">
+                    <input type="hidden" name="headerLogoLink" >
+                    <img class="image-to-input" src="../<?php echo $db_arr['headerLogoLink'];?>" alt="">
                     <button type="button" class="del-img btn btn-danger">Удалить</button>
                   </div>
                   <div class="upload-img">
@@ -43,11 +51,11 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Link fb</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" value="vk.com/">
+                  <input type="text" name="headerLinkFb" class="form-control" id="exampleInputEmail1" value="<?php echo $db_arr['headerLinkFb'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Link instagram</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" value="Instapram">
+                  <input type="text" name="headerLinkIn" class="form-control" id="exampleInputPassword1" value="<?php echo $db_arr['headerLinkIn'];?>">
                 </div>
               </div>
             </div>
@@ -60,25 +68,26 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputPassword1">Index - title</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" value="Title">
+                  <input type="text" name="headerTitle" class="form-control" id="exampleInputPassword1" value="<?php echo $db_arr['headerTitle'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Index - description (meta)</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" value="Desctiption">
+                  <input type="text" name="headerDescription" class="form-control" id="exampleInputPassword1" value="<?php echo $db_arr['headerDescription'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Small text</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" value="Instapram">
+                  <input type="text" name="headerSmallText" class="form-control" id="exampleInputPassword1" value="<?php echo $db_arr['headerSmallText'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Button text</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" value="Присоединяйся">
+                  <input type="text" name="headerButtonText" class="form-control" id="exampleInputPassword1" value="<?php echo $db_arr['headerButtonText'];?>">
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-12">
-            <div class="box box-primary">
+            <div class="box box-primary index-header-image-carousel">
+              <input type="hidden" name="headerCarouselSrc" class="form-control" id="" value="">
               <div class="box-header with-border">
                 <h3 class="box-title">Carousel images</h3>
               </div>
