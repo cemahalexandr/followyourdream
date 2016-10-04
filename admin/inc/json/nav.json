@@ -1,0 +1,80 @@
+
+
+[
+  {
+    "id" : 1,
+    "class" : "dropdown",
+    "title":"Путешествия",
+    "href": "index.php#travel",
+    "dropdown":[
+      {
+        "href":"index.php#travel",
+        "anchor":"Путешествия"
+      },
+      {
+        "href":"arctic.php",
+        "anchor":"Арктические экспедиции"
+      },
+      {
+        "href":"yachting.php",
+        "anchor":"Яхтинг"
+      },
+      {
+        "href":"dreambus.php",
+        "anchor":"Dream Bus"
+      },
+      {
+        "href":"calendar.php",
+        "anchor":"Календарь"
+      }
+    ]
+  },
+  {
+    "id" : 1,
+    "class" : "",
+    "title":"Сообщество",
+    "href": "index.php#comunity",
+    "dropdown":[
+      {
+        "href":"",
+        "anchor":""
+      }
+    ]
+  },
+  {
+    "id" : 1,
+    "class" : "",
+    "title":"Ближайшие экспедиции",
+    "href": "index.php#upcoming-event",
+    "dropdown":[
+      {
+        "href":"",
+        "anchor":""
+      }
+    ]
+  },
+  {
+    "id" : 1,
+    "class" : "",
+    "title":"Отзывы",
+    "href": "index.php#reviews",
+    "dropdown":[
+      {
+        "href":"",
+        "anchor":""
+      }
+    ]
+  },
+  {
+    "id" : 1,
+    "class" : "",
+    "title":"Контакты",
+    "href": "index.php#contacts",
+    "dropdown":[
+      {
+        "href":"",
+        "anchor":""
+      }
+    ]
+  }
+]

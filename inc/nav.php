@@ -21,7 +21,6 @@
             Путешествия
             <span class="caret " ></span>
           </a>
-
           <ul class="dropdown-menu">
             <li><a tabindex="-1" href="/#travels">Путешествия</a></li>
             <li><a tabindex="-1" href="arctic.php">Арктические экспедиции</a></li>
