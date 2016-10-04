@@ -22,7 +22,7 @@
     </section>
     <section class="content">
       <!-- form start -->
-      <form class="index-header-form" role="form">
+      <form action="formAction/index-header-action.php" method="post" class="index-header-form" role="form">
         <div class="row">
           <div class="col-md-6">
             <div class="box box-primary">
@@ -32,7 +32,8 @@
               <div class="box-body">
                 <div class="form-group">
                   <div class="form-group-img">
-                    <img src="../img/logo-header.png" alt="">
+                    <input type="hidden" name="headerLogoLink">
+                    <img class="image-to-input" src="../img/logo-header.png" alt="">
                     <button type="button" class="del-img btn btn-danger">Удалить</button>
                   </div>
                   <div class="upload-img">

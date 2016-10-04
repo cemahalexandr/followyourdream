@@ -26,22 +26,22 @@
                 </ul>
             </li>
             <li>
-                <a href="arctic.php">
+                <a href="page-arctic.php">
                     <span>Арктические экспедиции</span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="page-yachting.php">
                     <span>Яхтинг</span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="page-adventure.php">
                     <span>Приключения</span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="page-dreambus.php">
                     <span>DreamBus</span>
                 </a>
             </li>

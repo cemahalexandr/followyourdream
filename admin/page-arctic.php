@@ -27,27 +27,12 @@
       <form class="index-header-form" role="form">
         <div class="row">
           <div class="col-md-3">
-            <div class="box box-primary">
-              <div class="box-header with-border">
-                <h3 class="box-title">Header</h3>
-              </div>
-              <div class="box-body">
-                <div class="form-group">
-                  <label for="exampleInputFile">Header text</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="ARCTIC EXPEDITIONS">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputFile">Sub Header text</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="Отправься в самое необычное путешествие в своей жизни!">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputFile">Button text</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="Присоединяйся">
-                </div>
-              </div>
-            </div>
+            <?php include_once "tmp-header.php";?>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-3">
+            <?php include_once "tmp-meta.php";?>
+          </div>
+          <div class="col-md-12">
             <div class="box">
               <div class="box-header">
                 <h3 class="box-title">Main text</h3>

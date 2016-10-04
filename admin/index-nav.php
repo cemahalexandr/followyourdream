@@ -32,7 +32,7 @@
             <div class="box-header with-border">
               <h3 class="box-title">Навигация</h3>
             </div>
-            <form role="form">
+            <form role="form" method="post" action="formAction/index-nav-action.php">
               <div class="box-body">
                 <?php
                 $str = file_get_contents('inc/json/nav.json');
@@ -40,33 +40,19 @@
                 foreach ($json as $json_key => $json_val){
                   echo "<div class='form-group'>";
                   echo "<label for='exampleInputPassword1'>$json_val[title]</label>";
-                  echo "<input type='text' class='form-control' id='$json_val[id]' value='$json_val[title]'>";
-                  echo "<input type='text' class='form-control' id='' value='$json_val[href]'>";
+                  echo "<input type='text' name='$json_val[key]' class='form-control' id='$json_val[id]' value='$json_val[title]'>";
+                  echo "<input type='text' name='$json_val[key]-href' class='form-control' id='' value='$json_val[href]'>";
                   if ($json_val['class'] == "dropdown"){
                     foreach ($json_val['dropdown'] as $drop_key => $drop_val){
                       echo "<div class='form-group_sub'>";
-                      echo "<input type='text' class='form-control' id='' value='$drop_val[anchor]'>";
-                      echo "<input type='text' class='form-control' id='' value='$drop_val[href]'>";
+                      echo "<input type='text' name='$drop_val[key]' class='form-control' id='' value='$drop_val[anchor]'>";
+                      echo "<input type='text' name='$drop_val[key]-href' class='form-control' id='' value='$drop_val[href]'>";
                       echo "</div>";
                     }
                   }
                   echo "</div>";
-
                 }
                 ?>
-<!--                <div class='form-group'>-->
-<!--                  <label for='exampleInputPassword1'>Путешествия</label>-->
-<!--                  <input type='text' class='form-control' id='' value='Путешествия'>-->
-<!--                  <input type='text' class='form-control' id='' value='index.php#travel'>-->
-<!--                  <div class='form-group_sub'>-->
-<!--                    <input type='text' class='form-control' id='' value='Anchor'>-->
-<!--                    <input type='text' class='form-control' id='' value='href'>-->
-<!--                  </div>-->
-<!--                  <div class='form-group_sub'>-->
-<!--                    <input type='text' class='form-control' id='' value='Anchor'>-->
-<!--                    <input type='text' class='form-control' id='' value='href'>-->
-<!--                  </div>-->
-<!--                </div>-->
               </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Сохранить</button>
