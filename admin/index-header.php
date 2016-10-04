@@ -30,7 +30,7 @@ $db_arr = mysql_fetch_array($db_query);
     </section>
     <section class="content">
       <!-- form start -->
-      <form action="formAction/index-header-action.php" method="post" class="index-header-form" role="form">
+      <form action="formAction/index-header-action.php" method="post" class="index-header-form form-with-carousel" role="form" enctype="multipart/form-data" >
         <div class="row">
           <div class="col-md-6">
             <div class="box box-primary">
@@ -39,14 +39,14 @@ $db_arr = mysql_fetch_array($db_query);
               </div>
               <div class="box-body">
                 <div class="form-group">
-                  <div class="form-group-img">
-                    <input type="hidden" name="headerLogoLink" >
-                    <img class="image-to-input" src="../<?php echo $db_arr['headerLogoLink'];?>" alt="">
-                    <button type="button" class="del-img btn btn-danger">Удалить</button>
-                  </div>
+<!--                  <div class="form-group-img">-->
+<!--                    <input type="hidden" name="headerLogoLink" >-->
+<!--                    <img class="image-to-input" src="../--><?php //echo $db_arr['headerLogoLink'];?><!--" alt="">-->
+<!--                    <button type="button" class="del-img btn btn-danger">Удалить</button>-->
+<!--                  </div>-->
                   <div class="upload-img">
                     <label for="exampleInputFile">Logo</label>
-                    <input type="file" id="exampleInputFile">
+                    <input type="file" accept="image/*" id="" name="headerLogoLink">
                   </div>
                 </div>
                 <div class="form-group">

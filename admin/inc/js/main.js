@@ -6,6 +6,20 @@ $(document).ready(function () {
             $(this).children('.upload-img').css('display', 'none');
         }
     });
+    
+    // удаление изображения
+    $('button.del-img').click(function(){
+        $.ajax({
+            url: "../admin/formAction/img-del.php",
+            type: "POST",
+            data: { imgSrc : $(this).siblings('img').attr('src').substring(3)},
+            success: function (data) {
+                console.log(data);
+            }
+        });
+        $(this).parents('.form-group').children('.upload-img').css('display', 'block');
+        $(this).parent('.form-group-img').remove();
+    });
 
     // передача пути к картинке в input
     $('.form-group-img img.image-to-input').each(function(){
