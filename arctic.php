@@ -183,7 +183,7 @@
                         <div class="upcoming-event__item-hover-substrate"></div>
                         <div class="upcoming-event__item-hover">
                             <ul>
-                                <li class="upcoming-event__item-hover__place">Исландия джампинг – все самое грандиозное
+                                <li class="upcoming-event__item-hover__place">Исландия джиппинг – все самое грандиозное
                                     в одном путешествии
                                 </li>
                                 <li class="upcoming-event__item-hover__date">14 - 21 мая 2017</li>

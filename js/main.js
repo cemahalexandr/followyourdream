@@ -69,10 +69,14 @@ $(document).ready(function() {
                 }
             }
         });
-        $('.header-button a.button, .expectation a.button ').click(function () {
+
+        $('.header-button a.button, .expectation a.button, .upcoming-event__bottom a.button ').click(function () {
             var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
             if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
                 $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 1500); // анимируем скроолинг к элементу scroll_el
+        $('form.footer__sotial-form a.button').animate({opacity: 0}, 1000).css('display', 'none');
+        $('form.footer__sotial-form .animate-wrap').css('display', 'inline-block').animate({opacity: 1}, 1000);
+        $("footer").addClass("blur");
             }
             return false; // выключаем стандартное действие
         });
@@ -249,7 +253,7 @@ $(document).ready(function() {
                 setTimeout(function(){
                     $(".footer__sotial-form .footer__sotial-thanks").css('display', 'none');
                     $('form.footer__sotial-form a.button').css('display', 'inline-block').animate({opacity: 1}, 1000);
-                }, 25000);
+                }, 50000);
             }
         });
         e.preventDefault();

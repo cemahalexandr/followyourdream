@@ -128,7 +128,7 @@
       <form id="takePartForm-adventure">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title takepart_header">Интересуетесь путешествиями с приключениями?</h4>
+          <h4 class="modal-title takepart_header">Интересуетесь приключениями?</h4>
           <p class="takepart_descrip">Оставьте ваши данные и будьте в курсе ближайших путишествий, акций и скидок</p>
           <div id="errorMsg" class="alert alert-danger hidden ptsans">Произошла ошибка, попробуйте еще раз</div>
         </div>

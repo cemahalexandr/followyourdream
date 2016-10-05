@@ -265,8 +265,8 @@
       <div class="container upcoming-event__bottom">
         <div class="row">
           <div class="col-lg-10 col-lg-push-1">
-              <a class="button">
-                <button class="index_modal_subscribe button tour_btn_takepart_orange tour_btn_witout_marginbottom">хочу получать рассылку</button>
+              <a class="button" href="#contacts">
+                <button>хочу получать рассылку</button>
               </a>
               <p>Никакого спама. Только интересная информация о новых маршрутах, невероятных экспедициях и путешествиях.  </p>
           </div>
