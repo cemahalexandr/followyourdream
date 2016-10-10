@@ -3,6 +3,7 @@ $(document).ready(function () {
     // скрытие загрузчика если есть картинка
     $('.form-group').each(function(){
         if ($(this).children('.form-group-img').html() != undefined){
+            // console.log("yes");
             $(this).children('.upload-img').css('display', 'none');
         }
     });
