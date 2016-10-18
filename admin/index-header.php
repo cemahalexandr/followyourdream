@@ -39,11 +39,22 @@ $db_arr = mysql_fetch_array($db_query);
               </div>
               <div class="box-body">
                 <div class="form-group">
+                  <?php
+                  $headerLogoLinkString = $db_arr['headerLogoLink'];
+                  if ($headerLogoLinkString != ''):
+                  ?>
                   <div class="form-group-img">
                     <input type="hidden" name="headerLogoLink" >
+                    <input type="hidden" name="tableName" value="indexHeader">
+                    <input type="hidden" name="columnName" value="headerLogoLink">
+                    <input type="hidden" name="imgCount" value="one">
+                    <input type="hidden" name="id" value="1">
                     <img class="image-to-input" src="../<?php echo $db_arr['headerLogoLink'];?>" alt="">
                     <button type="button" class="del-img btn btn-danger">Удалить</button>
                   </div>
+                  <?php
+                  endif;
+                  ?>
                   <div class="upload-img">
                     <label for="exampleInputFile">Logo</label>
                     <input type="file" accept="image/*" id="" name="headerLogoLink">
@@ -89,7 +100,7 @@ $db_arr = mysql_fetch_array($db_query);
             <div class="box box-primary index-header-image-carousel">
               <input type="hidden" name="headerCarouselSrc" class="form-control" id="" value="">
               <div class="box-header with-border">
-                <h3 class="box-title">Carousel images</h3>
+                <h3 class="box-title">Header Carousel images</h3>
               </div>
               <div class="box-body">
                 <div class="row">
@@ -101,114 +112,24 @@ $db_arr = mysql_fetch_array($db_query);
                       <div class="form-group">
                         <?php if($carouselArr[$i] != ""):?>
                         <div class="form-group-img">
+                          <input type="hidden" name="tableName" value="indexHeader">
+                          <input type="hidden" name="columnName" value="headerCarouselSrc">
+                          <input type="hidden" name="imgCount" value="many">
+                          <input type="hidden" name="id" value="1">
                           <img src="../<?php echo $carouselArr[$i];?>" alt="">
                           <button type="button" class="del-img btn btn-danger">Удалить</button>
                         </div>
                         <?php endif;?>
                         <div class="upload-img">
-                          <input type="file" accept="image/*" id="exampleInputFile">
+                          <input type="file" accept="image/*" id="exampleInputFile" name="headerCarouselNewImg[]">
                         </div>
                       </div>
                     </div>
-                  <?php endfor;
-//                    die();
-                  ?>
-<!--                  <div class="col-md-3">-->
-<!--                    <div class="form-group">-->
-<!--                      <div class="form-group-img">-->
-<!--                        <img src="../img/header-img-1.jpg" alt="">-->
-<!--                        <button type="button" class="del-img btn btn-danger">Удалить</button>-->
-<!--                      </div>-->
-<!--                      <div class="upload-img">-->
-<!--                        <input type="file" accept="image/*" id="exampleInputFile">-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="col-md-3">-->
-<!--                    <div class="form-group">-->
-<!--                      <div class="form-group-img">-->
-<!--                        <img src="../img/header-img-2.jpg" alt="">-->
-<!--                        <button type="button" class="del-img btn btn-danger">Удалить</button>-->
-<!--                      </div>-->
-<!--                      <div class="upload-img">-->
-<!--                        <input type="file" accept="image/*" id="exampleInputFile">-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="col-md-3">-->
-<!--                    <div class="form-group">-->
-<!--                      <div class="form-group-img">-->
-<!--                        <img src="../img/our-travel__img-1.jpg" alt="">-->
-<!--                        <button type="button" class="del-img btn btn-danger">Удалить</button>-->
-<!--                      </div>-->
-<!--                      <div class="upload-img">-->
-<!--                        <input type="file" accept="image/*" id="exampleInputFile">-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="col-md-3">-->
-<!--                    <div class="form-group">-->
-<!--                      <div class="upload-img">-->
-<!--                        <input type="file" accept="image/*" id="exampleInputFile">-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
+                  <?php endfor; ?>
                 </div>
               </div>
             </div>
           </div>
-<!--          <div class="col-md-12">-->
-<!--            <div class="box box-primary index-header-image-carousel">-->
-<!--              <input type="hidden" name="headerCarouselSrc" class="form-control" id="" value="">-->
-<!--              <div class="box-header with-border">-->
-<!--                <h3 class="box-title">Carousel images</h3>-->
-<!--              </div>-->
-<!--              <div class="box-body">-->
-<!--                <div class="row">-->
-<!--                  <div class="col-md-3">-->
-<!--                    <div class="form-group">-->
-<!--                      <div class="form-group-img">-->
-<!--                        <img src="../img/header-img-1.jpg" alt="">-->
-<!--                        <button type="button" class="del-img btn btn-danger">Удалить</button>-->
-<!--                      </div>-->
-<!--                      <div class="upload-img">-->
-<!--                        <input type="file" accept="image/*" id="exampleInputFile">-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="col-md-3">-->
-<!--                    <div class="form-group">-->
-<!--                      <div class="form-group-img">-->
-<!--                        <img src="../img/header-img-2.jpg" alt="">-->
-<!--                        <button type="button" class="del-img btn btn-danger">Удалить</button>-->
-<!--                      </div>-->
-<!--                      <div class="upload-img">-->
-<!--                        <input type="file" accept="image/*" id="exampleInputFile">-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="col-md-3">-->
-<!--                    <div class="form-group">-->
-<!--                      <div class="form-group-img">-->
-<!--                        <img src="../img/our-travel__img-1.jpg" alt="">-->
-<!--                        <button type="button" class="del-img btn btn-danger">Удалить</button>-->
-<!--                      </div>-->
-<!--                      <div class="upload-img">-->
-<!--                        <input type="file" accept="image/*" id="exampleInputFile">-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="col-md-3">-->
-<!--                    <div class="form-group">-->
-<!--                      <div class="upload-img">-->
-<!--                        <input type="file" accept="image/*" id="exampleInputFile">-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
           <div class="col-md-12">
             <div class="box box-primary">
               <div class="box-footer">
