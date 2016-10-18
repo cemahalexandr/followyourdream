@@ -8,37 +8,42 @@ $db_table = "followyourdream";
 $db_select = mysql_select_db($db_table);
 
 // uploads images
-$ourtravelBlockNewImg = $_FILES['ourtravelBlockNewImg'];
-for ($i = 0; $i < 5; $i++){
-    if ($ourtravelBlockNewImg['name'][$i] == ''){
+$aboutComunityNewImg = $_FILES['aboutComunityNewImg'];
+for ($i = 0; $i < 4; $i++){
+    if ($aboutComunityNewImg['name'][$i] == ''){
 //        continue;
     } else {
-        $extension = pathinfo($_FILES['ourtravelBlockNewImg']['name'][$i]);
+        $extension = pathinfo($_FILES['aboutComunityNewImg']['name'][$i]);
         $uploaddir = $_SERVER['DOCUMENT_ROOT'] . "/img/uploads/";
         $fileName = uniqid() . "." . $extension['extension'];
         $uploadfile = $uploaddir . $fileName;
-        move_uploaded_file($_FILES['ourtravelBlockNewImg']['tmp_name'][$i], $uploadfile); //какой файл загружать и куда
+        move_uploaded_file($_FILES['aboutComunityNewImg']['tmp_name'][$i], $uploadfile); //какой файл загружать и куда
         $pos = strpos($uploadfile, "img");
         $uploadfile = substr($uploadfile, $pos);
-        $db_query = "UPDATE indexOurTravel SET ourtravelBlockImgSrc = '$uploadfile' WHERE id=$i+1";
+        $db_query = "UPDATE indexAboutComunity SET aboutComunityNewImg = '$uploadfile' WHERE id=$i+1";
         $db_result = mysql_query($db_query, $db_connect);
     }
     $i_text = $i+1;
-    $ourtravelBlockImgTitle = $_POST["ourtravelBlockImgTitle-$i_text"];
-    $ourtravelBlockImgLink = $_POST["ourtravelBlockImgLink-$i_text"];
-    $db_query = "UPDATE indexOurTravel SET 
-      ourtravelBlockImgTitle = '$ourtravelBlockImgTitle', 
-      ourtravelBlockImgLink = '$ourtravelBlockImgLink' 
+
+    $aboutComunityImgHeader = $_POST["aboutComunityImgHeader-$i_text"];
+    $aboutComunityImgText = $_POST["aboutComunityImgText-$i_text"];
+    $aboutComunityImgYellowText = $_POST["aboutComunityImgYellowText-$i_text"];
+    $db_query = "UPDATE indexAboutComunity SET 
+      aboutComunityImgHeader = '$aboutComunityImgHeader', 
+      aboutComunityImgText = '$aboutComunityImgText',
+      aboutComunityImgYellowText = '$aboutComunityImgYellowText'
       WHERE id=$i+1";
     $db_result = mysql_query($db_query, $db_connect);
 }
 // инифиализация переменных
-$ourtravelHeaderText = $_POST['ourtravelHeaderText'];
-$ourtravelSubHeaderText = $_POST['ourtravelSubHeaderText'];
+$aboutComunityHeaderText = $_POST["aboutComunityHeaderText"];
+$aboutComunitySubHeaderText = $_POST["aboutComunitySubHeaderText"];
+$aboutComunityImgYellowText = $_POST["aboutComunityImgYellowText"];
 $db_query = "
-  UPDATE indexOurTravel
-  SET ourtravelHeaderText = '$ourtravelHeaderText',
-      ourtravelSubHeaderText = '$ourtravelSubHeaderText'
+  UPDATE indexAboutComunity
+  SET aboutComunityHeaderText = '$aboutComunityHeaderText', 
+      aboutComunitySubHeaderText = '$aboutComunitySubHeaderText', 
+      aboutComunityImgYellowText = '$aboutComunityImgYellowText'
   WHERE id=1
 ";
 

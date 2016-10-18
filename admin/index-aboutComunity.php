@@ -1,5 +1,11 @@
 <?php include_once "inc/db.php";?>
-
+<?php
+//данные по базе данных
+$db_table = "followyourdream";
+$db_select = mysql_select_db($db_table);
+$db_query = mysql_query("SELECT * FROM indexAboutComunity WHERE id=1");
+$db_arr = mysql_fetch_array($db_query);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +28,7 @@
     </section>
     <section class="content">
       <!-- form start -->
-      <form class="index-header-form" role="form">
+      <form class="index-header-form" role="form" action="formAction/index-aboutComunity-action.php" method="post" enctype="multipart/form-data">
         <div class="row">
           <div class="col-md-3">
             <div class="box box-primary">
@@ -32,15 +38,15 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputFile">Header text</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="НАШИ ПУТЕШЕСТВИЯ">
+                  <input type="text" name="aboutComunityHeaderText" class="form-control" id="exampleInputFile" value="<?php echo $db_arr['aboutComunityHeaderText'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">About comunity text</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="#FOLLOW YOUR DREAM - открытое travel-сообщество для всех, кто влюблен в жизнь, в приключения и путешествия. Мы выбираем самые необыкновенные места планеты, собираем самую веселую компанию и отправляемся в самые крутые путешествия в вашей жизни. Для нас нет границ и возраста. Мы не заставим Вас слушать монотонные экскурсии или скучать на пляже. Все наши путешествия насыщены впечатлениями, яркими эмоциями, незабываемыми приключениями и при этом абсолютно доступны. Жизнь слишком коротка, что бы тратить ее на глупости!">
+                  <input type="text" name="aboutComunitySubHeaderText" class="form-control" id="exampleInputFile" value="<?php echo $db_arr['aboutComunitySubHeaderText'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Yellow text</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="#Живи_так_как_ты_хочешь">
+                  <input type="text" name="aboutComunityImgYellowText-<?php echo $i;?>" class="form-control" id="exampleInputFile" value="<?php echo $db_arr['aboutComunityYellowText'];?>">
                 </div>
               </div>
             </div>
@@ -52,98 +58,41 @@
               </div>
               <div class="box-body index-our-travel-img">
                 <div class="row">
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <div class="form-group-img">
-                        <img src="../img/about-comunity__icon-1.png" alt="">
-                        <button type="button" class="del-img btn btn-danger">Удалить</button>
+                  <?php for ($i = 1; $i < 5; $i++):?>
+                    <?php
+                    $db_query = mysql_query("SELECT * FROM indexAboutComunity WHERE id=++$i");
+                    $db_arr = mysql_fetch_array($db_query);
+                    ?>
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <?php if($db_arr['aboutComunityImgSrc'] != ""):?>
+                          <div class="form-group-img">
+                            <input type="hidden" name="tableName" value="indexAboutComunity">
+                            <input type="hidden" name="columnName" value="aboutComunityImgSrc">
+                            <input type="hidden" name="imgCount" value="one">
+                            <input type="hidden" name="id" value="<?php echo $i;?>">
+                            <img src="../<?php echo $db_arr['aboutComunityImgSrc'];?>" alt="">
+                            <button type="button" class="del-img btn btn-danger">Удалить</button>
+                          </div>
+                        <?php endif;?>
+                        <div class="upload-img">
+                          <input type="file" accept="image/*" id="exampleInputFile" name="aboutComunityNewImg[]">
+                        </div>
                       </div>
-                      <div class="upload-img">
-                        <input type="file" id="exampleInputFile">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Header</label>
+                        <input type="text" name="aboutComunityImgHeader-<?php echo $i;?>" class="form-control"  value="<?php echo $db_arr['aboutComunityImgHeader'];?>">
                       </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Header</label>
-                      <input type="text" class="form-control"  value="Путешествия">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Text</label>
-                      <input type="text" class="form-control"  value="Экспедиции, приключения и яхтенные регаты в самые редкие, необыкновенные и интересные места планеты">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Yellow text</label>
-                      <input type="text" class="form-control"  value="">
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <div class="form-group-img">
-                        <img src="../img/about-comunity__icon-2.png" alt="">
-                        <button type="button" class="del-img btn btn-danger">Удалить</button>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Header</label>
+                        <input type="text" name="aboutComunityImgText-<?php echo $i;?>" class="form-control"  value="<?php echo $db_arr['aboutComunityImgText'];?>">
                       </div>
-                      <div class="upload-img">
-                        <input type="file" id="exampleInputFile">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Header</label>
-                      <input type="text" class="form-control"  value="Идея">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Text</label>
-                      <input type="text" class="form-control"  value="Жизнь ОФИГЕННАЯ штука и она одна! Мечтай, путешествуй, вдохновляйся, действуй и наслаждайся каждым моментом">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Yellow text</label>
-                      <input type="text" class="form-control"  value="#Живи_так_как_ты_хочешь">
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <div class="form-group-img">
-                        <img src="../img/about-comunity__icon-3.png" alt="">
-                        <button type="button" class="del-img btn btn-danger">Удалить</button>
-                      </div>
-                      <div class="upload-img">
-                        <input type="file" id="exampleInputFile">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Header</label>
+                        <input type="text" name="aboutComunityImgYellowText-<?php echo $i;?>" class="form-control"  value="<?php echo $db_arr['aboutComunityImgYellowText'];?>">
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Header</label>
-                      <input type="text" class="form-control"  value="общение">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Text</label>
-                      <input type="text" class="form-control"  value="Искреннее общение и настоящие друзья по всему миру! Нас уже больше 8000 участников! Присоединяйся и наполни свою жизнь приключениями!">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Yellow text</label>
-                      <input type="text" class="form-control"  value="">
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <div class="form-group-img">
-                        <img src="../img/about-comunity__icon-4.png" alt="">
-                        <button type="button" class="del-img btn btn-danger">Удалить</button>
-                      </div>
-                      <div class="upload-img">
-                        <input type="file" id="exampleInputFile">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Header</label>
-                      <input type="text" class="form-control"  value="Доступность">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Text</label>
-                      <input type="text" class="form-control"  value="Мы уверены, что даже самые крутые путешествия не должны стоить дорого! Наши приключения уникальны и при этом абсолютно доступны!">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Yellow text</label>
-                      <input type="text" class="form-control"  value="">
-                    </div>
-                  </div>
+                  <?php endfor; ?>
                 </div>
               </div>
             </div>

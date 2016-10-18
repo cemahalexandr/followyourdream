@@ -54,8 +54,7 @@ $db_arr = mysql_fetch_array($db_query);
               </div>
               <div class="box-body index-our-travel-img">
                 <div class="row">
-                  <?php
-                  for ($i = 1; $i < 5; $i++):?>
+                  <?php for ($i = 1; $i < 5; $i++):?>
                     <?php
                     $db_query = mysql_query("SELECT * FROM indexOurTravel WHERE id=++$i");
                     $db_arr = mysql_fetch_array($db_query);
