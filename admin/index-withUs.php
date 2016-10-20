@@ -1,5 +1,11 @@
 <?php include_once "inc/db.php";?>
-
+<?php
+//данные по базе данных
+$db_table = "followyourdream";
+$db_select = mysql_select_db($db_table);
+$db_query = mysql_query("SELECT * FROM indexAboutComunity WHERE id=1");
+$db_arr = mysql_fetch_array($db_query);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +28,7 @@
     </section>
     <section class="content">
       <!-- form start -->
-      <form class="index-header-form" role="form">
+      <form class="index-header-form" role="form" action="formAction/index-withUs-action.php" method="post" enctype="multipart/form-data">
         <div class="row">
           <div class="col-md-3">
             <div class="box box-primary">
@@ -54,15 +60,8 @@
               </div>
               <!-- /.box-header -->
               <div class="box-body pad">
-                  <textarea class="textarea" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid rgb(221, 221, 221); padding: 10px; display: block;" placeholder="Place some text here">
-                    <p>
-                      <ul>
-                        <li>Веселые встречи, уникальные путешествия, приключения и тусовки!</li>
-                        <li>Уникальные арктические экспедиции – Гренландия, Шпицберген, Северный Полюс и Антарктика</li>
-                        <li>Приключения на краю света – Мадагаскар, Галапагосские острова, Антарктида и только самые впечатляющие места планеты</li>
-                        <li>Яхтенные флотилии в Италии, Греции, на Мальдивских островах – лучшие маршруты, комфортабельные  парусные яхты/катамараны и самые веселые Party на пляже</li>
-                        <li>DREAM Bus - легендарные FreeLifestyle  уикэнды  за звездами, MOREм,  и запахом трав… Для всех, кто в теме))</li>
-                      </ul>
+                  <textarea name="withUsTextarea" class="textarea" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid rgb(221, 221, 221); padding: 10px; display: block;" placeholder="Place some text here">
+                    <?php echo $db_arr['withUsTextarea'];?>
                     </p>
                   </textarea>
                 <input type="hidden" name="_wysihtml5_mode" value="1">
