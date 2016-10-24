@@ -1,5 +1,11 @@
 <?php include_once "inc/db.php";?>
-
+<?php
+//данные по базе данных
+$db_table = "followyourdream";
+$db_select = mysql_select_db($db_table);
+$db_query = mysql_query("SELECT * FROM indexUpcomingEvents WHERE id=1");
+$db_arr = mysql_fetch_array($db_query);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +28,7 @@
     </section>
     <section class="content index-upcomingEvents">
       <!-- form start -->
-      <form class="index-header-form" role="form">
+      <form class="index-header-form" role="form" action="formAction/index-upcomingEvents-action.php" method="post" enctype="multipart/form-data">
         <div class="row">
           <div class="col-md-12">
             <div class="box box-primary">
@@ -34,11 +40,11 @@
                   <div class="box-body">
                     <div class="form-group">
                       <label for="exampleInputFile">Header text</label>
-                      <input type="text" class="form-control" id="exampleInputFile" value="БЛИЖАЙШИЕ ПУТЕШЕСТВИЯ И ЭКСПЕДИЦИИ">
+                      <input type="text" class="form-control" name="upcomingEventsHeaderText" id="" value="<?php echo $db_arr['upcomingEventsHeaderText'];?>">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputFile">Text under button</label>
-                      <input type="text" class="form-control" id="exampleInputFile" value="Никакого спама. Только интересная информация о новых маршрутах, невероятных экспедициях и путешествиях.">
+                      <input type="text" class="form-control" name="upcomingEventsTextButton" id="" value="<?php echo $db_arr['upcomingEventsTextButton'];?>">
                     </div>
                   </div>
                 </div>
@@ -48,169 +54,48 @@
                     <h3 class="box-title">Img block</h3>
                   </div>
                   <div class="box-body index-our-travel-img">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <div class="form-group-img">
-                            <img src="../img/header-img-4.jpg" alt="">
-                            <button type="button" class="del-img btn btn-danger">Удалить</button>
+                    <div class="row colHeight">
+
+                      <?php for ($i = 1; $i < 7; $i++):?>
+                        <?php
+                        $db_query = mysql_query("SELECT * FROM indexUpcomingEvents WHERE id=++$i");
+                        $db_arr = mysql_fetch_array($db_query);
+                        ?>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <?php if($db_arr['upcomingEventsBlockImgSrc'] != ""):?>
+                              <div class="form-group-img">
+                                <input type="hidden" name="tableName" value="indexUpcomingEvents">
+                                <input type="hidden" name="columnName" value="upcomingEventsBlockImgSrc">
+                                <input type="hidden" name="imgCount" value="one">
+                                <input type="hidden" name="id" value="<?php echo $i;?>">
+                                <img src="../<?php echo $db_arr['upcomingEventsBlockImgSrc'];?>" alt="">
+                                <button type="button" class="del-img btn btn-danger">Удалить</button>
+                              </div>
+                            <?php endif;?>
+                            <div class="upload-img">
+                              <input type="file" accept="image/*" id="exampleInputFile" name="upcomingEventsBlockImgArr[]">
+                            </div>
                           </div>
-                          <div class="upload-img">
-                            <input type="file" id="exampleInputFile">
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Checkpoint</label>
+                            <input type="text" name="upcomingEventsBlockImgCheckpoint-<?php echo $i;?>" class="form-control"  value="<?php echo $db_arr['upcomingEventsBlockImgCheckpoint'];?>">
                           </div>
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Checkpoint</label>
-                          <input type="text" class="form-control"  value="ТАЙЛАНД + ЗАТЕРЯНЫЕ МИРЫ КАМБОДЖИ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Date</label>
-                          <input type="text" class="form-control"  value="2-14 ЯНВАРЯ 2017  ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Price</label>
-                          <input type="text" class="form-control"  value="1799 ЕВРО">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Link</label>
-                          <input type="text" class="form-control"  value="calendar.php#tay-kambodga">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <div class="form-group-img">
-                            <img src="../img/header-img-4.jpg" alt="">
-                            <button type="button" class="del-img btn btn-danger">Удалить</button>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Date</label>
+                            <input type="text" name="upcomingEventsBlockImgDate-<?php echo $i;?>" class="form-control"  value="<?php echo $db_arr['upcomingEventsBlockImgDate'];?>">
                           </div>
-                          <div class="upload-img">
-                            <input type="file" id="exampleInputFile">
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Price</label>
+                            <input type="text" name="upcomingEventsBlockImgPrice-<?php echo $i;?>" class="form-control"  value="<?php echo $db_arr['upcomingEventsBlockImgPrice'];?>">
                           </div>
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Checkpoint</label>
-                          <input type="text" class="form-control"  value="ТАЙЛАНД + ЗАТЕРЯНЫЕ МИРЫ КАМБОДЖИ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Date</label>
-                          <input type="text" class="form-control"  value="2-14 ЯНВАРЯ 2017  ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Price</label>
-                          <input type="text" class="form-control"  value="1799 ЕВРО">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Link</label>
-                          <input type="text" class="form-control"  value="calendar.php#tay-kambodga">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <div class="form-group-img">
-                            <img src="../img/header-img-4.jpg" alt="">
-                            <button type="button" class="del-img btn btn-danger">Удалить</button>
-                          </div>
-                          <div class="upload-img">
-                            <input type="file" id="exampleInputFile">
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Link</label>
+                            <input type="text" name="upcomingEventsBlockImgLink-<?php echo $i;?>" class="form-control"  value="<?php echo $db_arr['upcomingEventsBlockImgLink'];?>">
                           </div>
                         </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Checkpoint</label>
-                          <input type="text" class="form-control"  value="ТАЙЛАНД + ЗАТЕРЯНЫЕ МИРЫ КАМБОДЖИ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Date</label>
-                          <input type="text" class="form-control"  value="2-14 ЯНВАРЯ 2017  ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Price</label>
-                          <input type="text" class="form-control"  value="1799 ЕВРО">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Link</label>
-                          <input type="text" class="form-control"  value="calendar.php#tay-kambodga">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <div class="form-group-img">
-                            <img src="../img/header-img-4.jpg" alt="">
-                            <button type="button" class="del-img btn btn-danger">Удалить</button>
-                          </div>
-                          <div class="upload-img">
-                            <input type="file" id="exampleInputFile">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Checkpoint</label>
-                          <input type="text" class="form-control"  value="ТАЙЛАНД + ЗАТЕРЯНЫЕ МИРЫ КАМБОДЖИ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Date</label>
-                          <input type="text" class="form-control"  value="2-14 ЯНВАРЯ 2017  ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Price</label>
-                          <input type="text" class="form-control"  value="1799 ЕВРО">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Link</label>
-                          <input type="text" class="form-control"  value="calendar.php#tay-kambodga">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <div class="form-group-img">
-                            <img src="../img/header-img-4.jpg" alt="">
-                            <button type="button" class="del-img btn btn-danger">Удалить</button>
-                          </div>
-                          <div class="upload-img">
-                            <input type="file" id="exampleInputFile">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Checkpoint</label>
-                          <input type="text" class="form-control"  value="ТАЙЛАНД + ЗАТЕРЯНЫЕ МИРЫ КАМБОДЖИ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Date</label>
-                          <input type="text" class="form-control"  value="2-14 ЯНВАРЯ 2017  ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Price</label>
-                          <input type="text" class="form-control"  value="1799 ЕВРО">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Link</label>
-                          <input type="text" class="form-control"  value="calendar.php#tay-kambodga">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <div class="form-group-img">
-                            <img src="../img/header-img-4.jpg" alt="">
-                            <button type="button" class="del-img btn btn-danger">Удалить</button>
-                          </div>
-                          <div class="upload-img">
-                            <input type="file" id="exampleInputFile">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Checkpoint</label>
-                          <input type="text" class="form-control"  value="ТАЙЛАНД + ЗАТЕРЯНЫЕ МИРЫ КАМБОДЖИ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Date</label>
-                          <input type="text" class="form-control"  value="2-14 ЯНВАРЯ 2017  ">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Price</label>
-                          <input type="text" class="form-control"  value="1799 ЕВРО">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Link</label>
-                          <input type="text" class="form-control"  value="calendar.php#tay-kambodga">
-                        </div>
-                      </div>
+
+                      <?php endfor; ?>
                     </div>
                   </div>
                 </div>
@@ -220,7 +105,7 @@
           <div class="col-md-12">
             <div class="box box-primary">
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Сохранить</button>
               </div>
             </div>
 

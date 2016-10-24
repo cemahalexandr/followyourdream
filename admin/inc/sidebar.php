@@ -45,28 +45,10 @@
                     <span>DreamBus</span>
                 </a>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <!--<i class="fa fa-laptop"></i>-->
+            <li>
+                <a href="calendar.php">
                     <span>Календарь</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-down pull-right"></i>
-                </span>
                 </a>
-                <ul class="treeview-menu">
-                    <li><a href=""><i class="fa fa-circle-o"></i>Январь</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Февраль</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Март</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Апрель</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Май</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Июнь</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Июль</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Август</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Сентябрь</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Октябрь</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Ноябрь</a></li>
-                    <li><a href=""><i class="fa fa-circle-o"></i>Декабрь</a></li>
-                </ul>
             </li>
         </ul>
     </section>

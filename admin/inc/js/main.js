@@ -28,6 +28,22 @@ $(document).ready(function () {
     /*-----------------------------------------*/
     /*-----------main functions----------------*/
     /*-----------------------------------------*/
+    var maxHeight = 0;
+    $('.colHeight > div').each(function () {
+        var height = $(this).height();
+        if (height > maxHeight){
+            maxHeight = height;
+        }
+    });
+    $('.colHeight > div').each(function () {
+        $(this).css('height', maxHeight + 'px');
+    });
+    // console.log(maxHeight);
+
+
+    // $('.colHeight > div').equalHeights();
+
+
     // скрытие загрузчика если есть картинка
     $('.form-group').each(function(){
         if ($(this).children('.form-group-img').html() != undefined){

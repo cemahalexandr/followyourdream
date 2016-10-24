@@ -1,5 +1,12 @@
 <?php include_once "inc/db.php";?>
-
+<?php include_once "inc/db.php";?>
+<?php
+//данные по базе данных
+$db_table = "followyourdream";
+$db_select = mysql_select_db($db_table);
+$db_query = mysql_query("SELECT * FROM indexFooter WHERE id=1");
+$db_arr = mysql_fetch_array($db_query);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +29,7 @@
     </section>
     <section class="content index-upcomingEvents">
       <!-- form start -->
-      <form class="index-header-form" role="form">
+      <form class="index-header-form" role="form" action="formAction/index-footer-action.php" method="post" enctype="multipart/form-data">
         <div class="row">
           <div class="col-md-4">
             <div class="box box-primary">
@@ -32,15 +39,15 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputFile">viber</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="followyourdream">
+                  <input type="text" name="indexFooterSotialViber" class="form-control" id="" value="<?php echo $db_arr['indexFooterSotialViber'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">skype</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="followyourdream">
+                  <input type="text" name="indexFooterSotialSkype" class="form-control" id="" value="<?php echo $db_arr['indexFooterSotialSkype'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">email</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="info@dreamlifeexpeditions.com">
+                  <input type="text" name="indexFooterSotialEmail" class="form-control" id="" value="<?php echo $db_arr['indexFooterSotialEmail'];?>">
                 </div>
               </div>
             </div>
@@ -53,35 +60,47 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputFile">Footer logo</label>
-                  <div class="form-group-img">
-                    <img src="../img/logo-header.png" alt="">
-                    <button type="button" class="del-img btn btn-danger">Удалить</button>
-                  </div>
+                  <?php if($db_arr['indexFooterLogoLink'] != ""):?>
+                    <div class="form-group-img">
+                      <input type="hidden" name="tableName" value="indexFooter">
+                      <input type="hidden" name="columnName" value="indexFooterLogoLink">
+                      <input type="hidden" name="imgCount" value="one">
+                      <input type="hidden" name="id" value="1">
+                      <img src="../<?php echo $db_arr['indexFooterLogoLink'];?>" alt="">
+                      <button type="button" class="del-img btn btn-danger">Удалить</button>
+                    </div>
+                  <?php endif;?>
                   <div class="upload-img">
-                    <input type="file" id="exampleInputFile">
+                    <input type="file" id="exampleInputFile" name="indexFooterLogoLink">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Background image</label>
-                  <div class="form-group-img">
-                    <img src="../img/footer__bg.jpg" alt="">
-                    <button type="button" class="del-img btn btn-danger">Удалить</button>
-                  </div>
+                  <?php if($db_arr['indexFooterBgImg'] != ""):?>
+                    <div class="form-group-img">
+                      <input type="hidden" name="tableName" value="indexFooter">
+                      <input type="hidden" name="columnName" value="indexFooterBgImg">
+                      <input type="hidden" name="imgCount" value="one">
+                      <input type="hidden" name="id" value="1">
+                      <img src="../<?php echo $db_arr['indexFooterBgImg'];?>" alt="">
+                      <button type="button" class="del-img btn btn-danger">Удалить</button>
+                    </div>
+                  <?php endif;?>
                   <div class="upload-img">
-                    <input type="file" id="exampleInputFile">
+                    <input type="file" id="exampleInputFile" name="indexFooterBgImg">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Text button</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="присоединиться к сообществу">
+                  <input type="text" name="indexFooterButtonText" class="form-control" id="" value="<?php echo $db_arr['indexFooterButtonText'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Sotial facebook</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="https://www.facebook.com/FollowYourDREAM2015">
+                  <input type="text" name="indexFooterSotialFb" class="form-control" id="" value="<?php echo $db_arr['indexFooterSotialFb'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Sotial instagram</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="https://www.instagram.com/follow_your_dream_kiev">
+                  <input type="text" name="indexFooterSotialIn" class="form-control" id="" value="<?php echo $db_arr['indexFooterSotialIn'];?>">
                 </div>
               </div>
             </div>
@@ -92,14 +111,19 @@
                 <h3 class="box-title">Phones</h3>
               </div>
               <div class="box-body">
-                <div class="form-group">
-                  <label for="exampleInputFile">Phone 1</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="+380 67 850 21 07">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputFile">Phone 2</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="+380 44 360 53 28">
-                </div>
+
+                <?php for ($i = 1; $i < 3; $i++):?>
+                  <?php
+                  $db_query = mysql_query("SELECT * FROM indexFooter WHERE id=++$i");
+                  $db_arr = mysql_fetch_array($db_query);
+                  ?>
+                  <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" name="indexFooterPhone-<?php echo $i;?>" class="form-control" id="" value="<?php echo $db_arr['indexFooterPhone'];?>">
+                  </div>
+                <?php endfor; ?>
+                
+                
               </div>
             </div>
           </div>

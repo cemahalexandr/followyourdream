@@ -3,7 +3,7 @@
 //данные по базе данных
 $db_table = "followyourdream";
 $db_select = mysql_select_db($db_table);
-$db_query = mysql_query("SELECT * FROM indexAboutComunity WHERE id=1");
+$db_query = mysql_query("SELECT * FROM indexWithUs WHERE id=1");
 $db_arr = mysql_fetch_array($db_query);
 ?>
 <!DOCTYPE html>
@@ -38,16 +38,22 @@ $db_arr = mysql_fetch_array($db_query);
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputFile">Header text</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="с нами вас ждут">
+                  <input type="text" class="form-control" id="" name="withUsHeaderText" value="<?php echo $db_arr['withUsHeaderText'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Background Image</label>
-                  <div class="form-group-img">
-                    <img src="../img/expectation__right-img.png" alt="">
-                    <button type="button" class="del-img btn btn-danger">Удалить</button>
-                  </div>
+                  <?php if($db_arr['withUsBgImg'] != ""):?>
+                    <div class="form-group-img">
+                      <input type="hidden" name="tableName" value="indexWithUs">
+                      <input type="hidden" name="columnName" value="withUsBgImg">
+                      <input type="hidden" name="imgCount" value="one">
+                      <input type="hidden" name="id" value="1">
+                      <img src="../<?php echo $db_arr['withUsBgImg'];?>" alt="">
+                      <button type="button" class="del-img btn btn-danger">Удалить</button>
+                    </div>
+                  <?php endif;?>
                   <div class="upload-img">
-                    <input type="file" id="exampleInputFile">
+                    <input type="file" accept="image/*" id="exampleInputFile" name="withUsNewImg">
                   </div>
                 </div>
               </div>
@@ -62,7 +68,6 @@ $db_arr = mysql_fetch_array($db_query);
               <div class="box-body pad">
                   <textarea name="withUsTextarea" class="textarea" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid rgb(221, 221, 221); padding: 10px; display: block;" placeholder="Place some text here">
                     <?php echo $db_arr['withUsTextarea'];?>
-                    </p>
                   </textarea>
                 <input type="hidden" name="_wysihtml5_mode" value="1">
               </div>
@@ -76,11 +81,11 @@ $db_arr = mysql_fetch_array($db_query);
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputFile">Text</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="НЕ ПРЕДАВАЙ СВОИ МЕЧТЫ И РАЗРЕШИ СЕБЕ ЖИТЬ ТАК, КАК ХОЧЕШЬ ИМЕННО ТЫ! ПРИСОЕДИНЯЙСЯ!">
+                  <input type="text" class="form-control" name="withUsUnderText" id="" value="<?php echo $db_arr['withUsUnderText'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Text button</label>
-                  <input type="text" class="form-control" id="exampleInputFile" value="Присоединяйся">
+                  <input type="text" class="form-control" name="withUsUnderTextButton" id="" value="<?php echo $db_arr['withUsUnderTextButton'];?>">
                 </div>
               </div>
             </div>
