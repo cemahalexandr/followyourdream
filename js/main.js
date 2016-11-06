@@ -340,15 +340,15 @@ $(document).ready(function() {
     }
 
 
-    
+
     // $('form.calendarModalGetForm a.button').on('click', function(e){
     //     $(this).animate({opacity: 0}, 1000).css('display', 'none');
     //     $('form.footer__sotial-form .animate-wrap').css('display', 'inline-block').animate({opacity: 1}, 1000);
     //     e.preventDefault();
     //     return 0;
     // });
-    
-    
+
+
     //INDEX --- TAKE PART MODAL SOTIAL
     // function openTakePartModalsocial() {
     //     $("#takePartModalsocial").modal("show");
@@ -404,15 +404,15 @@ $(document).ready(function() {
 
 
     /*--------SCRIPTS FROM INDEX.PHP START------------------------------------------*/
-    
+
 
     //
-    
-    
+
+
     /*--------SCRIPTS FROM INDEX.PHP END------------------------------------------*/
-    
-    
-    
+
+
+
     /*--------SCRIPTS FROM CALENDAR.PHP START------------------------------------------*/
     // function closeWindow(videoPlayer) {
     //     var v = $("#" + videoPlayer + " video")[0];
@@ -957,8 +957,8 @@ $(document).ready(function() {
 
 
     /*--------SCRIPTS FROM CALENDAR.PHP END------------------------------------------*/
-    
-    
+
+
     /*--------SCRIPTS FROM FOOTER.PHP START------------------------------------------*/
     // var videos = document.getElementsByTagName('video');
     // for (var i = 0; i < videos.length; i++) {

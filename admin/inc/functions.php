@@ -34,4 +34,21 @@ function loopUploadManyFiles($uploadVar, $filesNameSpace) {
     return $carouselItemLink;
 }
 
+function unique_upload_one_img($upload_file_name){
+
+    $upload_file = $_FILES[$upload_file_name];
+
+        if ($upload_file['name'] == '') {
+//        continue;
+        } else {
+            $extension = pathinfo($_FILES[$upload_file_name]['name'][0]);
+            $uploaddir = $_SERVER['DOCUMENT_ROOT'] . "/img/uploads/";
+            $fileName = uniqid() . "." . $extension['extension'];
+            $uploadfile = $uploaddir . $fileName;
+            move_uploaded_file($_FILES[$upload_file_name]['tmp_name'][0], $uploadfile); //какой файл загружать и куда
+            $pos = strpos($uploadfile, "img");
+            $uploadfile = substr($uploadfile, $pos);
+            return $uploadfile;
+        }
+}
 ?>

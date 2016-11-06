@@ -61,8 +61,8 @@ $db_arr = mysql_fetch_array($db_query);
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Link fb</label>
-                  <input type="text" name="headerLinkFb" class="form-control" id="exampleInputEmail1" value="<?php echo $db_arr['headerLinkFb'];?>">
+                  <label for="">Link fb</label>
+                  <input type="text" name="headerLinkFb" class="form-control" id="" value="<?php echo $db_arr['headerLinkFb'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Link instagram</label>
