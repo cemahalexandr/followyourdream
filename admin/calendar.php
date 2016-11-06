@@ -77,32 +77,31 @@
                 //данные по базе данных
                 $db_table = "followyourdream";
                 $db_select = mysql_select_db($db_table);
-                $db_query = mysql_query("SELECT COUNT(1) FROM modal");
-                $db_arr = mysql_fetch_array($db_query);
-                $db_count = count($db_arr);
+                $db_query = mysql_query("SELECT * FROM modalData");
+                $db_row_number = mysql_num_rows($db_query);
+//                var_dump($db_row_number);
+//                die;
                 ?>
                 <table class="table table-hover">
                   <tbody>
                     <tr>
                       <th>ID</th>
-                      <th>text</th>
+                      <th>Month</th>
+                      <th>Title</th>
                       <th width="100px">Edit/delete</th>
                     </tr>
 
-                    <?php for ($i = 1; $i <= $db_count; $i++):?>
-                      <?php
-                      $db_query = mysql_query("SELECT * FROM modal WHERE id=$i");
-                      $db_arr = mysql_fetch_array($db_query);
-                      ?>
+                    <?php while($db_arr = mysql_fetch_assoc($db_query)):?>
                       <tr>
                         <td><?php echo $db_arr['id'];?></td>
-                        <td><?php echo $db_arr['text'];?></td>
+                        <td><?php echo $db_arr['generalMonth'];?></td>
+                        <td><?php echo $db_arr['header'];?></td>
                         <td>
-                          <a href="modal-edit.php"><button type="button" class="btn btn-success"><span class="fa fa-edit"></span></button></a>
-                          <a href=""><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></a>
+                          <a href="modal-edit.php?id=<?php echo $db_arr['id'];?>"><button type="button" class="btn btn-success"><span class="fa fa-edit"></span></button></a>
+                          <a href="modal-del.php?id=<?php echo $db_arr['id'];?>"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></a>
                         </td>
                       </tr>
-                    <?php endfor; ?>
+                    <?php endwhile; ?>
                   </tbody>
                 </table>
               </div>

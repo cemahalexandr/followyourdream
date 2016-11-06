@@ -4,8 +4,11 @@
 $db_table = "followyourdream";
 $db_select = mysql_select_db($db_table);
 
+$id_from_get = $_GET['id'];
+//var_dump($id_from_get);
+//die;
 
-$db_query = mysql_query("SELECT * FROM modalData WHERE id=1");
+$db_query = mysql_query("SELECT * FROM modalData WHERE id='$id_from_get'");
 $db_arr = mysql_fetch_array($db_query);
 
 $id_row = $db_arr['id'];
