@@ -84,11 +84,11 @@ $db_arr = mysql_fetch_array($db_query);
                         <input type="text" name="aboutComunityImgHeader-<?php echo $i;?>" class="form-control"  value="<?php echo $db_arr['aboutComunityImgHeader'];?>">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputPassword1">Header</label>
+                        <label for="exampleInputPassword1">Sub Header</label>
                         <input type="text" name="aboutComunityImgText-<?php echo $i;?>" class="form-control"  value="<?php echo $db_arr['aboutComunityImgText'];?>">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputPassword1">Header</label>
+                        <label for="exampleInputPassword1">Yellow text</label>
                         <input type="text" name="aboutComunityImgYellowText-<?php echo $i;?>" class="form-control"  value="<?php echo $db_arr['aboutComunityImgYellowText'];?>">
                       </div>
                     </div>

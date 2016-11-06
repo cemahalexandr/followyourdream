@@ -1,3 +1,10 @@
+<?php include_once "db.php";?>
+<?php
+$db_table = "followyourdream";
+$db_select = mysql_select_db($db_table);
+$db_query = mysql_query("SELECT * FROM indexHeader WHERE id=1");
+$db_arr = mysql_fetch_array($db_query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,11 +31,11 @@
     <link rel="shortcut icon" href="img/favicon.ico">
 
 
-    <title>Follow Your Dream</title>
+    <title><?php echo $db_arr['headerTitle'];?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="#FOLLOW YOUR DREAM - открытое travel-сообщество для всех, кто влюблен в жизнь, в приключения и путешествия. Мы выбираем самые необыкновенные места планеты, собираем самую веселую компанию и отправляемся в самые крутые путешествия в вашей жизни">
+    <meta name="description" content="<?php echo $db_arr['headerTitle'];?>">
 
     <meta name="keywords" content="Шпицберген, экспедиция, арктика, впечатления, тур, путешествие в арктику, поездка в арктику, туры на шпицберген, туры в гринландию, экспедиция в арктику, экспедиция на северный полюс, туры на северный полюс, туры в исландию, из Украины">
 

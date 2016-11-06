@@ -117,7 +117,7 @@ $db_arr = mysql_fetch_array($db_query);
                           <input type="hidden" name="imgCount" value="many">
                           <input type="hidden" name="id" value="1">
                           <img src="../<?php echo $carouselArr[$i];?>" alt="">
-                          <button type="button" class="del-img btn btn-danger">Удалить</button>
+                          <button type="button" class="del-carousel-img btn btn-danger">Удалить</button>
                         </div>
                         <?php endif;?>
                         <div class="upload-img">

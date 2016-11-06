@@ -9,6 +9,9 @@ $db_select = mysql_select_db($db_table);
 
 // uploads images
 $aboutComunityNewImg = $_FILES['aboutComunityNewImg'];
+
+//var_dump($aboutComunityNewImg);
+//die;
 for ($i = 0; $i < 4; $i++){
     if ($aboutComunityNewImg['name'][$i] == ''){
 //        continue;
@@ -20,7 +23,7 @@ for ($i = 0; $i < 4; $i++){
         move_uploaded_file($_FILES['aboutComunityNewImg']['tmp_name'][$i], $uploadfile); //какой файл загружать и куда
         $pos = strpos($uploadfile, "img");
         $uploadfile = substr($uploadfile, $pos);
-        $db_query = "UPDATE indexAboutComunity SET aboutComunityNewImg = '$uploadfile' WHERE id=$i+1";
+        $db_query = "UPDATE indexAboutComunity SET aboutComunityImgSrc = '$uploadfile' WHERE id=$i+1";
         $db_result = mysql_query($db_query, $db_connect);
     }
     $i_text = $i+1;

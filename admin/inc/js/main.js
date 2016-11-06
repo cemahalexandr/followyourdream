@@ -22,8 +22,27 @@ $(document).ready(function () {
             }
         });
     });
-    
-    
+
+    $('button.del-carousel-img').click(function(){
+        var localThis = $(this);
+        $.ajax({
+            url: "../admin/formAction/img-many-del.php",
+            type: "POST",
+            data: {
+                imgSrc : $(this).siblings('img').attr('src').substring(3),
+                tableName : $(this).siblings("input[name=tableName]").val(),
+                columnName : $(this).siblings("input[name=columnName]").val(),
+                imgCount : $(this).siblings("input[name=imgCount]").val(),
+                id : $(this).siblings("input[name=id]").val()
+            },
+            success: function (data) {
+                console.log(data);
+                var test = localThis.parents('.box-body').html();
+                localThis.parents('.form-group').children('.upload-img').css('display', 'block');
+                localThis.parent('.form-group-img').remove();
+            }
+        });
+    });
 
 /*-----------------------------------------*/
 /*-----------main functions----------------*/

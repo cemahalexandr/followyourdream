@@ -33,11 +33,11 @@ function loopUploadManyFiles($uploadVar, $filesNameSpace) {
     }
     return $carouselItemLink;
 }
-
+function unique_upload_many_img($upload_file_name){
+    
+}
 function unique_upload_one_img($upload_file_name){
-
     $upload_file = $_FILES[$upload_file_name];
-
         if ($upload_file['name'] == '') {
 //        continue;
         } else {

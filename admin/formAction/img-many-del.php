@@ -7,8 +7,6 @@ $columnName = $_POST['columnName'];
 $imgCount = $_POST['imgCount'];
 $id = $_POST['id'];
 
-
-
 // убрать и поставить закоментированнное когда утвердят все картинки
 if (substr($imgSrc, 4, 8) != "uploads/"){
     return 0;
@@ -22,6 +20,7 @@ if (substr($imgSrc, 4, 8) != "uploads/"){
         $db_select = mysql_select_db($db_table);
         $db_query = mysql_query("SELECT $columnName FROM $tableName WHERE id=$id");
         $db_arr = mysql_fetch_array($db_query);
+
         $string_to_arr = explode(",", $db_arr[$columnName]);
 
         for($i = 0; $i < count($string_to_arr); $i++){
@@ -29,17 +28,19 @@ if (substr($imgSrc, 4, 8) != "uploads/"){
                 unset($string_to_arr[$i]);
             }
         }
-//        unlink($_SERVER['DOCUMENT_ROOT'] . "/" . $imgSrc);
+        unlink($_SERVER['DOCUMENT_ROOT'] . "/" . $imgSrc);
         $arr_to_string = implode(",", $string_to_arr);
-//        $db_update = "UPDATE " . $tableName . " SET " . $columnName . "='" . $arr_to_string . "' WHERE id=1";
-//        $db_query = mysql_query($db_update);
+        $db_update = "UPDATE " . $tableName . " SET " . $columnName . "='" . $arr_to_string . "' WHERE id=1";
+        $db_query = mysql_query($db_update);
         echo $arr_to_string;
     }
+/*--------НЕ УВЕРЕН, ЧТО ЭТО НУЖНО--------*/
 //    unlink($_SERVER['DOCUMENT_ROOT'] . "/" . $imgSrc);
 //    $db_table = "followyourdream";
 //    $db_select = mysql_select_db($db_table);
 //    $db_query = mysql_query("UPDATE indexHeader SET headerLogoLink='' WHERE id=1");
 //    echo $db_query;
+/*-------- / НЕ УВЕРЕН, ЧТО ЭТО НУЖНО--------*/
 }
 
 ?>
