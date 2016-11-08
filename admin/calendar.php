@@ -79,7 +79,6 @@
                 $db_select = mysql_select_db($db_table);
                 $db_query = mysql_query("SELECT * FROM modalData");
                 $db_row_number = mysql_num_rows($db_query);
-//                var_dump($db_row_number);
 //                die;
                 ?>
                 <table class="table table-hover">
