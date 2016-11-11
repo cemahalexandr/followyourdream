@@ -24,7 +24,7 @@
     </section>
     <section class="content">
       <!-- form start -->
-      <form class="index-header-form" role="form">
+      <form class="index-header-form" role="form" action="formAction/tmp-action.php" method="post" enctype="multipart/form-data">
         <div class="row">
           <div class="col-md-3">
             <?php include_once "tmp-header.php";?>
