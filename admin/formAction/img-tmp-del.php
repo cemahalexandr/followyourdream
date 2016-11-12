@@ -2,12 +2,8 @@
 <?php
 $db_table = "followyourdream";
 $imgSrc = $_POST['imgSrc'];
-$tableName = $_POST['tableName'];
-$columnName = $_POST['columnName'];
-$imgCount = $_POST['imgCount'];
-$id = $_POST['id'];
-
-echo $imgSrc;
+$unlink =  unlink($_SERVER['DOCUMENT_ROOT'] . "/" . $imgSrc);
+echo $unlink;
 
 
 //// убрать и поставить закоментированнное когда утвердят все картинки
