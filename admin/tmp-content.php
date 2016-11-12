@@ -22,11 +22,11 @@
         content_css: 'inc/css/tiny.css',
         menubar: false,
         plugins: [
-            "advlist autolink lists link image charmap print preview anchor",
+            "advlist autolink lists link image charmap print preview anchor code",
             "searchreplace visualblocks code fullscreen",
             "insertdatetime media table contextmenu paste"
         ],
-        toolbar: " styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
+        toolbar: " styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent code",
         relative_urls: false
     });
 
