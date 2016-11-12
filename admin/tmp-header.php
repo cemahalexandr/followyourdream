@@ -36,7 +36,7 @@ $db_arr = mysql_fetch_array($db_query);
         </div>
       <?php endif;?>
       <div class="upload-img">
-        <input type="file" accept="image/*" id="exampleInputFile" name="tmpHeaderBgUrl">
+        <input type="file" accept="image/*" id="" name="tmpHeaderBgUrl">
       </div>
     </div>
   </div>

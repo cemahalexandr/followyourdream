@@ -13,11 +13,11 @@ $db_arr = mysql_fetch_array($db_query);
   <div class="box-body">
     <div class="form-group">
       <label for="">Meta title</label>
-      <input type="text" class="form-control" id="" value="<?php echo $db_arr['tmpMetaTitle'];?>">
+      <input name="tmpMetaTitle" type="text" class="form-control" id="" value="<?php echo $db_arr['tmpMetaTitle'];?>">
     </div>
     <div class="form-group">
       <label for="">Meta description</label>
-      <input type="text" class="form-control" id="" value="<?php echo $db_arr['tmpMetaDescription'];?>">
+      <input name="tmpMetaDescription" type="text" class="form-control" id="" value="<?php echo $db_arr['tmpMetaDescription'];?>">
     </div>
   </div>
 </div>

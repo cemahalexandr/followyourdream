@@ -4,44 +4,63 @@
   </div>
   <div class="box-body">
     <div class="row">
+      <?
+      //данные по базе данных
+      $db_table = "followyourdream";
+      $db_select = mysql_select_db($db_table);
+      $db_query = mysql_query("SELECT * FROM tmpHowJoin WHERE tmpGeneralId='$generalId'");
+      $db_arr = mysql_fetch_array($db_query);
+      ?>
       <div class="col-md-6">
         <div class="form-group">
           <label for="exampleInputFile">Header text</label>
-          <input type="text" class="form-control" id="exampleInputFile" value="Как присоединиться">
+          <input name="tmpJoinLeftHeader" type="text" class="form-control" id="exampleInputFile" value="<?php echo $db_arr['tmpJoinLeftHeader'];?>">
         </div>
         <div class="form-group">
           <label for="exampleInputFile">Image</label>
-          <div class="form-group-img">
-            <img src="../img/arctic/arctic-join.png" alt="">
-            <button type="button" class="del-img btn btn-danger">Удалить</button>
-          </div>
+          <?php if($db_arr['tmpJoinLeftImgSrc'] != ""):?>
+            <div class="form-group-img">
+              <input type="hidden" name="tableName" value="tmpHowJoin">
+              <input type="hidden" name="columnName" value="tmpJoinLeftImgSrc">
+              <input type="hidden" name="imgCount" value="one">
+              <input type="hidden" name="id" value="1">
+              <img src="../<?php echo $db_arr['tmpJoinLeftImgSrc'];?>" alt="">
+              <button type="button" class="del-img btn btn-danger">Удалить</button>
+            </div>
+          <?php endif;?>
           <div class="upload-img">
-            <input type="file" id="exampleInputFile">
+            <input name="tmpJoinLeftImgSrc" type="file" accept="image/*"  id="">
           </div>
         </div>
         <div class="form-group">
           <label for="exampleInputFile">Text</label>
-          <input type="text" class="form-control" id="exampleInputFile" value="Выбирайте направление в Календаре путешествий или в Ближайших экспедициях. Отправляйте заявку на участие и мы вам перезвоним для уточнения всех деталей или кликате на скайп или вайбер колл внизу страницы и совершите бесплатный звонок из любой точки мира. Мы рады каждому из вас! Честно))">
+          <input name="tmpJoinLeftText" type="text" class="form-control" id="exampleInputFile" value="<?php echo $db_arr['tmpJoinLeftText'];?>">
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <label for="exampleInputFile">Header text</label>
-          <input type="text" class="form-control" id="exampleInputFile" value="Как присоединиться">
+          <input name="tmpJoinRightHeader" type="text" class="form-control" id="exampleInputFile" value="<?php echo $db_arr['tmpJoinRightHeader'];?>">
         </div>
         <div class="form-group">
           <label for="exampleInputFile">Image</label>
-          <div class="form-group-img">
-            <img src="../img/arctic/arctic-team.png" alt="">
-            <button type="button" class="del-img btn btn-danger">Удалить</button>
-          </div>
+          <?php if($db_arr['tmpJoinRightImgSrc'] != ""):?>
+            <div class="form-group-img">
+              <input type="hidden" name="tableName" value="tmpHowJoin">
+              <input type="hidden" name="columnName" value="tmpJoinRightImgSrc">
+              <input type="hidden" name="imgCount" value="one">
+              <input type="hidden" name="id" value="1">
+              <img src="../<?php echo $db_arr['tmpJoinRightImgSrc'];?>" alt="">
+              <button type="button" class="del-img btn btn-danger">Удалить</button>
+            </div>
+          <?php endif;?>
           <div class="upload-img">
-            <input type="file" id="exampleInputFile">
+            <input name="tmpJoinRightImgSrc" type="file" accept="image/*"  id="">
           </div>
         </div>
         <div class="form-group">
           <label for="exampleInputFile">Text</label>
-          <input type="text" class="form-control" id="exampleInputFile" value="Выбирайте направление в Календаре путешествий или в Ближайших экспедициях. Отправляйте заявку на участие и мы вам перезвоним для уточнения всех деталей или кликате на скайп или вайбер колл внизу страницы и совершите бесплатный звонок из любой точки мира. Мы рады каждому из вас! Честно))">
+          <input name="tmpJoinRightText" type="text" class="form-control" id="exampleInputFile" value="<?php echo $db_arr['tmpJoinRightText'];?>">
         </div>
       </div>
     </div>
