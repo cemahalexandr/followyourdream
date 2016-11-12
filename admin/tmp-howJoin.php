@@ -23,7 +23,7 @@
               <input type="hidden" name="tableName" value="tmpHowJoin">
               <input type="hidden" name="columnName" value="tmpJoinLeftImgSrc">
               <input type="hidden" name="imgCount" value="one">
-              <input type="hidden" name="id" value="1">
+              <input type="hidden" name="id" value="<?php echo $db_arr['id'];?>">
               <img src="../<?php echo $db_arr['tmpJoinLeftImgSrc'];?>" alt="">
               <button type="button" class="del-img btn btn-danger">Удалить</button>
             </div>
@@ -43,13 +43,13 @@
           <input name="tmpJoinRightHeader" type="text" class="form-control" id="exampleInputFile" value="<?php echo $db_arr['tmpJoinRightHeader'];?>">
         </div>
         <div class="form-group">
-          <label for="exampleInputFile">Image</label>
+          <label for="">Image</label>
           <?php if($db_arr['tmpJoinRightImgSrc'] != ""):?>
             <div class="form-group-img">
               <input type="hidden" name="tableName" value="tmpHowJoin">
               <input type="hidden" name="columnName" value="tmpJoinRightImgSrc">
               <input type="hidden" name="imgCount" value="one">
-              <input type="hidden" name="id" value="1">
+              <input type="hidden" name="id" value="<?php echo $db_arr['id'];?>">
               <img src="../<?php echo $db_arr['tmpJoinRightImgSrc'];?>" alt="">
               <button type="button" class="del-img btn btn-danger">Удалить</button>
             </div>

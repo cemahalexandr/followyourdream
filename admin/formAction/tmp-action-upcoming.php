@@ -1,111 +1,53 @@
 <?
+// update "upcoming events" (3x)
+for ($i = 0; $i < 3; $i++){
+    $id = $_POST["rowId-$i"];
+    $tmpCheckpoint = $_POST["tmpUpcomingCheckpoint-$i"];
+    $tmpDate = $_POST["tmpUpcomingDate-$i"];
+    $tmpPrice = $_POST["tmpUpcomingPrice-$i"];
+    $tmpLink = $_POST["tmpUpcomingLink-$i"];
 
-$tmpMetaTitle = $_POST['tmpMetaTitle'];
-$tmpMetaDescription = $_POST['tmpMetaDescription'];
+    $db_query = "
+        UPDATE tmpUpcoming
+        SET tmpCheckpoint = '$tmpCheckpoint',
+            tmpDate = '$tmpDate',
+            tmpPrice = '$tmpPrice',
+            tmpLink = '$tmpLink'
+        WHERE id='$id'
+    ";
+    $db_result = mysql_query($db_query, $db_connect);
 
+    $file_name = "tmpUpcomingImgSrc-" . $i;
+    if ($_FILES[$file_name]['name'] != ""){
+        $tmpUpcomingImgSrc = unique_upload_one_img_without_zero($file_name);
+        $db_query = "UPDATE tmpUpcoming SET tmpImgSrc = '$tmpUpcomingImgSrc'  WHERE  id='$id'";
+        $db_result = mysql_query($db_query, $db_connect);
+    }
+}
+
+
+
+// UPDATE CALENDAR DATA IN TEMP PAGE
+$generalId = $_POST['generalId'];
+$tmpCalendarTitle = $_POST['tmpCalendarTitle'];
+$tmpCalendarLink = $_POST['tmpCalendarLink'];
 
 $db_query = "
-  UPDATE tmpUpcoming
-  SET tmpMetaTitle = '$tmpMetaTitle',
-      tmpMetaDescription = '$tmpMetaDescription',
-  WHERE tmpGeneralId='$generalId'
+        UPDATE tmpUpcomingCalendar
+        SET tmpCalendarTitle = '$tmpCalendarTitle',
+            tmpCalendarLink = '$tmpCalendarLink'
+        WHERE  generalId='$generalId'
 ";
-
-
 $db_result = mysql_query($db_query, $db_connect);
-mysql_close($db_connect);
 
-
-
-
-
-//// загрузка картинки для фонового изображения шапки
-//$bgImgFile = $_FILES["modalHeaderBgImg"];
-//$bg_img_path = '';
-//if ($bgImgFile['name'][0] == false){
-//    $bg_img_path = $_POST["modalHeaderBgImgCurrent"];
-//} else {
-//    $bg_img_path = unique_upload_one_img('modalHeaderBgImg');
-//}
-//$db_query = "UPDATE modalData SET bgImg = '$bg_img_path' WHERE id='$idRow'";
-//$db_result = mysql_query($db_query, $db_connect);
-//
-//
-////формирование строки для первого организатора
-//function organizator_fields_to_string($current_number){
-//    $organizator_arr = array(7);
-//    $organizator_img = $_FILES["organizator_img_$current_number"];
-//
-//    if ($organizator_img['name'][0] == false){
-//        $organizator_img = $_POST["currentImgSrc_$current_number"];
-//    } else {
-//        $organizator_img_selector = "organizator_img_" . $current_number;
-//        $organizator_img = unique_upload_one_img($organizator_img_selector);
-//    }
-//    $organizator_arr[0] = $organizator_img;
-//    $organizator_arr[1] = $_POST["organizator_name_$current_number"];
-//    $organizator_arr[2] = $_POST["organizator_position_$current_number"];
-//    $organizator_arr[3] = $_POST["organizator_fb_$current_number"];
-//    $organizator_arr[4] = $_POST["organizator_skype_$current_number"];
-//    $organizator_arr[5] = $_POST["organizator_email_$current_number"];
-//    $organizator_arr[6] = $_POST["organizator_phone_$current_number"];
-//    $organizator_string = implode("|", $organizator_arr);
-//    return $organizator_string;
-//}
-//
-//
-////обработка полей input
-//$generalId = $_POST['generalId'];
-//$generalMonth = $_POST['generalMonth'];
-//$header = $_POST['header'];
-//$subHeader = $_POST['subHeader'];
-//$infoDate = $_POST['infoDate'];
-//$infoImportant = $_POST['infoImportant'];
-//$infoPrice = $_POST['infoPrice'];
-//$listMain = $_POST['listMain'];
-//$textOverForm = $_POST['textOverForm'];
-//$textUnderForm = $_POST['textUnderForm'];
-//$howJoin = $_POST['howJoin'];
-//$organizator_1 = organizator_fields_to_string(1);
-//$organizator_2 = organizator_fields_to_string(2);
-////var_dump($header);
-////die();
-//
-//$db_query = "
-//  UPDATE modalData
-//  SET generalId = '$generalId',
-//      generalMonth = '$generalMonth',
-//      header = '$header',
-//      subHeader = '$subHeader',
-//      infoDate = '$infoDate',
-//      infoImportant = '$infoImportant',
-//      infoPrice = '$infoPrice',
-//      listMain = '$listMain',
-//      textOverForm = '$textOverForm',
-//      textUnderForm = '$textUnderForm',
-//      howJoin = '$howJoin',
-//      org1 = '$organizator_1',
-//      org2 = '$organizator_2'
-//  WHERE id='$idRow'
-//";
-
-//$db_result = mysql_query($db_query, $db_connect);
-//mysql_close($db_connect);
-
-/*---------------------------------------------*/
-
-// так получаем URL, с которого пришёл посетитель
-$back = $_SERVER['HTTP_REFERER']; // для справки, не обязательно создавать переменную
-// Теперь создаём страницу, пересылающую
-// в meta теге на предыдущую
-echo "
-<html>
-<head>
-  <meta http-equiv='Refresh' content='0; URL=".$_SERVER['HTTP_REFERER']."'>
-</head>
-</html>";
+//upload img if not empty
+$tmpCalendarBgImgPath = "";
+if ($_FILES['tmpCalendarBgImg']['name'] != ""){
+    $tmpCalendarBgImgPath = unique_upload_one_img_without_zero('tmpCalendarBgImg');
+    $db_query = "UPDATE tmpUpcomingCalendar SET tmpCalendarBgImg = '$tmpCalendarBgImgPath'  WHERE  generalId='$generalId'";
+    $db_result = mysql_query($db_query, $db_connect);
+}
 ?>
-
 
 
 

@@ -43,6 +43,25 @@ $(document).ready(function () {
             }
         });
     });
+    
+    
+    // del img tmp
+    $('button.tmp-del-img').click(function(){
+        var localThis = $(this);
+        $.ajax({
+            url: "../admin/formAction/img-tmp-del.php",
+            type: "POST",
+            data: {
+                imgSrc : $(this).siblings('img').attr('src').substring(3),
+            },
+            success: function (data) {
+                console.log(data);
+                var test = localThis.parents('.box-body').html();
+                localThis.parents('.form-group').children('.upload-img').css('display', 'block');
+                localThis.parent('.form-group-img').remove();
+            }
+        });
+    });
 
 /*-----------------------------------------*/
 /*-----------main functions----------------*/

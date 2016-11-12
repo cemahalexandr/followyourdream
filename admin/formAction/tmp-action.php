@@ -11,6 +11,8 @@ $generalId = $_POST['generalId'];
 
 include_once "tmp-action-header.php";
 include_once "tmp-action-howJoin.php";
+include_once "tmp-action-upcoming.php";
+include_once "tmp-action-carousel.php";
 mysql_close($db_connect);
 
 
