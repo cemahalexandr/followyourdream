@@ -2,7 +2,7 @@
 //данные по базе данных
 $db_table = "followyourdream";
 $db_select = mysql_select_db($db_table);
-$db_query = mysql_query("SELECT * FROM tmpHeader WHERE id='1'");
+$db_query = mysql_query("SELECT * FROM tmpHeader WHERE tmpGeneralId = '$generalId'");
 $db_arr = mysql_fetch_array($db_query);
 ?>
 
