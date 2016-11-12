@@ -22,7 +22,7 @@
                     </a>
                 </li>
                 <li class="user user-menu">
-                    <a href="#">
+                    <a href="admin.php?do=logout">
                         <span>Выйти</span>
                     </a>
                 </li>
